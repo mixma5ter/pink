@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Сергей Иншаков](https://up.htmlacademy.ru/adaptive/7/user/59949).
-* Наставник: `Неизвестно`.
+* Наставник: [Николай Громов](https://up.htmlacademy.ru/adaptive/7/user/6170).
 
 ---
 
