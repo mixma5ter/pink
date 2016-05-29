@@ -10,7 +10,7 @@
         <img src="http://placehold.it/20x10" width="20" height="10" alt="logo">
       </div>
 
-      <div class="header-menu">
+      <div  class="header-menu">
         <a class="header-menu__link" href="#"></a>
 
         <div class="header-menu__wrapper">
@@ -25,22 +25,128 @@
     </header>
 
     <main>
-      <section class="intro-wrapper">
-        <div class="intro-background"></div>
+      <section class="intro">
+        <div class="intro__background"></div>
 
-        <div class="intro">
+        <div class="intro__content">
           <a class="intro__download-link" href="#">Скачать приложение</a>
 
           <ul class="intro__icons-list">
-            <li><a class="intro__icon" href="#"></a></li>
-            <li><a class="intro__icon" href="#"></a></li>
-            <li><a class="intro__icon" href="#"></a></li>
+            <li><a class="intro__icon intro__apple-icon" href="#"></a></li>
+            <li><a class="intro__icon intro__android-icon" href="#"></a></li>
+            <li><a class="intro__icon intro__windows-icon" href="#"></a></li>
           </ul>
 
           <div class="intro__text">
             <p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Window</p>>
           </div>>
         </div>
+      </section>
+
+      <div class="promo">
+          <h1>Устали от серости мегаполиса?  Нам есть, что вам  предложить!</h1>
+      </div>
+
+      <section class="advantages">
+        <div class="advantages__item">
+          <div class="advantages__title">
+            <p>Поднимает настроение</p>
+          </div>
+
+          <p>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+        </div>
+
+        <div class="advantages__item">
+          <div class="advantages__title">
+            <p>Меняет мир вокруг</p>
+          </div>
+
+          <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+        </div>
+
+        <div class="advantages__item">
+          <div class="advantages__title">
+            <p>Заводит новых друзей</p>
+          </div>
+
+          <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+        </div>
+      </section>
+
+      <section class="review-slider">
+        <input type="radio" id="btn-1" name="toggle" checked>
+        <input type="radio" id="btn-2" name="toggle">
+        <input type="radio" id="btn-3" name="toggle">
+
+        <div class="review-slider__slide" id="slide-1">
+          <div class="review-slider__title">
+            <p>Николай Петров</p>
+          </div>
+
+          <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+            А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+        </div>
+
+        <div class="review-slider__slide" id="slide-2">
+          <div class="review-slider__title">
+            <p>Николай Петров</p>
+          </div>
+
+          <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+            А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+        </div>
+
+        <div class="review-slider__slide" id="slide-3">
+          <div class="review-slider__title">
+            <p>Николай Петров</p>
+          </div>
+
+          <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+            А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+        </div>
+
+        <div class="review-slider__controls">
+          <label for="btn-1"></label>
+          <label for="btn-2"></label>
+          <label for="btn-3"></label>
+        </div>
+      </section>
+
+      <section class="price-slider">
+        <input type="radio" id="btn-4" name="toggle" checked>
+        <input type="radio" id="btn-5" name="toggle">
+        <input type="radio" id="btn-6" name="toggle">
+
+        <div class="price-slider__slides-container">
+          <div class="price-slider__slides">
+            <img src="http://placehold.it/150x80" width="150" height="80" alt="standart-price">
+            <img src="http://placehold.it/150x80" width="150" height="80" alt="standart-price">
+            <img src="http://placehold.it/150x80" width="150" height="80" alt="standart-price">
+          </div>
+        </div>
+
+        <div class="price-slider__controls">
+          <label for="btn-4"></label>
+          <label for="btn-5"></label>
+          <label for="btn-6"></label>
+        </div>
+      </section>
+
+      <section class="contacts">
+        <div class="contacts__info">
+          <p>Остались вопросы? Свяжитесь с нами!</p>
+
+          <p>Звоните:</p>
+          <a class="contacts__tel" href="tel:+78125556666">+7 (812) 555-66-66</a>
+
+          <p>Пишите:</p>
+          <a class="contacts__mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+
+          <p>Приезжайте в гости:</p>
+          <a class="contacts__address" href="https://yandex.ru/maps/-/CVTgZEpc">ул. Большая Конюшенная, 19/8</a>
+        </div>
+
+        <div class="contacts__map"></div>
       </section>
     </main>
   </body>
