@@ -5,7 +5,7 @@
     <title>HTML Academy: Пинк</title>
   </head>
   <body>
-    <header class="main-nav">
+    <header class="page-header">
       <div class="logo">
         <img src="http://placehold.it/20x10" width="20" height="10" alt="logo">
       </div>
@@ -15,10 +15,10 @@
 
         <div class="main-menu__wrapper">
           <ul class="main-menu__list">
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">Фотографии</a></li>
-            <li><a class="main-menu--active-page" href="#">Конкурс</a></li>
-            <li><a href="#">HTML Academy</a></li>
+            <li><a class="main-menu__item"  href="#">Главная</a></li>
+            <li><a class="main-menu__item main-menu__item--active" href="#">Фотографии</a></li>
+            <li><a class="main-menu__item"  href="#">Конкурс</a></li>
+            <li><a class="main-menu__item"  href="#">HTML Academy</a></li>
           </ul>
         </div>
       </div>
@@ -26,7 +26,7 @@
 
     <main>
       <div class="page-title">
-        <h2>Фотографии пользователей</h2>
+        <h1>Фотографии пользователей</h1>
       </div>
 
       <div class="photo-blog">
@@ -36,108 +36,123 @@
         </div>
 
         <article class="photo-blog__post">
-          <header class="photo-blog__post-picture">
+          <div class="photo-blog__post-picture">
             <img src="http://placehold.it/100x40" width="100" height="40" alt="picture">
-          </header>
+          </div>
 
-          <section class="photo-blog__post-content">
-            <b>Анна</b><span>(5 минут назад)</span>
+          <div class="photo-blog__post-content">
+            <div class="photo-blog__post-title">
+              <b>Анна</b><span>(5 минут назад)</span>
+            </div>
 
-            <p>Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе, задавайте свои вопросы!</p>
+            <p>Прыгать или нет? Напишите в коментарии свой совет и
+              смотрите прямую транслацию в перископе, задавайте свои вопросы!</p>
 
-            <a class="photo-blog__post-like-icon" href="#" title="like"></a>
+            <a class="like-icon" href="#" title="like"></a>
             <div class="photo-blog__post-likes">Нравится: 215</div>
-          </section>
+          </div>
         </article>
 
         <article class="photo-blog__post">
-          <header class="photo-blog__post-picture">
+          <div class="photo-blog__post-picture">
             <img src="http://placehold.it/100x40" width="100" height="40" alt="picture">
-          </header>
+          </div>
 
-          <section class="photo-blog__post-content">
-            <b>Левон</b><span>(5 часов назад)</span>
+          <div class="photo-blog__post-content">
+            <div class="photo-blog__post-title">
+              <b>Левон</b><span>(5 часов назад)</span>
+            </div>
 
             <p>Вчера он на луну летал, сегодня в руки к нам попал.</p>
 
-            <a class="photo-blog__post-like-icon" href="#" title="like"></a>
+            <a class="like-icon" href="#" title="like"></a>
             <div class="photo-blog__post-likes">Нравится: 356</div>
-          </section>
+          </div>
         </article>
 
         <article class="photo-blog__post">
-          <header class="photo-blog__post-picture">
+          <div class="photo-blog__post-picture">
             <img src="http://placehold.it/100x40" width="100" height="40" alt="picture">
-          </header>
+          </div>
 
-          <section class="photo-blog__post-content">
-            <b>Антон</b><span>(12 часов назад)</span>
+          <div class="photo-blog__post-content">
+            <div class="photo-blog__post-title">
+              <b>Антон</b><span>(12 часов назад)</span>
+            </div>
 
             <p>Соседи будут рады!</p>
 
-            <a class="photo-blog__post-like-icon" href="#" title="like"></a>
+            <a class="like-icon" href="#" title="like"></a>
             <div class="photo-blog__post-likes">Нравится: 666</div>
-          </section>
+          </div>
         </article>
 
         <article class="photo-blog__post">
-          <header class="photo-blog__post-picture">
+          <div class="photo-blog__post-picture">
             <img src="http://placehold.it/100x40" width="100" height="40" alt="picture">
-          </header>
+          </div>
 
-          <section class="photo-blog__post-content">
-            <b>Борис</b><span>(20 часов назад)</span>
+          <div class="photo-blog__post-content">
+            <div class="photo-blog__post-title">
+              <b>Борис</b><span>(20 часов назад)</span>
+            </div>
 
             <p>Здесь могла быть ваша цитата о высоком и вечном.</p>
 
-            <a class="photo-blog__post-like-icon" href="#" title="like"></a>
+            <a class="like-icon" href="#" title="like"></a>
             <div class="photo-blog__post-likes">Нравится: 215</div>
-          </section>
+          </div>
         </article>
 
         <article class="photo-blog__post">
-          <header class="photo-blog__post-picture">
+          <div class="photo-blog__post-picture">
             <img src="http://placehold.it/100x40" width="100" height="40" alt="picture">
-          </header>
+          </div>
 
-          <section class="photo-blog__post-content">
-            <b>Сергей</b><span>(25 часов назад)</span>
+          <div class="photo-blog__post-content">
+            <div class="photo-blog__post-title">
+              <b>Сергей</b><span>(25 часов назад)</span>
+            </div>
 
             <p>Самая кубанская в мире!</p>
 
-            <a class="photo-blog__post-like-icon" href="#" title="like"></a>
+            <a class="like-icon" href="#" title="like"></a>
             <div class="photo-blog__post-likes">Нравится: 4</div>
-          </section>
+          </div>
         </article>
 
         <article class="photo-blog__post">
-          <header class="photo-blog__post-picture">
+          <div class="photo-blog__post-picture">
             <img src="http://placehold.it/100x40" width="100" height="40" alt="picture">
-          </header>
+          </div>
 
-          <section class="photo-blog__post-content">
-            <b>Максим</b><span>(40 часов назад)</span>
+          <div class="photo-blog__post-content">
+            <div class="photo-blog__post-title">
+              <b>Максим</b><span>(40 часов назад)</span>
+            </div>
 
             <p>Где снег-то?</p>
 
-            <a class="photo-blog__post-like-icon" href="#" title="like"></a>
+            <a class="like-icon" href="#" title="like"></a>
             <div class="photo-blog__post-likes">Нравится: 150</div>
-          </section>
+          </div>
         </article>
 
         <article class="photo-blog__post">
-          <header class="photo-blog__post-picture">
+          <div class="photo-blog__post-picture">
             <img src="http://placehold.it/100x40" width="100" height="40" alt="picture">
-          </header>
+          </div>
 
-          <section class="photo-blog__post-content">
-            <b>Надежда</b><span>(45 часов назад)</span>
+          <div class="photo-blog__post-content">
+            <div class="photo-blog__post-title">
+              <b>Надежда</b><span>(45 часов назад)</span>
+            </div>
 
             <p>Всем GM и взаимные лайки!</p>
 
-            <a class="photo-blog__post-like-icon" href="#" title="like"></a>
+            <a class="like-icon" href="#" title="like"></a>
             <div class="photo-blog__post-likes">Нравится: 2560</div>
-          </section>
+          </div>
         </article>
       </div>
 
@@ -162,8 +177,7 @@
         </fieldset>
 
         <fieldset class="upload-form__range-controls">
-          <div class="upload-form__range-scale"></div>
-          <div class="upload-form__range-toggle"></div>
+          <input type="range" id="range-filter-1" name="range-filter">
         </fieldset>
 
         <fieldset class="upload-form__controls">
@@ -177,9 +191,9 @@
       <div class="logo-glasses"></div>
 
       <ul class="social-links">
-        <li><a class="social-links__icon social-links__icon--twitter" href="#" title="twitter"></a></li>
-        <li><a class="social-links__icon social-links__icon--facebook" href="#" title="facebook"></a></li>
-        <li><a class="social-links__icon social-links__icon--youtube" href="#" title="youtube"></a></li>
+        <li><a class="social-links__icon social-links__icon--twitter" href="#" title="twitter">twitter</a></li>
+        <li><a class="social-links__icon social-links__icon--facebook" href="#" title="facebook">facebook</a></li>
+        <li><a class="social-links__icon social-links__icon--youtube" href="#" title="youtube">youtube</a></li>
       </ul>
 
       <div class="developer">

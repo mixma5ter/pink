@@ -5,7 +5,7 @@
     <title>HTML Academy: Пинк</title>
   </head>
   <body>
-    <header class="main-nav">
+    <header class="page-header">
       <div class="logo">
         <img src="http://placehold.it/20x10" width="20" height="10" alt="logo">
       </div>
@@ -15,10 +15,10 @@
 
         <div class="main-menu__wrapper">
           <ul class="main-menu__list">
-            <li><a class="main-menu--active-page" href="#">Главная</a></li>
-            <li><a href="#">Фотографии</a></li>
-            <li><a href="#">Конкурс</a></li>
-            <li><a href="#">HTML Academy</a></li>
+            <li><a class="main-menu__item main-menu__item--active" href="#">Главная</a></li>
+            <li><a class="main-menu__item" href="#">Фотографии</a></li>
+            <li><a class="main-menu__item" href="#">Конкурс</a></li>
+            <li><a class="main-menu__item" href="#">HTML Academy</a></li>
           </ul>
         </div>
       </div>
@@ -30,9 +30,9 @@
           <a class="intro__download-link" href="#">Скачать приложение</a>
 
           <ul class="intro__icons-list">
-            <li><a class="intro__icon intro__icon--apple" href="#" title="скачать для iOS"></a></li>
-            <li><a class="intro__icon intro__icon--android" href="#" title="скачать для Android"></a></li>
-            <li><a class="intro__icon intro__icon--windows" href="#" title="скачать для Windows"></a></li>
+            <li><a class="intro__icon intro__icon--apple" href="#" title="скачать для iOS">скачать для iOS</a></li>
+            <li><a class="intro__icon intro__icon--android" href="#" title="скачать для Android">скачать для Android</a></li>
+            <li><a class="intro__icon intro__icon--windows" href="#" title="скачать для Windows">скачать для Windows</a></li>
           </ul>
 
           <div class="intro__text">
@@ -41,15 +41,15 @@
         </div>
       </section>
 
-      <div class="promo">
-        <p>Устали от серости мегаполиса?</p>
-        <p>Нам есть, что вам  предложить!</p>
-      </div>
-
       <section class="advantages">
+        <div class="advantages__promo">
+          <p>Устали от серости мегаполиса?</p>
+          <p>Нам есть, что вам  предложить!</p>
+        </div>
+
         <div class="advantages__item">
           <div class="advantages__title">
-            <h2>Поднимает настроение</h2>
+            <b>Поднимает настроение</b>
           </div>
 
           <p>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
@@ -57,7 +57,7 @@
 
         <div class="advantages__item">
           <div class="advantages__title">
-            <h2>Меняет мир вокруг</h2>
+            <b>Меняет мир вокруг</b>
           </div>
 
           <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
@@ -65,7 +65,7 @@
 
         <div class="advantages__item">
           <div class="advantages__title">
-            <h2>Заводит новых друзей</h2>
+            <b>Заводит новых друзей</b>
           </div>
 
           <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
@@ -78,30 +78,30 @@
         <input type="radio" id="btn-3" name="toggle">
 
         <div class="review-slider__slide" id="slide-1">
-          <div class="review-slider__title">
-            <p>Николай Петров</p>
-          </div>
+          <blockquote>
+            <b class="review-slider__title">Николай Петров</b>
 
-          <blockquote>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
-            А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
+            <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+            А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          </blockquote>
         </div>
 
         <div class="review-slider__slide" id="slide-2">
-          <div class="review-slider__title">
-            <p>Николай Петров</p>
-          </div>
+          <blockquote>
+            <b class="review-slider__title">Николай Петров</b>
 
-          <blockquote>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
-            А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
+            <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+              А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          </blockquote>
         </div>
 
         <div class="review-slider__slide" id="slide-3">
-          <div class="review-slider__title">
-            <p>Николай Петров</p>
-          </div>
+          <blockquote>
+            <b class="review-slider__title">Николай Петров</b>
 
-          <blockquote>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
-            А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
+            <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+              А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          </blockquote>
         </div>
 
         <div class="review-slider__controls">
@@ -120,24 +120,24 @@
           <div class="price-slider__slides">
             <table class="price-table">
               <tr>
-                <th>База<span>1,99 USD</span></th>
-                <th class="price-table--hit-logo">Стандарт<span>3,99 USD</span></th>
-                <th>Анлим<span>9,99 USD</span></th>
+                <th class="price-table__title">База<span>1,99 USD</span></th>
+                <th class="price-table__title price-table__title--hit-logo">Стандарт<span>3,99 USD</span></th>
+                <th class="price-table__title">Анлим<span>9,99 USD</span></th>
               </tr>
               <tr>
-                <td>Розовый фильтр<div class="price-table--check-icon-yes"></div></td>
-                <td>Розовый фильтр<div class="price-table--check-icon-no"></div></td>
-                <td>Розовый фильтр<div class="price-table--check-icon-no"></div></td>
+                <td>Розовый фильтр<div class="price-table__check-icon-yes"></div></td>
+                <td>Розовый фильтр<div class="price-table__check-icon-no"></div></td>
+                <td>Розовый фильтр<div class="price-table__check-icon-no"></div></td>
               </tr>
               <tr>
-                <td>Смайлики<div class="price-table--check-icon-yes"></div></td>
-                <td>Смайлики<div class="price-table--check-icon-yes"></div></td>
-                <td>Смайлики<div class="price-table--check-icon-no"></div></td>
+                <td>Смайлики<div class="price-table__check-icon-yes"></div></td>
+                <td>Смайлики<div class="price-table__check-icon-yes"></div></td>
+                <td>Смайлики<div class="price-table__check-icon-no"></div></td>
               </tr>
               <tr>
-                <td>Комментарии<div class="price-table--check-icon-yes"></div></td>
-                <td>Комментарии<div class="price-table--check-icon-yes"></div></td>
-                <td>Комментарии<div class="price-table--check-icon-yes"></div></td>
+                <td>Комментарии<div class="price-table__check-icon-yes"></div></td>
+                <td>Комментарии<div class="price-table__check-icon-yes"></div></td>
+                <td>Комментарии<div class="price-table__check-icon-yes"></div></td>
               </tr>
             </table>
           </div>
