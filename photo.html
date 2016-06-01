@@ -7,18 +7,20 @@
   <body>
     <header class="page-header">
       <div class="logo">
-        <img src="http://placehold.it/20x10" width="20" height="10" alt="logo">
+        <a href="index.html">
+          <img src="http://placehold.it/20x10" width="20" height="10" alt="logo">
+        </a>
       </div>
 
       <div  class="main-menu">
-        <a class="main-menu__burger-button" href="#"></a>
+        <a class="main-menu__toggle" href="#"></a>
 
         <div class="main-menu__wrapper">
           <ul class="main-menu__list">
-            <li><a class="main-menu__item"  href="#">Главная</a></li>
-            <li><a class="main-menu__item main-menu__item--active" href="#">Фотографии</a></li>
-            <li><a class="main-menu__item"  href="#">Конкурс</a></li>
-            <li><a class="main-menu__item"  href="#">HTML Academy</a></li>
+            <li><a class="main-menu__item" href="#">Главная</a></li>
+            <li><a class="main-menu__item  main-menu__item--active">Фотографии</a></li>
+            <li><a class="main-menu__item" href="#">Конкурс</a></li>
+            <li><a class="main-menu__item" href="#">HTML Academy</a></li>
           </ul>
         </div>
       </div>
@@ -26,7 +28,7 @@
 
     <main>
       <div class="page-title">
-        <h1>Фотографии пользователей</h1>
+        <h1 class="page-title__text">Фотографии пользователей</h1>
       </div>
 
       <div class="photo-blog">
@@ -48,7 +50,7 @@
             <p>Прыгать или нет? Напишите в коментарии свой совет и
               смотрите прямую транслацию в перископе, задавайте свои вопросы!</p>
 
-            <a class="like-icon" href="#" title="like"></a>
+            <a class="like-icon" href="#" title="like">&#x2661;</a>
             <div class="photo-blog__post-likes">Нравится: 215</div>
           </div>
         </article>
@@ -65,7 +67,7 @@
 
             <p>Вчера он на луну летал, сегодня в руки к нам попал.</p>
 
-            <a class="like-icon" href="#" title="like"></a>
+            <a class="like-icon" href="#" title="like">&#x2661;</a>
             <div class="photo-blog__post-likes">Нравится: 356</div>
           </div>
         </article>
@@ -82,7 +84,7 @@
 
             <p>Соседи будут рады!</p>
 
-            <a class="like-icon" href="#" title="like"></a>
+            <a class="like-icon" href="#" title="like">&#x2661;</a>
             <div class="photo-blog__post-likes">Нравится: 666</div>
           </div>
         </article>
@@ -99,7 +101,7 @@
 
             <p>Здесь могла быть ваша цитата о высоком и вечном.</p>
 
-            <a class="like-icon" href="#" title="like"></a>
+            <a class="like-icon" href="#" title="like">&#x2661;</a>
             <div class="photo-blog__post-likes">Нравится: 215</div>
           </div>
         </article>
@@ -116,7 +118,7 @@
 
             <p>Самая кубанская в мире!</p>
 
-            <a class="like-icon" href="#" title="like"></a>
+            <a class="like-icon" href="#" title="like">&#x2661;</a>
             <div class="photo-blog__post-likes">Нравится: 4</div>
           </div>
         </article>
@@ -133,7 +135,7 @@
 
             <p>Где снег-то?</p>
 
-            <a class="like-icon" href="#" title="like"></a>
+            <a class="like-icon" href="#" title="like">&#x2661;</a>
             <div class="photo-blog__post-likes">Нравится: 150</div>
           </div>
         </article>
@@ -150,7 +152,7 @@
 
             <p>Всем GM и взаимные лайки!</p>
 
-            <a class="like-icon" href="#" title="like"></a>
+            <a class="like-icon" href="#" title="like">&#x2661;</a>
             <div class="photo-blog__post-likes">Нравится: 2560</div>
           </div>
         </article>
@@ -167,22 +169,22 @@
 
         <fieldset class="upload-form__filter-controls">
           <input type="radio" id="upload-filter-1" name="upload-filter" checked>
-          <label class="upload-form__filter" for="upload-filter-1"></label>
+          <label class="upload-form__filter-toggle" for="upload-filter-1"></label>
 
           <input type="radio" id="upload-filter-2" name="upload-filter">
-          <label class="upload-form__filter" for="upload-filter-2"></label>
+          <label class="upload-form__filter-toggle" for="upload-filter-2"></label>
 
           <input type="radio" id="upload-filter-3" name="upload-filter">
-          <label class="upload-form__filter" for="upload-filter-3"></label>
+          <label class="upload-form__filter-toggle" for="upload-filter-3"></label>
         </fieldset>
 
         <fieldset class="upload-form__range-controls">
           <input type="range" id="range-filter-1" name="range-filter">
         </fieldset>
 
-        <fieldset class="upload-form__controls">
-          <button class="upload-form__controls-submit" type="submit" name="submit" value="Запостить"></button>
-          <button class="upload-form__controls-reset" type="reset" name="reset" value="Отмена" disabled></button>
+        <fieldset class="upload-form__button-wrap">
+          <button class="button" id="submit-btn" type="submit" value="Запостить"></button>
+          <button class="button" id="reset-btn" type="reset" value="Отмена" disabled></button>
         </fieldset>
       </form>
     </main>
@@ -191,9 +193,9 @@
       <div class="logo-glasses"></div>
 
       <ul class="social-links">
-        <li><a class="social-links__icon social-links__icon--twitter" href="#" title="twitter">twitter</a></li>
-        <li><a class="social-links__icon social-links__icon--facebook" href="#" title="facebook">facebook</a></li>
-        <li><a class="social-links__icon social-links__icon--youtube" href="#" title="youtube">youtube</a></li>
+        <li><a class="social-links__icon  social-links__icon--twitter" href="#" title="twitter">twitter</a></li>
+        <li><a class="social-links__icon  social-links__icon--facebook" href="#" title="facebook">facebook</a></li>
+        <li><a class="social-links__icon  social-links__icon--youtube" href="#" title="youtube">youtube</a></li>
       </ul>
 
       <div class="developer">
