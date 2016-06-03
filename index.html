@@ -5,8 +5,163 @@
     <title>HTML Academy: Пинк</title>
   </head>
   <body>
+    <header class="page-header">
+      <a class="logo">
+        <img src="http://placehold.it/20x10" width="20" height="10" alt="logo">
+      </a>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
+      <div  class="main-menu">
+        <a class="main-menu__toggle" href="#"></a>
 
+        <div class="main-menu__wrapper">
+          <ul class="main-menu__list">
+            <li><a class="main-menu__item  main-menu__item--active">Главная</a></li>
+            <li><a class="main-menu__item" href="#">Фотографии</a></li>
+            <li><a class="main-menu__item" href="#">Конкурс</a></li>
+            <li><a class="main-menu__item" href="#">HTML Academy</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro">
+        <div class="intro__content">
+          <a class="button" href="#">Скачать приложение</a>
+
+          <ul class="intro__icons-list">
+            <li><a class="intro__icon  intro__icon--apple" href="#" title="скачать для iOS">скачать для iOS</a></li>
+            <li><a class="intro__icon  intro__icon--android" href="#" title="скачать для Android">скачать для Android</a></li>
+            <li><a class="intro__icon  intro__icon--windows" href="#" title="скачать для Windows">скачать для Windows</a></li>
+          </ul>
+
+          <div class="intro__text">
+            <p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Window</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="advantages">
+        <div class="advantages__promo-wrap">
+          <span class="advantages__promo">Устали от серости мегаполиса?</span>
+          <span class="advantages__promo">Нам есть, что вам  предложить!</span>
+        </div>
+
+        <div class="advantages__item">
+          <b class="advantages__title">Поднимает настроение</b>
+          <p>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+        </div>
+
+        <div class="advantages__item">
+          <b class="advantages__title">Меняет мир вокруг</b>
+          <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+        </div>
+
+        <div class="advantages__item">
+          <b class="advantages__title">Заводит новых друзей</b>
+          <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+        </div>
+      </section>
+
+      <section class="review-slider">
+        <input type="radio" id="btn-1" name="toggle" checked>
+        <input type="radio" id="btn-2" name="toggle">
+        <input type="radio" id="btn-3" name="toggle">
+
+        <div class="review-slider__slide" id="slide-1">
+          <blockquote>
+            <b class="review-slider__title">Николай Петров</b>
+            <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+            А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          </blockquote>
+        </div>
+
+        <div class="review-slider__slide" id="slide-2">
+          <blockquote>
+            <b class="review-slider__title">Николай Петров</b>
+            <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+              А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          </blockquote>
+        </div>
+
+        <div class="review-slider__slide" id="slide-3">
+          <blockquote>
+            <b class="review-slider__title">Николай Петров</b>
+            <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+              А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          </blockquote>
+        </div>
+
+        <div class="review-slider__controls">
+          <label for="btn-1"></label>
+          <label for="btn-2"></label>
+          <label for="btn-3"></label>
+        </div>
+      </section>
+
+      <section class="price-slider">
+        <input type="radio" id="btn-4" name="toggle" checked>
+        <input type="radio" id="btn-5" name="toggle">
+        <input type="radio" id="btn-6" name="toggle">
+
+        <div class="price-slider__slides-container">
+          <div class="price-slider__slides">
+            <table class="price-table">
+              <tr>
+                <th class="price-table__title">База<span class="price-table__price">1,99 USD</span></th>
+                <th class="price-table__title  price-table__title--hit-logo">Стандарт<span class="price-table__price">3,99 USD</span></th>
+                <th class="price-table__title">Анлим<span class="price-table__price">9,99 USD</span></th>
+              </tr>
+              <tr>
+                <td>Розовый фильтр<div class="price-table__check-icon-yes">yes</div></td>
+                <td>Розовый фильтр<div class="price-table__check-icon-no">no</div></td>
+                <td>Розовый фильтр<div class="price-table__check-icon-no">no</div></td>
+              </tr>
+              <tr>
+                <td>Смайлики<div class="price-table__check-icon-yes">yes</div></td>
+                <td>Смайлики<div class="price-table__check-icon-yes">yes</div></td>
+                <td>Смайлики<div class="price-table__check-icon-no">no</div></td>
+              </tr>
+              <tr>
+                <td>Комментарии<div class="price-table__check-icon-yes">yes</div></td>
+                <td>Комментарии<div class="price-table__check-icon-yes">yes</div></td>
+                <td>Комментарии<div class="price-table__check-icon-yes">yes</div></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="price-slider__controls">
+          <label for="btn-4"></label>
+          <label for="btn-5"></label>
+          <label for="btn-6"></label>
+        </div>
+      </section>
+
+      <section class="contacts">
+        <div class="contacts-info">
+          <div class="contacts-info__title-wrap">
+            <h1 class="contacts-info__title">Остались вопросы? Свяжитесь с нами!</h1>
+          </div>
+
+          <div class="contacts-info__phone">
+            <b>Звоните:</b>
+            <a class="contacts-info__data" href="tel:+78125556666">+7 (812) 555-66-66</a>
+          </div>
+
+          <div class="contacts-info__email">
+            <b>Пишите:</b>
+            <a class="contacts-info__data" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </div>
+
+          <div class="contacts-info__address">
+            <b>Приезжайте в гости:</b>
+            <a class="contacts-info__data" href="https://yandex.ru/maps/-/CVTgZEpc">ул. Большая Конюшенная, 19/8</a>
+          </div>
+        </div>
+
+        <div class="contacts-map"></div>
+      </section>
+    </main>
   </body>
 </html>
