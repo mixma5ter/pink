@@ -1,9 +1,24 @@
 .review-slider {
+  padding: 30px 20px;
   font-family: opensans, Arial, sans-serif;
   background: @color-white;
 }
 
-.review-slider__slide {
+.review-slider-slides-container {
+  overflow: hidden;
+}
+
+.review-slider-slides {
+  .clearfix();
+  width: 300%;
+  transition: transform .8s ease;
+}
+
+.review-slider__block {
+  width: 280px;
+  float: left;
+  margin: 0;
+  text-align: center;
   font-size: 14px;
   font-weight: normal;
   line-height: 30px;
@@ -13,4 +28,14 @@
   font-size: 18px;
   font-weight: bold;
   line-height: 30px;
+}
+
+#btn-1:checked ~ .review-slider-slides-container .review-slider-slides {
+  transform: translate(0);
+}
+#btn-2:checked ~ .review-slider-slides-container .review-slider-slides {
+  transform: translate(-280px);
+}
+#btn-3:checked ~ .review-slider-slides-container .review-slider-slides {
+  transform: translate(-560px);
 }

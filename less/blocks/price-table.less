@@ -1,7 +1,15 @@
 .price-table {
+  margin: 0 20px;
+  border-collapse: collapse;
   font-family: opensans, Arial, sans-serif;
   background: @color-white;
-  border-collapse: collapse;
+}
+
+.price-table th,
+.price-table td {
+  box-sizing: border-box;
+  width: 277px;
+  padding: 13px;
 }
 
 .price-table td {
@@ -30,7 +38,7 @@
 
 .price-table__check-icon-yes,
 .price-table__check-icon-no {
-  display: block;
+  float: right;
   position: relative;
   width: 35px;
   height: 35px;

@@ -2,19 +2,34 @@
   font-family: opensans, Arial, sans-serif;
 }
 
+.main-menu__toggle {
+  float: right;
+}
+
+.main-menu__wrap {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+  z-index: 1;
+}
+
 .main-menu__list {
+  padding: 0;
   text-align: center;
   list-style: none;
   background-color: @color-blue;
 }
 
 .main-menu__item {
-  color: @color-white;
   font-size: 18px;
   font-weight: bold;
   line-height: 32px;
   text-transform: uppercase;
   text-decoration: none;
+  color: @color-white;
 }
 
 .main-menu__item:visited {

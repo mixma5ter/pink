@@ -13,7 +13,8 @@
 
       <div  class="main-menu">
         <a class="main-menu__toggle">
-          <img src="img/icon-menu-burger.svg" width="50" height="24" alt="menu-button">
+          <img id="burger-button" src="img/icon-menu-burger.svg" width="50" height="24" alt="menu-button">
+          <img id="burger-close-button" class="hidden" src="img/icon-menu-cross.svg" width="50" height="24" alt="close-button">
         </a>
 
         <div class="main-menu__wrap">
@@ -32,7 +33,7 @@
         <div class="download-app-wallpaper"></div>
 
         <div class="download-app__content">
-          <a class="button" href="#">Скачать приложение</a>
+          <a class="button button--download" href="#">Скачать приложение</a>
 
           <ul class="download-app__icons-list">
             <li><a class="download-app__icon  download-app__icon--apple" href="#" title="скачать для iOS">скачать для iOS</a></li>
@@ -49,7 +50,7 @@
       <section class="advantages">
         <div class="advantages__promo-wrap">
           <span class="advantages__promo">Устали от серости мегаполиса?</span>
-          <br>
+
           <span class="advantages__promo">Нам есть, что вам  предложить!</span>
         </div>
 
@@ -72,32 +73,30 @@
       </section>
 
       <section class="review-slider">
-        <input type="radio" id="btn-1" name="toggle" checked>
-        <input type="radio" id="btn-2" name="toggle">
-        <input type="radio" id="btn-3" name="toggle">
+        <input type="radio" id="btn-1" name="toggle-1" checked>
+        <input type="radio" id="btn-2" name="toggle-1">
+        <input type="radio" id="btn-3" name="toggle-1">
 
-        <div class="review-slider__slide" id="slide-1">
-          <blockquote>
-            <b class="review-slider__title">Николай Петров</b>
-            <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
-            А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-          </blockquote>
-        </div>
-
-        <div class="review-slider__slide" id="slide-2">
-          <blockquote>
-            <b class="review-slider__title">Николай Петров</b>
-            <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+        <div class="review-slider-slides-container">
+          <div class="review-slider-slides">
+            <blockquote class="review-slider__block">
+              <b class="review-slider__title">Николай Петров</b>
+              <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
               А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-          </blockquote>
-        </div>
+            </blockquote>
 
-        <div class="review-slider__slide" id="slide-3">
-          <blockquote>
-            <b class="review-slider__title">Николай Петров</b>
-            <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
-              А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-          </blockquote>
+            <blockquote class="review-slider__block">
+              <b class="review-slider__title">Николай Петров</b>
+              <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+                А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+            </blockquote>
+
+            <blockquote class="review-slider__block">
+              <b class="review-slider__title">Николай Петров</b>
+              <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+                А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+            </blockquote>
+          </div>
         </div>
 
         <div class="review-slider__controls">
@@ -108,9 +107,9 @@
       </section>
 
       <section class="price-slider">
-        <input type="radio" id="btn-4" name="toggle" checked>
-        <input type="radio" id="btn-5" name="toggle">
-        <input type="radio" id="btn-6" name="toggle">
+        <input type="radio" id="btn-4" name="toggle-2">
+        <input type="radio" id="btn-5" name="toggle-2" checked>
+        <input type="radio" id="btn-6" name="toggle-2">
 
         <div class="price-slider__slides-container">
           <div class="price-slider__slides">
@@ -158,21 +157,18 @@
             <span class="contacts-info__title">Остались вопросы? <br>Свяжитесь с нами!</span>
           </div>
 
-          <div class="contacts-info__data-title">
-            <b>Звоните:</b>
-            <br>
+          <div class="contacts-info__data-wrap">
+            <div class="contacts-info__data-title">Звоните:</div>
             <a class="contacts-info__data" href="tel:+78125556666">+7 (812) 555-66-66</a>
           </div>
 
-          <div class="contacts-info__data-title">
-            <b>Пишите:</b>
-            <br>
+          <div class="contacts-info__data-wrap">
+            <div class="contacts-info__data-title">Пишите:</div>
             <a class="contacts-info__data" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </div>
 
-          <div class="contacts-info__data-title">
-            <b>Приезжайте в гости:</b>
-            <br>
+          <div class="contacts-info__data-wrap">
+            <div class="contacts-info__data-title">Приезжайте в гости:</div>
             <a class="contacts-info__data" href="https://yandex.ru/maps/-/CVTgZEpc">ул. Большая Конюшенная, 19/8</a>
           </div>
         </div>
