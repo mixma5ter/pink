@@ -1,23 +1,23 @@
 .price-slider {
   padding-bottom: 30px;
   background: @color-grey-light;
-}
 
-.price-slider:before {
-  content: '';
-  display: block;
-  height: 30px;
-  background: url('../../img/bg-triangle-white.svg') no-repeat left -65px;
-}
+  &:before {
+    content: '';
+    display: block;
+    height: 30px;
+    background: url('../../img/bg-triangle-white.svg') no-repeat left -65px;
+  }
 
-.price-slider__slides-container {
-  overflow: hidden;
-  margin: 30px 0;
-}
+  &__slides-container {
+    overflow: hidden;
+    margin: 30px 0;
+  }
 
-.price-slider__slides {
-  width: 300%;
-  transition: transform .8s ease;
+  &__slides {
+    width: 300%;
+    transition: transform .8s ease;
+  }
 }
 
 #btn-4:checked ~ .price-slider__slides-container .price-slider__slides {

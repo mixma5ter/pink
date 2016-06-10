@@ -14,14 +14,14 @@
       <div  class="main-menu">
         <a class="main-menu__toggle">
           <img id="burger-button" src="img/icon-menu-burger.svg" width="50" height="24" alt="menu-button">
-          <img id="burger-close-button" class="hidden" src="img/icon-menu-cross.svg" width="50" height="24" alt="close-button">
+          <img id="burger-close-button" class="main-menu__close-button" src="img/icon-menu-cross.svg" width="50" height="24" alt="close-button">
         </a>
 
         <div class="main-menu__wrap">
           <ul class="main-menu__list">
             <li><a class="main-menu__item  main-menu__item--active">Главная</a></li>
-            <li><a class="main-menu__item" href="#">Фотографии</a></li>
-            <li><a class="main-menu__item" href="#">Конкурс</a></li>
+            <li><a class="main-menu__item" href="photo.html">Фотографии</a></li>
+            <li><a class="main-menu__item" href="form.html">Конкурс</a></li>
             <li><a class="main-menu__item" href="#">HTML Academy</a></li>
           </ul>
         </div>
@@ -30,8 +30,6 @@
 
     <main>
       <section class="download-app">
-        <div class="download-app-wallpaper"></div>
-
         <div class="download-app__content">
           <a class="button button--download" href="#">Скачать приложение</a>
 
@@ -77,8 +75,8 @@
         <input type="radio" id="btn-2" name="toggle-1">
         <input type="radio" id="btn-3" name="toggle-1">
 
-        <div class="review-slider-slides-container">
-          <div class="review-slider-slides">
+        <div class="review-slider__slides-container">
+          <div class="review-slider__slides">
             <blockquote class="review-slider__block">
               <b class="review-slider__title">Николай Петров</b>
               <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
@@ -126,19 +124,19 @@
                 </th>
               </tr>
               <tr>
-                <td>Розовый фильтр<div class="price-table__check-icon-yes">yes</div></td>
-                <td>Розовый фильтр<div class="price-table__check-icon-yes">yes</div></td>
-                <td>Розовый фильтр<div class="price-table__check-icon-yes">yes</div></td>
+                <td>Розовый фильтр<div class="price-table__check-icon-yes">есть</div></td>
+                <td>Розовый фильтр<div class="price-table__check-icon-yes">есть</div></td>
+                <td>Розовый фильтр<div class="price-table__check-icon-yes">есть</div></td>
               </tr>
               <tr>
-                <td>Смайлики<div class="price-table__check-icon-no">no</div></td>
-                <td>Смайлики<div class="price-table__check-icon-yes">yes</div></td>
-                <td>Смайлики<div class="price-table__check-icon-yes">yes</div></td>
+                <td>Смайлики<div class="price-table__check-icon-no">нет</div></td>
+                <td>Смайлики<div class="price-table__check-icon-yes">есть</div></td>
+                <td>Смайлики<div class="price-table__check-icon-yes">есть</div></td>
               </tr>
               <tr>
-                <td>Комментарии<div class="price-table__check-icon-no">no</div></td>
-                <td>Комментарии<div class="price-table__check-icon-no">no</div></td>
-                <td>Комментарии<div class="price-table__check-icon-yes">yes</div></td>
+                <td>Комментарии<div class="price-table__check-icon-no">нет</div></td>
+                <td>Комментарии<div class="price-table__check-icon-no">нет</div></td>
+                <td>Комментарии<div class="price-table__check-icon-yes">есть</div></td>
               </tr>
             </table>
           </div>

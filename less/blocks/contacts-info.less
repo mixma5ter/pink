@@ -1,40 +1,41 @@
 .contacts-info {
   padding: 30px 40px;
   text-align: center;
-  font-family: opensans, Arial, sans-serif;
+  font-family: @font-family-main;
+
+  &__data:link,
+  &__data:visited,
+  &__data:active {
+    color: #d22856;
+    text-decoration: none;
+  }
+
+  &__title-wrap {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    font-size: @font-size-big;
+    font-weight: 100;
+    line-height: 1.42;
+  }
+
+  &__data-wrap {
+    margin-bottom: 15px;
+  }
+
+  &__data-title {
+    font-size: @font-size-main;
+    font-weight: bold;
+    line-height: 1.55;
+  }
+
+  &__data {
+    font-size: 24px;
+    font-weight: 100;
+    line-height: 1.5;
+  }
 }
 
-.contacts-info__title-wrap {
-  margin-bottom: 30px;
-}
-
-.contacts-info__title {
-  font-size: 24px;
-  font-weight: 100;
-  line-height: 34px;
-}
-
-.contacts-info__data-wrap {
-  margin-bottom: 15px;
-}
-
-.contacts-info__data-title {
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 28px;
-}
-
-.contacts-info__data {
-  font-size: 24px;
-  font-weight: 100;
-  line-height: 36px;
-}
-
-.contacts-info__data:link,
-.contacts-info__data:visited,
-.contacts-info__data:active {
-  color: #d22856;
-  text-decoration: none;
-}
 
 

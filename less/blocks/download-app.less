@@ -1,54 +1,66 @@
-.download-app-wallpaper {
-  height: 463px;
-  background:
-    url('../../img/iphone-hand-mobile@1x.png') no-repeat left bottom,
-    url('../../img/bg-back-mobile@1x.jpg') no-repeat;
-  background-color: @color-blue-dark;
+.download-app {
+
+  &::before {
+    content: '';
+    display: block;
+    height: 463px;
+    background:
+      url('../../img/iphone-hand-mobile@1x.png') no-repeat left bottom,
+      url('../../img/bg-back-mobile@1x.jpg') no-repeat;
+    background-color: @color-blue-dark;
+  }
+
+  &__icon:visited {
+    color: @color-white;
+  }
+
+  &__content {
+    padding: 20px;
+    text-align: center;
+    background-color: @color-blue-dark;
+  }
+
+  &__icons-list {
+    padding: 0;
+    font-size: 0;
+    list-style: none;
+    margin-bottom: 10px;
+
+    li {
+      display: inline-block;
+      vertical-align: bottom;
+      margin: 0 15px;
+    }
+  }
+
+  &__icon {
+    display: block;
+    width: 50px;
+    height: 60px;
+    text-decoration: none;
+  }
+
+  &__text {
+    font-family: @font-family-main;
+    font-size: @font-size-small;
+    font-weight: 100;
+    line-height: 1.7;
+    color: @color-white;
+  }
+
+  &__icon--apple {
+    height: 56px;
+    background: url('../../img/logo-apple.svg') no-repeat center;
+  }
+
+  &__icon--android {
+    height: 51px;
+    background: url('../../img/logo-android.svg') no-repeat center;
+  }
+
+  &__icon--windows {
+    height: 50px;
+    background: url('../../img/logo-microsoft.svg') no-repeat center;
+  }
 }
 
-.download-app__content {
-  padding: 20px;
-  text-align: center;
-  background-color: @color-blue-dark;
-}
-
-.download-app__icons-list {
-  padding: 0;
-  font-size: 0;
-  list-style: none;
-}
-
-.download-app__icons-list li {
-  display: inline-block;
-}
-
-.download-app__icon {
-  display: block;
-  width: 50px;
-  height: 60px;
-  text-decoration: none;
-}
-
-.download-app__icon:visited {
-  color: @color-white;
-}
-
-.download-app__icon--apple {
-  background: url('../../img/logo-apple.svg') no-repeat center;
-}
-
-.download-app__icon--android {
-  background: url('../../img/logo-android.svg') no-repeat center;
-}
-
-.download-app__icon--windows {
-  background: url('../../img/logo-microsoft.svg') no-repeat center;
-}
-
-.download-app__text {
-  font-family: opensans, Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 100;
-  line-height: 24px;
-  color: @color-white;
-}

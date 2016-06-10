@@ -5,11 +5,12 @@
   background:
     url('../../img/icon-map-marker.svg') no-repeat 53% 65%,
     url('../../img/bg-map-mobile@1x.png') no-repeat 0 bottom;
+
+  &::before {
+    content: '';
+    display: block;
+    height: 40px;
+    background: url('../../img/bg-triangle-white-footer.svg') no-repeat center -25px;
+  }
 }
 
-.contacts-map::before {
-  content: '';
-  display: block;
-  height: 40px;
-  background: url('../../img/bg-triangle-white-footer.svg') no-repeat center -25px;
-}

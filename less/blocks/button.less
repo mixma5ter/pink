@@ -1,22 +1,33 @@
 .button {
-  display: inline-block;
+  display: block;
   box-sizing: border-box;
   margin-bottom: 20px;
   padding: 15px;
   border: 2px solid white;
   border-radius: 30px;
-  font-family: opensans, Arial, sans-serif;
-  text-decoration: none;
-}
-
-.button--download {
-  padding: 20px 35px;
-  border: 3px solid white;
-  font-size: 18px;
+  font-family: @font-family-main;
+  font-size: @font-size-main;
   font-weight: bold;
-  line-height: 18px;
-}
+  text-decoration: none;
 
-.button--download:visited {
-  color: @color-white;
+  &--download:visited {
+    color: @color-white;
+  }
+
+  &--download {
+    padding: 20px 35px;
+    border: 3px solid white;
+    line-height: 1;
+  }
+
+  &--send-form {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 51px;
+    border-radius: 5px;
+    color: @color-white;
+    background-color: @color-green;
+    line-height: 1.66;
+    text-transform: uppercase;
+  }
 }

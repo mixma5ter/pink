@@ -1,96 +1,96 @@
 .price-table {
   margin: 0 20px;
   border-collapse: collapse;
-  font-family: opensans, Arial, sans-serif;
+  font-family: @font-family-main;
   background: @color-white;
+
+  th, td {
+    box-sizing: border-box;
+    width: 277px;
+    padding: 13px;
+  }
+
+  td {
+    font-size: @font-size-small;
+    font-weight: normal;
+    line-height: 2.14;
+    text-transform: uppercase;
+    border: 2px solid #e5e5e5;
+  }
+
+  &__check-icon-yes::before,
+  &__check-icon-yes::after,
+  &__check-icon-no::before,
+  &__check-icon-no::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    border-radius: 5px;
+  }
+
+  &__check-icon-yes::before {
+    top: 63%;
+    left: -1%;
+    width: 15px;
+    background-color: #3dc644;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  &__check-icon-yes::after {
+    top: 45%;
+    left: 18%;
+    width: 31px;
+    background-color: #3dc644;
+    -webkit-transform: rotate(-47deg);
+    -ms-transform: rotate(-47deg);
+    transform: rotate(-47deg);
+  }
+
+  &__check-icon-no::before {
+    top: 45%;
+    left: -5%;
+    width: 35px;
+    background-color: #f25b26;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  &__check-icon-no::after {
+    top: 45%;
+    left: -5%;
+    width: 35px;
+    background-color: #f25b26;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  &__title {
+    color: @color-white;
+    font-size: @font-size-main;
+    font-weight: bold;
+    line-height: 1.66;
+    text-transform: uppercase;
+    background: @color-blue;
+    border: 2px solid #e5e5e5;
+  }
+
+  &__price {
+    font-size: @font-size-big;
+    font-weight: 100;
+    line-height: 1.25;
+  }
+
+  &__check-icon-yes,
+  &__check-icon-no {
+    float: right;
+    position: relative;
+    width: 35px;
+    height: 35px;
+    font-size: 0;
+  }
 }
 
-.price-table th,
-.price-table td {
-  box-sizing: border-box;
-  width: 277px;
-  padding: 13px;
-}
-
-.price-table td {
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 30px;
-  text-transform: uppercase;
-  border: 2px solid #e5e5e5;
-}
-
-.price-table__title {
-  color: @color-white;
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 30px;
-  text-transform: uppercase;
-  background: @color-blue;
-  border: 2px solid #e5e5e5;
-}
-
-.price-table__price {
-  font-size: 24px;
-  font-weight: 100;
-  line-height: 30px;
-}
-
-.price-table__check-icon-yes,
-.price-table__check-icon-no {
-  float: right;
-  position: relative;
-  width: 35px;
-  height: 35px;
-  font-size: 0;
-}
-
-.price-table__check-icon-yes::before,
-.price-table__check-icon-yes::after,
-.price-table__check-icon-no::before,
-.price-table__check-icon-no::after {
-  content: '';
-  position: absolute;
-  height: 3px;
-  border-radius: 5px;
-}
-
-.price-table__check-icon-yes::before {
-  top: 63%;
-  left: -1%;
-  width: 15px;
-  background-color: #3dc644;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.price-table__check-icon-yes::after {
-  top: 45%;
-  left: 18%;
-  width: 31px;
-  background-color: #3dc644;
-  -webkit-transform: rotate(-47deg);
-  -ms-transform: rotate(-47deg);
-  transform: rotate(-47deg);
-}
-
-.price-table__check-icon-no::before {
-  top: 45%;
-  left: -5%;
-  width: 35px;
-  background-color: #f25b26;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.price-table__check-icon-no::after {
-  top: 45%;
-  left: -5%;
-  width: 35px;
-  background-color: #f25b26;
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
