@@ -2,21 +2,25 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Пинк</title>
   </head>
   <body>
     <header class="page-header">
       <a class="logo" href="index.html">
-        <img src="http://placehold.it/20x10" width="20" height="10" alt="logo">
+        <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="logo">
       </a>
 
       <div  class="main-menu">
-        <a class="main-menu__toggle" href="#"></a>
+        <a class="main-menu__toggle">
+          <img id="burger-button" src="img/icon-menu-burger.svg" width="50" height="24" alt="menu-button">
+          <img id="burger-close-button" class="main-menu__close-button" src="img/icon-menu-cross.svg" width="50" height="24" alt="close-button">
+        </a>
 
-        <div class="main-menu__wrapper">
+        <div class="main-menu__wrap">
           <ul class="main-menu__list">
-            <li><a class="main-menu__item" href="#">Главная</a></li>
-            <li><a class="main-menu__item" href="#">Фотографии</a></li>
+            <li><a class="main-menu__item" href="index.html">Главная</a></li>
+            <li><a class="main-menu__item" href="photo.html">Фотографии</a></li>
             <li><a class="main-menu__item  main-menu__item--active">Конкурс</a></li>
             <li><a class="main-menu__item" href="#">HTML Academy</a></li>
           </ul>
@@ -32,7 +36,7 @@
       <form class="contest-form" action="https://echo.htmlacademy.ru" method="post">
         <div class="contest-form__title">
           <p>Поделитесь своей историей и получите шанс выиграть ценный приз —
-          1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
+          1000 миль на вашу бонусную карту!</p>
         </div>
 
         <label class="text-field">
@@ -83,12 +87,12 @@
               <span class="checkbox-field__input-text">Накупил сувениров</span>
             </label>
 
-            <label class="checkbox-field__label">
+            <label class="checkbox-field">
               <input class="checkbox-field__input" type="checkbox" id="checkbox-5" name="user_achievements" checked>
               <span class="checkbox-field__input-text">Удержал башню</span>
             </label>
 
-            <label class="checkbox-field__label">
+            <label class="checkbox-field">
               <input class="checkbox-field__input" type="checkbox" id="checkbox-6" name="user_achievements">
               <span class="checkbox-field__input-text">Разгромил отель</span>
             </label>
@@ -133,14 +137,14 @@
         </fieldset>
 
         <label class="text-field">
-          <div class="text-field__title">Опишите свои эмоции</div>
+          <div class="text-field__title  text-field__title--center">Опишите свои эмоции</div>
 
           <div class="text-field__input-wrap">
             <textarea class="text-field__input" name="user_review" rows="5" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </div>
         </label>
 
-        <input class="button" type="submit" value="Отправить форму" name="contest_form_submit">
+        <input class="button  button--green" type="submit" value="Отправить форму" name="contest_form_submit">
 
         <div class="contest-form__required-text"><span>*</span> — обязательные поля</div>
 
@@ -153,7 +157,7 @@
             В ближайшее время мы рассмотрим ее и оповестим вас.</p>
 
           <div class="popup__button-wrapper">
-            <button class="button" type="button" value="ЗАКРЫТЬ ОКНО"></button>
+            <button class="button  button--green" type="button">Закрыть окно</button>
           </div>
         </div>
 
@@ -164,13 +168,13 @@
 
           <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
 
-          <button class="button" type="button" value="OK"></button>
+          <button class="button  button--green" type="button">Ok</button>
         </div>
       </form>
     </main>
 
     <footer class="page-footer">
-      <img class="logo-glasses" src="http://placehold.it/20x20" width="20" height="20" alt="logo">
+      <img class="logo-glasses" src="/img/logo-pink-blue-mobile.svg" width="147" height="40" alt="logo">
 
       <ul class="social-links">
         <li><a class="social-links__icon  social-links__icon--twitter" href="#" title="twitter">twitter</a></li>
@@ -178,10 +182,10 @@
         <li><a class="social-links__icon  social-links__icon--youtube" href="#" title="youtube">youtube</a></li>
       </ul>
 
-      <div class="developer">
+      <a class="developer" href="https://htmlacademy.ru/">
         <span class="developer__text">Разработано</span>
-        <img src="http://placehold.it/10x10" width="10" height="10" alt="dev_logo">
-      </div>
+        <img src="img/logo-htmlacademy.svg" width="27" height="34" alt="dev_logo">
+      </a>
     </footer>
   </body>
 </html>

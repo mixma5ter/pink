@@ -2,22 +2,26 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Пинк</title>
   </head>
   <body>
     <header class="page-header">
       <a class="logo" href="index.html">
-        <img src="http://placehold.it/20x10" width="20" height="10" alt="logo">
+        <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="logo">
       </a>
 
       <div  class="main-menu">
-        <a class="main-menu__toggle" href="#"></a>
+        <a class="main-menu__toggle">
+          <img id="burger-button" src="img/icon-menu-burger.svg" width="50" height="24" alt="menu-button">
+          <img id="burger-close-button" class="main-menu__close-button" src="img/icon-menu-cross.svg" width="50" height="24" alt="close-button">
+        </a>
 
-        <div class="main-menu__wrapper">
+        <div class="main-menu__wrap">
           <ul class="main-menu__list">
-            <li><a class="main-menu__item" href="#">Главная</a></li>
+            <li><a class="main-menu__item" href="index.html">Главная</a></li>
             <li><a class="main-menu__item  main-menu__item--active">Фотографии</a></li>
-            <li><a class="main-menu__item" href="#">Конкурс</a></li>
+            <li><a class="main-menu__item" href="form.html">Конкурс</a></li>
             <li><a class="main-menu__item" href="#">HTML Academy</a></li>
           </ul>
         </div>
@@ -37,7 +41,7 @@
 
         <article class="photo-blog__post">
           <div class="photo-blog__post-picture">
-            <img src="http://placehold.it/100x40" width="100" height="40" alt="picture">
+            <img src="img/panorama-mobile@1x.jpg" width="280" height="180" alt="picture">
           </div>
 
           <div class="photo-blog__post-content">
@@ -55,7 +59,7 @@
 
         <article class="photo-blog__post">
           <div class="photo-blog__post-picture">
-            <img src="http://placehold.it/100x40" width="100" height="40" alt="picture">
+            <img src="/img/photo-1-mobile@1x.jpg" width="280" height="180" alt="picture">
           </div>
 
           <div class="photo-blog__post-content">
@@ -72,7 +76,7 @@
 
         <article class="photo-blog__post">
           <div class="photo-blog__post-picture">
-            <img src="http://placehold.it/100x40" width="100" height="40" alt="picture">
+            <img src="img/photo-2-mobile@1x.jpg" width="280" height="180" alt="picture">
           </div>
 
           <div class="photo-blog__post-content">
@@ -89,7 +93,7 @@
 
         <article class="photo-blog__post">
           <div class="photo-blog__post-picture">
-            <img src="http://placehold.it/100x40" width="100" height="40" alt="picture">
+            <img src="img/photo-3-mobile@1x.jpg" width="280" height="180" alt="picture">
           </div>
 
           <div class="photo-blog__post-content">
@@ -106,7 +110,7 @@
 
         <article class="photo-blog__post">
           <div class="photo-blog__post-picture">
-            <img src="http://placehold.it/100x40" width="100" height="40" alt="picture">
+            <img src="img/photo-4-mobile@1x.jpg" width="280" height="180" alt="picture">
           </div>
 
           <div class="photo-blog__post-content">
@@ -123,7 +127,7 @@
 
         <article class="photo-blog__post">
           <div class="photo-blog__post-picture">
-            <img src="http://placehold.it/100x40" width="100" height="40" alt="picture">
+            <img src="img/photo-5-mobile@1x.jpg" width="280" height="180" alt="picture">
           </div>
 
           <div class="photo-blog__post-content">
@@ -140,7 +144,7 @@
 
         <article class="photo-blog__post">
           <div class="photo-blog__post-picture">
-            <img src="http://placehold.it/100x40" width="100" height="40" alt="picture">
+            <img src="img/photo-6-mobile@1x.jpg" width="280" height="180" alt="picture">
           </div>
 
           <div class="photo-blog__post-content">
@@ -188,7 +192,7 @@
     </main>
 
     <footer class="page-footer">
-      <img class="logo-glasses" src="http://placehold.it/20x20" width="20" height="20" alt="logo">
+      <img class="logo-glasses" src="/img/logo-pink-blue-mobile.svg" width="147" height="40" alt="logo">
 
       <ul class="social-links">
         <li><a class="social-links__icon  social-links__icon--twitter" href="#" title="twitter">twitter</a></li>
@@ -196,10 +200,10 @@
         <li><a class="social-links__icon  social-links__icon--youtube" href="#" title="youtube">youtube</a></li>
       </ul>
 
-      <div class="developer">
+      <a class="developer" href="https://htmlacademy.ru/">
         <span class="developer__text">Разработано</span>
-        <img src="http://placehold.it/10x10" width="10" height="10" alt="dev_logo">
-      </div>
+        <img src="img/logo-htmlacademy.svg" width="27" height="34" alt="dev_logo">
+      </a>
     </footer>
   </body>
 </html>
