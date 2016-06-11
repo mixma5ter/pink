@@ -1,6 +1,18 @@
 .text-field {
   text-align: left;
 
+  &__input::-webkit-input-placeholder {color: @color-blue-dark;}
+  &__input::-moz-placeholder {color: @color-blue-dark;}
+  &__input::-ms-input-placeholder {color: @color-blue-dark;}
+  &__input:-moz-placeholder {color: @color-blue-dark;}
+  &__input:-ms-input-placeholder {color: @color-blue-dark;}
+
+  &__input:focus::-webkit-input-placeholder {color: transparent;}
+  &__input:focus::-moz-placeholder {color: transparent;}
+  &__input:focus::-ms-input-placeholder {color: transparent;}
+  &__input:focus:-moz-placeholder {color: transparent;}
+  &__input:focus:-ms-input-placeholder  {color: transparent;}
+
   &__title {
     margin-left: 36px;
     color: @color-pink;
@@ -23,7 +35,7 @@
     padding: 15px 20px;
     border: 2px solid #e7e7e7;
     border-radius: 2px;
-    color: #283645;
+    color: @color-blue-dark;
     font-size: @font-size-main;
     font-weight: normal;
     line-height: 1.66;
