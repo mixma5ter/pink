@@ -1,7 +1,6 @@
 .price-table {
   .centering();
   border-collapse: collapse;
-  background: @color-white;
 
   th, td {
     box-sizing: border-box;
@@ -15,6 +14,7 @@
     line-height: 2.14;
     text-transform: uppercase;
     border: 2px solid #e5e5e5;
+    background: @color-white;
   }
 
   &__check-icon-yes::before,
@@ -112,7 +112,7 @@
       display: table-cell;
     }
 
-    &__hide {
+    &__hidden-text {
       display: none;
     }
 
