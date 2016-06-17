@@ -1,16 +1,35 @@
 .contacts-map {
-  height: 200px;
+  position: relative;
   width: 100%;
+  min-height: 130px;
+  padding-top: 50%;
   font-size: 0;
-  background:
-    url('../../img/icon-map-marker.svg') no-repeat 53% 65%,
-    url('../../img/bg-map-mobile@1x.png') no-repeat 0 bottom;
+  background: url('../../img/map-small.png') no-repeat bottom;
+  background-size: cover;
 
   &::before {
     content: '';
+    position: absolute;
+    top: 0;
     display: block;
-    height: 40px;
-    background: url('../../img/bg-triangle-white-footer.svg') no-repeat center -25px;
+    width: 100%;
+    height: 111px;
+    background: url('../../img/bg-triangle-white-footer.svg') no-repeat center 0;
   }
 }
 
+@media (min-width: 600px) {
+  .contacts-map {
+    padding-top: 40%;
+    background: url('../../img/map-mid.png') no-repeat bottom;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 1000px) {
+  .contacts-map {
+    padding-top: 33%;
+    background: url('../../img/map-big.png') no-repeat bottom;
+    background-size: cover;
+  }
+}

@@ -1,6 +1,27 @@
 .page-footer {
-  padding: 20px;
+  padding: 20px 6%;
   padding-bottom: 0;
   background: @color-white;
   text-align: center;
+
+  &--hidden {
+    display: none;
+  }
+}
+
+@media @tablet-width {
+  .page-footer {
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+    padding: 20px 5%;
+  }
+}
+
+@media @desktop-width {
+  .page-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10%;
+  }
 }

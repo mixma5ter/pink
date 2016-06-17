@@ -1,6 +1,5 @@
 .review-slider {
-  padding: 30px 20px;
-  font-family: @font-family-main;
+  padding: 30px 6%;
   background: @color-white;
 
   &__slides-container {
@@ -11,11 +10,10 @@
     .clearfix();
     width: 300%;
     transition: transform .8s ease;
+    display: flex;
   }
 
-  &__block {
-    width: 280px;
-    float: left;
+  &__item {
     margin: 0;
     text-align: center;
     font-size: @font-size-small;
@@ -29,14 +27,89 @@
     font-weight: bold;
     line-height: 1.66;
   }
+
+  &__author {
+    display: none;
+    .centering();
+  }
 }
 
 #btn-1:checked ~ .review-slider__slides-container .review-slider__slides {
   transform: translate(0);
 }
 #btn-2:checked ~ .review-slider__slides-container .review-slider__slides {
-  transform: translate(-280px);
+  transform: translate(-33.3%);
 }
 #btn-3:checked ~ .review-slider__slides-container .review-slider__slides {
-  transform: translate(-560px);
+  transform: translate(-66.6%);
+}
+
+@media @tablet-width {
+  .review-slider {
+    padding: 30px 5%;
+
+    &__item {
+      width: 100%;
+      font-size: @font-size-main;
+      line-height: 1.6;
+
+      p {
+        max-width: 630px;
+        .centering();
+      }
+    }
+
+    &__title {
+      display: none;
+    }
+
+    &__author {
+      display: block;
+      width: 300px;
+      font-size: @font-size-small;
+      font-weight: normal;
+      line-height: 2.14;
+    }
+
+    &__author-title {
+      display: block;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 1.5;
+      color: @color-black;
+    }
+  }
+}
+
+@media @desktop-width {
+  .review-slider {
+    background: @color-white url('../../img/quotes.png') no-repeat center 40px;
+
+    &__slides-container {
+      margin-top: 60px;
+    }
+
+    &__item {
+      font-size: @font-size-main;
+      line-height: 1.6;
+
+      p {
+        max-width: 720px;
+      }
+    }
+
+    &__quotes {
+      display: none;
+    }
+
+    &__author {
+      font-size: @font-size-main;
+      line-height: 1.6;
+    }
+
+    &__author-title {
+      font-size: 24px;
+      line-height: 1.25;
+    }
+  }
 }

@@ -1,8 +1,7 @@
 .developer {
   display: block;
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
+  width: 150px;
+  .centering();
   font-family: @font-family-main;
   text-decoration: none;
 
@@ -21,5 +20,11 @@
     font-size: @font-size-small;
     font-weight: normal;
     line-height: 1.28;
+  }
+}
+
+@media @tablet-width {
+  .developer {
+    margin: 0;
   }
 }

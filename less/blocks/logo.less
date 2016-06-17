@@ -1,3 +1,22 @@
 .logo {
-  float: left;
+  //float: left;
+  width: 75px;
+  height: 23px;
+  background: url('../../img/logo-pink-white-mobile.svg') no-repeat center;
+}
+
+@media @tablet-width {
+  .logo {
+    width: 147px;
+    height: 40px;
+    background: url('../../img/logotype-white-tablet.png') no-repeat center;
+  }
+}
+
+@media @desktop-width {
+  .logo {
+    margin-left: 42px;
+    margin-right: 42px;
+    background: url('../../img/logotype-white-desktop.png') no-repeat center;
+  }
 }

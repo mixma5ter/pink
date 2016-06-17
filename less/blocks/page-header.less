@@ -1,8 +1,28 @@
 .page-header {
+  max-width: 1320px;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
   position: absolute;
   top: 0;
   box-sizing: border-box;
-  width: 320px;
+  width: 100%;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+@media @tablet-width {
+  .page-header {
+    padding-left: 40px;
+    padding-right: 40px;
+    min-height: 110px;
+  }
+}
+
+@media @desktop-width {
+  .page-header {
+    padding-left: 130px;
+    padding-right: 130px;
+  }
 }

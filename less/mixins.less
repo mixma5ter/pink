@@ -1,5 +1,12 @@
 .clearfix() {
-  content: '';
-  display: table;
-  clear: both;
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+.centering() {
+  margin-left: auto;
+  margin-right: auto;
 }

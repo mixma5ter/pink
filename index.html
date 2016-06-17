@@ -2,14 +2,13 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Пинк</title>
   </head>
   <body>
     <header class="page-header">
-      <a class="logo">
-        <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="logo">
-      </a>
+      <a class="logo"></a>
 
       <div  class="main-menu">
         <a class="main-menu__toggle">
@@ -31,6 +30,8 @@
     <main>
       <section class="download-app">
         <div class="download-app__content">
+          <h1 class="download-app__title">Взгляните на жизнь иначе!</h1>
+
           <a class="button button--download" href="#">Скачать приложение</a>
 
           <ul class="download-app__icons-list">
@@ -48,25 +49,36 @@
       <section class="advantages">
         <div class="advantages__promo-wrap">
           <span class="advantages__promo">Устали от серости мегаполиса?</span>
-
           <span class="advantages__promo">Нам есть, что вам  предложить!</span>
         </div>
 
-        <div class="advantages__item-wrap">
-          <div class="advantages__item">
-            <b class="advantages__title">Поднимает настроение</b>
-            <p>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-          </div>
+        <div class="advantages__item-container">
+          <div class="advantages__item-wrap">
+            <div class="advantages__item  advantages__item--screen-1">
+              <b class="advantages__title">Поднимает настроение</b>
+              <p>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+            </div>
 
-          <div class="advantages__item">
-            <b class="advantages__title">Меняет мир вокруг</b>
-            <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-          </div>
+            <div class="advantages__item  advantages__item--screen-2">
+              <b class="advantages__title">Меняет мир вокруг</b>
+              <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+            </div>
 
-          <div class="advantages__item">
-            <b class="advantages__title">Заводит новых друзей</b>
-            <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+            <div class="advantages__item  advantages__item--screen-3">
+              <b class="advantages__title">Заводит новых друзей</b>
+              <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+            </div>
           </div>
+        </div>
+      </section>
+
+      <section class="diagram">
+        <div class="diagram__item">
+          <b class="diagram__title">Эффект<br>на 24 часа!</b>
+          <p>Британские ученые провели исследования и доказали, что
+            положительный эффект<br>от использования приложения длится целые сутки!</p>
+
+          <a class="diagram__link" href="#1">Узнать больше об исследовании</a>
         </div>
       </section>
 
@@ -77,22 +89,37 @@
 
         <div class="review-slider__slides-container">
           <div class="review-slider__slides">
-            <blockquote class="review-slider__block">
+            <blockquote class="review-slider__item">
               <b class="review-slider__title">Николай Петров</b>
-              <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
-              А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+              <p><span class="review-slider__quotes">«</span>Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+              А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!<span class="review-slider__quotes">»</span></p>
+
+              <div class="review-slider__author">
+                <b class="review-slider__author-title">Николай Петров</b>
+                <span>25 лет, водитель трамвая</span>
+              </div>
             </blockquote>
 
-            <blockquote class="review-slider__block">
+            <blockquote class="review-slider__item">
               <b class="review-slider__title">Николай Петров</b>
-              <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
-                А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+              <p><span class="review-slider__quotes">«</span>Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+                А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!<span class="review-slider__quotes">»</span></p>
+
+              <div class="review-slider__author">
+                <b class="review-slider__author-title">Николай Петров</b>
+                <span>25 лет, водитель трамвая</span>
+              </div>
             </blockquote>
 
-            <blockquote class="review-slider__block">
+            <blockquote class="review-slider__item">
               <b class="review-slider__title">Николай Петров</b>
-              <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
-                А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+              <p><span class="review-slider__quotes">«</span>Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+                А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!<span class="review-slider__quotes">»</span></p>
+
+              <div class="review-slider__author">
+                <b class="review-slider__author-title">Николай Петров</b>
+                <span>25 лет, водитель трамвая</span>
+              </div>
             </blockquote>
           </div>
         </div>
@@ -113,6 +140,7 @@
           <div class="price-slider__slides">
             <table class="price-table">
               <tr>
+                <th class="price-table__hidden-cell"></th>
                 <th class="price-table__title">База<br>
                   <span class="price-table__price">1,99 USD</span>
                 </th>
@@ -124,19 +152,22 @@
                 </th>
               </tr>
               <tr>
-                <td>Розовый фильтр<div class="price-table__check-icon-yes">есть</div></td>
-                <td>Розовый фильтр<div class="price-table__check-icon-yes">есть</div></td>
-                <td>Розовый фильтр<div class="price-table__check-icon-yes">есть</div></td>
+                <td class="price-table__hidden-cell">Розовый фильтр</td>
+                <td><span class="price-table__hide">Розовый фильтр</span><div class="price-table__check-icon-yes">есть</div></td>
+                <td><span class="price-table__hide">Розовый фильтр</span><div class="price-table__check-icon-yes">есть</div></td>
+                <td><span class="price-table__hide">Розовый фильтр</span><div class="price-table__check-icon-yes">есть</div></td>
               </tr>
               <tr>
-                <td>Смайлики<div class="price-table__check-icon-no">нет</div></td>
-                <td>Смайлики<div class="price-table__check-icon-yes">есть</div></td>
-                <td>Смайлики<div class="price-table__check-icon-yes">есть</div></td>
+                <td class="price-table__hidden-cell">Смайлики</td>
+                <td><span class="price-table__hide">Смайлики</span><div class="price-table__check-icon-no">нет</div></td>
+                <td><span class="price-table__hide">Смайлики</span><div class="price-table__check-icon-yes">есть</div></td>
+                <td><span class="price-table__hide">Смайлики</span><div class="price-table__check-icon-yes">есть</div></td>
               </tr>
               <tr>
-                <td>Комментарии<div class="price-table__check-icon-no">нет</div></td>
-                <td>Комментарии<div class="price-table__check-icon-no">нет</div></td>
-                <td>Комментарии<div class="price-table__check-icon-yes">есть</div></td>
+                <td class="price-table__hidden-cell">Комментарии</td>
+                <td><span class="price-table__hide">Комментарии</span><div class="price-table__check-icon-no">нет</div></td>
+                <td><span class="price-table__hide">Комментарии</span><div class="price-table__check-icon-no">нет</div></td>
+                <td><span class="price-table__hide">Комментарии</span><div class="price-table__check-icon-yes">есть</div></td>
               </tr>
             </table>
           </div>
@@ -152,27 +183,46 @@
       <section class="contacts">
         <div class="contacts-info">
           <div class="contacts-info__title-wrap">
-            <span class="contacts-info__title">Остались вопросы? <br>Свяжитесь с нами!</span>
+            <span class="contacts-info__title">Остались вопросы?<br>Свяжитесь с нами!</span>
           </div>
 
-          <div class="contacts-info__data-wrap">
-            <div class="contacts-info__data-title">Звоните:</div>
-            <a class="contacts-info__data" href="tel:+78125556666">+7 (812) 555-66-66</a>
-          </div>
+          <div class="contacts-info__data-container">
+            <div class="contacts-info__data-wrap">
+              <div class="contacts-info__data-title">Звоните:</div>
+              <a class="contacts-info__data" href="tel:+78125556666">+7 (812) 555-66-66</a>
+            </div>
 
-          <div class="contacts-info__data-wrap">
-            <div class="contacts-info__data-title">Пишите:</div>
-            <a class="contacts-info__data" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-          </div>
+            <div class="contacts-info__data-wrap  contacts-info__data-wrap--order">
+              <div class="contacts-info__data-title">Пишите:</div>
+              <a class="contacts-info__data" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            </div>
 
-          <div class="contacts-info__data-wrap">
-            <div class="contacts-info__data-title">Приезжайте в гости:</div>
-            <a class="contacts-info__data" href="https://yandex.ru/maps/-/CVTgZEpc">ул. Большая Конюшенная, 19/8</a>
+            <div class="contacts-info__data-wrap">
+              <div class="contacts-info__data-title">Приезжайте в гости:</div>
+              <a class="contacts-info__data" href="https://yandex.ru/maps/-/CVTgZEpc">ул. Большая<br>Конюшенная, 19/8</a>
+            </div>
           </div>
         </div>
 
-        <div class="contacts-map" id="ya-maps"></div>
+        <div class="contacts__map-wrap">
+          <div class="contacts-map" id="ya-maps"></div>
+        </div>
       </section>
     </main>
+
+    <footer class="page-footer  page-footer--hidden">
+      <img class="logo-glasses" src="/img/logo-pink-blue-mobile.svg" width="147" height="40" alt="logo">
+
+      <ul class="social-links">
+        <li><a class="social-links__icon  social-links__icon--twitter" href="#" title="twitter">twitter</a></li>
+        <li><a class="social-links__icon  social-links__icon--facebook" href="#" title="facebook">facebook</a></li>
+        <li><a class="social-links__icon  social-links__icon--youtube" href="#" title="youtube">youtube</a></li>
+      </ul>
+
+      <a class="developer" href="https://htmlacademy.ru/">
+        <span class="developer__text">Разработано</span>
+        <img src="img/logo-htmlacademy.svg" width="27" height="34" alt="dev_logo">
+      </a>
+    </footer>
   </body>
 </html>

@@ -1,0 +1,76 @@
+.diagram {
+  display: none;
+  padding: 40px 5%;
+  background: @color-white url('../../img/24-hours.png') no-repeat 10% center;
+
+  &__item {
+    margin: 50px 0;
+    margin-left: 50%;
+
+    p {
+      font-size: @font-size-small;
+      font-weight: normal;
+      line-height: 1.7;
+    }
+  }
+
+  &__title {
+    display: block;
+    color: @color-black;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+
+  &__link {
+    color: @color-pink;
+    font-size: @font-size-small;
+    font-weight: normal;
+    line-height: 1.7;
+  }
+}
+
+@media @tablet-width {
+  .diagram {
+    display: block;
+
+    &__title {
+      max-width: 180px;
+    }
+
+    &__item {
+      max-width: 300px;
+    }
+  }
+}
+
+@media @desktop-width {
+  .diagram {
+    background-color: @color-grey-light;
+    background-position: 15% center;
+
+    &__title {
+      max-width: 310px;
+      line-height: 1;
+
+      br {
+        display: none;
+      }
+    }
+
+    &__item {
+      margin-left: 40%;
+      max-width: 530px;
+
+      p {
+        font-size: @font-size-main;
+        line-height: 1.66;
+      }
+    }
+
+    &__link {
+      font-size: @font-size-main;
+      line-height: 1.66;
+    }
+  }
+}

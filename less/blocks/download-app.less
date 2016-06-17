@@ -1,4 +1,5 @@
 .download-app {
+  background-color: #1d2631;
 
   &::before {
     content: '';
@@ -7,7 +8,6 @@
     background:
       url('../../img/iphone-hand-mobile@1x.png') no-repeat left bottom,
       url('../../img/bg-back-mobile@1x.jpg') no-repeat;
-    background-color: #1d2631;
   }
 
   &__icon:visited {
@@ -16,11 +16,21 @@
 
   &__content {
     padding: 20px;
+    padding-left: 6%;
+    padding-right: 6%;
     text-align: center;
-    background-color: #1d2631;
+  }
+
+  &__title {
+    display: none;
+    font-size: 40px;
+    font-weight: 100;
+    line-height: 1.3;
+    color: @color-white;
   }
 
   &__icons-list {
+    margin: 0;
     padding: 0;
     font-size: 0;
     list-style: none;
@@ -41,7 +51,8 @@
   }
 
   &__text {
-    font-family: @font-family-main;
+    width: 240px;
+    .centering();
     font-size: @font-size-small;
     font-weight: 100;
     line-height: 1.7;
@@ -64,3 +75,42 @@
   }
 }
 
+@media @tablet-width {
+  .download-app {
+    padding-top: 210px;
+    padding-bottom: 60px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background:
+      url('../../img/iphone-6 copy.png') no-repeat center bottom,
+      url('../../img/bg-back-mobile@1x.jpg') no-repeat;
+    background-color: #1d2631;
+    background-size: 550px, cover;
+
+    &::before {
+      display: none;
+    }
+
+    &__content {
+      padding: 0;
+      width: 300px;
+    }
+
+    &__title {
+      display: block;
+      max-width: 200px;
+      .centering();
+      font-size: 40px;
+      font-weight: 100;
+      line-height: 1.3;
+      color: @color-white;
+    }
+  }
+}
+
+@media @desktop-width {
+  .download-app {
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+}
