@@ -2,46 +2,61 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Пинк</title>
   </head>
   <body>
     <header class="page-header">
-      <a class="logo"></a>
-
-      <div  class="main-menu">
-        <a class="main-menu__toggle">
-          <img id="burger-button" src="img/icon-menu-burger.svg" width="50" height="24" alt="menu-button">
-          <img id="burger-close-button" class="main-menu__close-button" src="img/icon-menu-cross.svg" width="50" height="24" alt="close-button">
+      <div class="page-header__container">
+        <a class="logo">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logotype-white-desktop.png">
+            <source media="(min-width: 700px)" srcset="img/logotype-white-tablet.png">
+            <img src="img/logo-pink-white-mobile.svg" alt="Пинк">
+          </picture>
         </a>
 
-        <div class="main-menu__wrap">
-          <ul class="main-menu__list">
-            <li><a class="main-menu__item  main-menu__item--active">Главная</a></li>
-            <li><a class="main-menu__item" href="photo.html">Фотографии</a></li>
-            <li><a class="main-menu__item" href="form.html">Конкурс</a></li>
-            <li><a class="main-menu__item" href="#">HTML Academy</a></li>
-          </ul>
+        <div  class="main-menu">
+          <a class="main-menu__toggle">
+            <img id="burger-button" src="img/icon-menu-burger.svg" width="50" height="24" alt="menu-button">
+          </a>
+
+          <div class="main-menu__wrap">
+            <ul class="main-menu__list">
+              <li class="main-menu__top-item">
+                <picture>
+                  <source media="(min-width: 700px)" srcset="img/logotype-white-tablet.png">
+                  <img src="img/logo-pink-white-mobile.svg" alt="Пинк">
+                </picture>
+                <button class="main-menu__close-button" type="button" title="Закрыть"></button>
+              </li>
+              <li><a class="main-menu__item  main-menu__item--active">Главная</a></li>
+              <li><a class="main-menu__item" href="photo.html">Фотографии</a></li>
+              <li><a class="main-menu__item" href="form.html">Конкурс</a></li>
+              <li><a class="main-menu__item" href="#">HTML Academy</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
 
     <main>
       <section class="download-app">
-        <div class="download-app__content">
-          <h1 class="download-app__title">Взгляните на жизнь иначе!</h1>
+        <div class="download-app__container">
+          <div class="download-app__content">
+            <h1 class="download-app__title">Взгляните на жизнь иначе!</h1>
 
-          <a class="button button--download" href="#">Скачать приложение</a>
+            <a class="button button--download" href="#">Скачать приложение</a>
 
-          <ul class="download-app__icons-list">
-            <li><a class="download-app__icon  download-app__icon--apple" href="#" title="скачать для iOS">скачать для iOS</a></li>
-            <li><a class="download-app__icon  download-app__icon--android" href="#" title="скачать для Android">скачать для Android</a></li>
-            <li><a class="download-app__icon  download-app__icon--windows" href="#" title="скачать для Windows">скачать для Windows</a></li>
-          </ul>
+            <ul class="download-app__icons-list">
+              <li><a class="download-app__icon  download-app__icon--apple" href="#" title="скачать для iOS">скачать для iOS</a></li>
+              <li><a class="download-app__icon  download-app__icon--android" href="#" title="скачать для Android">скачать для Android</a></li>
+              <li><a class="download-app__icon  download-app__icon--windows" href="#" title="скачать для Windows">скачать для Windows</a></li>
+            </ul>
 
-          <div class="download-app__text">
-            <p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+            <div class="download-app__text">
+              <p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+            </div>
           </div>
         </div>
       </section>
@@ -73,12 +88,14 @@
       </section>
 
       <section class="diagram">
-        <div class="diagram__item">
-          <b class="diagram__title">Эффект<br>на 24 часа!</b>
-          <p>Британские ученые провели исследования и доказали, что
-            положительный эффект<br>от использования приложения длится целые сутки!</p>
+        <div class="diagram__container">
+          <div class="diagram__item">
+            <b class="diagram__title">Эффект<br> на 24 часа!</b>
+            <p>Британские ученые провели исследования и доказали, что
+              положительный эффект<br>от использования приложения длится целые сутки!</p>
 
-          <a class="diagram__link" href="#1">Узнать больше об исследовании</a>
+            <a class="diagram__link" href="#1">Узнать больше об исследовании</a>
+          </div>
         </div>
       </section>
 
@@ -124,7 +141,7 @@
           </div>
         </div>
 
-        <div class="review-slider__controls">
+        <div class="review-slider__controls slider-controls">
           <label for="btn-1"></label>
           <label for="btn-2"></label>
           <label for="btn-3"></label>
@@ -173,7 +190,7 @@
           </div>
         </div>
 
-        <div class="price-slider__controls">
+        <div class="price-slider__controls slider-controls">
           <label for="btn-4"></label>
           <label for="btn-5"></label>
           <label for="btn-6"></label>
@@ -210,19 +227,22 @@
       </section>
     </main>
 
-    <footer class="page-footer  page-footer--hidden">
-      <img class="logo-glasses" src="/img/logo-pink-blue-mobile.svg" width="147" height="40" alt="logo">
+    <footer class="page-footer  page-footer--index-page">
+      <div class="page-footer__data-container">
+        <img class="logo-glasses" src="/img/logo-pink-blue-mobile.svg" width="147" height="40" alt="logo">
 
-      <ul class="social-links">
-        <li><a class="social-links__icon  social-links__icon--twitter" href="#" title="twitter">twitter</a></li>
-        <li><a class="social-links__icon  social-links__icon--facebook" href="#" title="facebook">facebook</a></li>
-        <li><a class="social-links__icon  social-links__icon--youtube" href="#" title="youtube">youtube</a></li>
-      </ul>
+        <ul class="social-links">
+          <li><a class="social-links__icon  social-links__icon--twitter" href="#" title="twitter">twitter</a></li>
+          <li><a class="social-links__icon  social-links__icon--facebook" href="#" title="facebook">facebook</a></li>
+          <li><a class="social-links__icon  social-links__icon--youtube" href="#" title="youtube">youtube</a></li>
+        </ul>
 
-      <a class="developer" href="https://htmlacademy.ru/">
-        <span class="developer__text">Разработано</span>
-        <img src="img/logo-htmlacademy.svg" width="27" height="34" alt="dev_logo">
-      </a>
+        <a class="developer" href="https://htmlacademy.ru/">
+          <span class="developer__text">Разработано</span>
+          <img src="img/logo-htmlacademy.svg" width="27" height="34" alt="dev_logo">
+        </a>
+      </div>
     </footer>
+    <script type="text/javascript" src="js/scripts.js"></script>
   </body>
 </html>

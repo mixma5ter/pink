@@ -1,31 +1,28 @@
 .text-field {
+  display: block;
+  width: 280px;
+  margin: 0 auto 20px auto;
   text-align: left;
 
   &__input::-webkit-input-placeholder {color: @color-blue-dark;}
   &__input::-moz-placeholder {color: @color-blue-dark;}
-  &__input::-ms-input-placeholder {color: @color-blue-dark;}
+  &__input:-ms-input-placeholder {color: @color-blue-dark;}
   &__input:-moz-placeholder {color: @color-blue-dark;}
   &__input:-ms-input-placeholder {color: @color-blue-dark;}
 
   &__input:focus::-webkit-input-placeholder {color: transparent;}
   &__input:focus::-moz-placeholder {color: transparent;}
-  &__input:focus::-ms-input-placeholder {color: transparent;}
+  &__input:focus:-ms-input-placeholder {color: transparent;}
   &__input:focus:-moz-placeholder {color: transparent;}
   &__input:focus:-ms-input-placeholder  {color: transparent;}
 
   &__title {
-    margin-left: 36px;
+    margin-left: 23px;
     color: @color-pink;
     font-size: @font-size-small;
     font-weight: normal;
     line-height: 2.14;
     text-transform: uppercase;
-  }
-
-  &__input-wrap {
-    margin-bottom: 20px;
-    margin-left: 16px;
-    margin-right: 16px;
   }
 
   &__input {
@@ -41,9 +38,86 @@
     line-height: 1.66;
   }
 
-  &__title--center {
-    text-align: center;
-    margin-left: 0;
+  &--review {
+    padding: 0;
+    border: none;
+  }
+
+  &__title-review {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media @tablet-width {
+    width: auto;
+
+    &__title {
+      margin-left: 0;
+      margin-right: 20px;
+    }
+
+    &__title-review {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &__input-wrap {
+      flex-grow: 1;
+    }
+
+    &--name {
+      display: flex;
+      align-items: center;
+      width: auto;
+      //margin-left: 4.7%;
+      //margin-right: 4.7%;
+    }
+
+    &--contacts {
+      width: 100%;
+    }
+
+    &__title--contacts {
+      margin-top: 15px;
+      margin-left: 19px;
+    }
+
+    &--review {
+      order: 4;
+      margin: 0 0 40px 0;
+      padding: 40px 8.5%;
+      border: 2px solid #e5e5e5;
+    }
+
+    &__title-review {
+      min-width: 260px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0;
+      text-align: center;
+    }
+  }
+
+  @media @desktop-width {
+    &--name {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    &--review {
+      width: 100%;
+    }
+
+    &--contacts {
+      width: 47%;
+      margin: 0;
+    }
+
+    &__container {
+      width: 42%;
+      margin-left: 5.7%;
+      padding-top: 15px;
+      margin-bottom: 0px;
+    }
   }
 }
-

@@ -1,13 +1,14 @@
 .application-field {
   box-sizing: border-box;
-  margin: 0;
   margin-bottom: 40px;
-  padding: 33px 20px;
+  padding: 33px 6%;
   border: none;
   background: @color-grey-light;
 
   &__title {
-    margin: 0 20px;
+    max-width: 220px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 30px;
     color: @color-pink;
     font-size: @font-size-small;
@@ -17,7 +18,49 @@
   }
 
   &__input-wrap {
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    margin: 0 auto;
+    align-items: flex-start;
+  }
+
+  &__title--max {
+    display: none;
+  }
+
+  @media @tablet-width {
+    order: 1;
+    margin: 40px 0 60px 0;
+    padding: 33px 8.5%;
+    border: 2px solid #e5e5e5;
+    background: @color-white;
+
+    &__title {
+      line-height: 2.14;
+    }
+
+    &__title--min {
+      display: none;
+    }
+
+    &__title--max {
+      display: block;
+      min-width: 367px;
+      margin-bottom: 0;
+      padding: 0;
+    }
+
+    &__input-wrap {
+      margin-left: 0;
+    }
+  }
+
+  @media @desktop-width {
+    width: 42%;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    padding: 33px 6%;
   }
 }
-

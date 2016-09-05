@@ -6,8 +6,9 @@
     display: block;
     height: 463px;
     background:
-      url('../../img/iphone-hand-mobile@1x.png') no-repeat left bottom,
-      url('../../img/bg-back-mobile@1x.jpg') no-repeat;
+      url('../../img/iphone-hand-mobile@1x.png') no-repeat 40% bottom,
+      url('../../img/bg-back-mobile@1x.jpg') no-repeat center;
+    background-size: auto, cover;
   }
 
   &__icon:visited {
@@ -16,14 +17,12 @@
 
   &__content {
     padding: 20px;
-    padding-left: 6%;
-    padding-right: 6%;
     text-align: center;
   }
 
   &__title {
     display: none;
-    font-size: 40px;
+    font-size: @font-size-title-big;
     font-weight: 100;
     line-height: 1.3;
     color: @color-white;
@@ -52,7 +51,8 @@
 
   &__text {
     width: 240px;
-    .centering();
+    margin-left: auto;
+    margin-right: auto;
     font-size: @font-size-small;
     font-weight: 100;
     line-height: 1.7;
@@ -73,22 +73,22 @@
     height: 50px;
     background: url('../../img/logo-microsoft.svg') no-repeat center;
   }
-}
 
-@media @tablet-width {
-  .download-app {
-    padding-top: 210px;
-    padding-bottom: 60px;
-    padding-left: 40px;
-    padding-right: 40px;
+  @media @tablet-width {
+    padding: 210px 5% 60px 5%;
     background:
       url('../../img/iphone-6 copy.png') no-repeat center bottom,
-      url('../../img/bg-back-mobile@1x.jpg') no-repeat;
+      url('../../img/back-tablet@1x.jpg') no-repeat;
     background-color: #1d2631;
     background-size: 550px, cover;
 
     &::before {
       display: none;
+    }
+
+    &__container {
+      max-width: 940px;
+      margin: 0 auto;
     }
 
     &__content {
@@ -99,18 +99,20 @@
     &__title {
       display: block;
       max-width: 200px;
-      .centering();
-      font-size: 40px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: @font-size-title-big;
       font-weight: 100;
       line-height: 1.3;
       color: @color-white;
     }
   }
-}
 
-@media @desktop-width {
-  .download-app {
-    padding-left: 130px;
-    padding-right: 130px;
+  @media (min-width: 1000px) {
+    background:
+      url('../../img/iphone-6 copy.png') no-repeat center bottom,
+      url('../../img/back-desktop.jpg') no-repeat;
+    background-color: #1d2631;
+    background-size: 550px, cover;
   }
 }

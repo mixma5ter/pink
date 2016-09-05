@@ -1,9 +1,10 @@
 .diagram {
   display: none;
-  padding: 40px 5%;
-  background: @color-white url('../../img/24-hours.png') no-repeat 10% center;
+  padding: 40px 7%;
+  background-color: @color-white;
 
   &__item {
+    position: relative;
     margin: 50px 0;
     margin-left: 50%;
 
@@ -17,7 +18,7 @@
   &__title {
     display: block;
     color: @color-black;
-    font-size: 30px;
+    font-size: @font-size-title-min;
     font-weight: bold;
     line-height: 1.2;
   }
@@ -28,11 +29,20 @@
     font-weight: normal;
     line-height: 1.7;
   }
-}
 
-@media @tablet-width {
-  .diagram {
+  @media @tablet-width {
     display: block;
+
+    &__item::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: -325px;
+      top: -80px;
+      width: 300px;
+      height: 350px;
+      background: url('../../img/24-hours.png') no-repeat center;
+    }
 
     &__title {
       max-width: 180px;
@@ -42,12 +52,21 @@
       max-width: 300px;
     }
   }
-}
 
-@media @desktop-width {
-  .diagram {
+  @media @desktop-width {
     background-color: @color-grey-light;
     background-position: 15% center;
+
+    &__item::before {
+      left: -450px;
+      top: -100px;
+      background: url('../../img/24-hours_big.png') no-repeat center;
+    }
+
+    &__container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
 
     &__title {
       max-width: 310px;
@@ -59,7 +78,7 @@
     }
 
     &__item {
-      margin-left: 40%;
+      margin-left: 38%;
       max-width: 530px;
 
       p {

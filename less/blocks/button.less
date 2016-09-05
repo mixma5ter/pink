@@ -1,7 +1,8 @@
 .button {
   display: block;
   box-sizing: border-box;
-  .centering();
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 20px;
   padding: 15px;
   border: 2px solid white;
@@ -25,15 +26,20 @@
   }
 
   &--green {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px 20px;
+    width: 280px;
+    margin-top: 20px;
+    padding: 20px 0;
     border: none;
     border-radius: 5px;
     color: @color-white;
     background-color: @color-green;
     line-height: 1.66;
     text-transform: uppercase;
+  }
+
+  @media @tablet-width {
+    &--send-form {
+      margin: 0;
+    }
   }
 }

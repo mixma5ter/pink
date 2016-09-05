@@ -1,13 +1,17 @@
 .review-slider {
+  position: relative;
   padding: 30px 6%;
   background: @color-white;
+
+  input {
+    display: none;
+  }
 
   &__slides-container {
     overflow: hidden;
   }
 
   &__slides {
-    .clearfix();
     width: 300%;
     transition: transform .8s ease;
     display: flex;
@@ -30,9 +34,160 @@
 
   &__author {
     display: none;
-    .centering();
+    margin-left: auto;
+    margin-right: auto;
   }
-}
+
+  &__controls {
+    display: flex;
+  }
+
+  #btn-1:checked ~ .review-slider__controls label[for="btn-1"],
+  #btn-2:checked ~ .review-slider__controls label[for="btn-2"],
+  #btn-3:checked ~ .review-slider__controls label[for="btn-3"] {
+    box-shadow: 0 0 0 3px #283645;
+    background-color: transparent;
+  }
+
+  @media @tablet-width {
+      padding: 30px 5.7%;
+
+      &__item {
+        width: 100%;
+        font-size: @font-size-main;
+        line-height: 1.6;
+
+        p {
+          max-width: 630px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      &__title {
+        display: none;
+      }
+
+      &__author {
+        display: block;
+        width: 300px;
+        font-size: @font-size-small;
+        font-weight: normal;
+        line-height: 2.14;
+      }
+
+      &__author-title {
+        display: block;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 1.5;
+        color: @color-black;
+      }
+    }
+
+  @media @desktop-width {
+      background: @color-white url('../../img/quotes.png') no-repeat center 40px;
+
+      &__slides-container {
+        margin-top: 60px;
+      }
+
+      &__item {
+        font-size: @font-size-main;
+        line-height: 1.6;
+
+        p {
+          max-width: 720px;
+        }
+      }
+
+      &__quotes {
+        display: none;
+      }
+
+      &__author {
+        font-size: @font-size-main;
+        line-height: 1.6;
+      }
+
+      &__author-title {
+        font-size: 24px;
+        line-height: 1.25;
+      }
+
+      &__controls {
+        display: block;
+        top: 45%;
+        height: 50px;
+        max-width: 950px;
+        margin: 0 auto;
+
+        label {
+          display: none;
+          position: relative;
+          width: 25px;
+          height: 45px;
+          border-radius: 0;
+        }
+      }
+
+      #btn-1:checked ~ .review-slider__controls label[for="btn-3"],
+      #btn-2:checked ~ .review-slider__controls label[for="btn-1"],
+      #btn-3:checked ~ .review-slider__controls label[for="btn-2"] {
+        display: block;
+        background-color: transparent;
+        float: left;
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          left: -3px;
+          width: 30px;
+          height: 2px;
+          background-color: #bec2c7;
+        }
+
+        &::before {
+          top: 12px;
+          transform: rotate(-45deg);
+        }
+
+        &::after {
+          bottom: 11px;
+          transform: rotate(45deg);
+        }
+      }
+
+      #btn-1:checked ~ .review-slider__controls label[for="btn-2"],
+      #btn-2:checked ~ .review-slider__controls label[for="btn-3"],
+      #btn-3:checked ~ .review-slider__controls label[for="btn-1"] {
+        display: block;
+        background-color: transparent;
+        float: right;
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          right: -3px;
+          width: 30px;
+          height: 2px;
+          background-color: #bec2c7;
+        }
+
+        &::before {
+          top: 12px;
+          transform: rotate(45deg);
+        }
+
+        &::after {
+          bottom: 11px;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
 
 #btn-1:checked ~ .review-slider__slides-container .review-slider__slides {
   transform: translate(0);
@@ -42,74 +197,4 @@
 }
 #btn-3:checked ~ .review-slider__slides-container .review-slider__slides {
   transform: translate(-66.6%);
-}
-
-@media @tablet-width {
-  .review-slider {
-    padding: 30px 5%;
-
-    &__item {
-      width: 100%;
-      font-size: @font-size-main;
-      line-height: 1.6;
-
-      p {
-        max-width: 630px;
-        .centering();
-      }
-    }
-
-    &__title {
-      display: none;
-    }
-
-    &__author {
-      display: block;
-      width: 300px;
-      font-size: @font-size-small;
-      font-weight: normal;
-      line-height: 2.14;
-    }
-
-    &__author-title {
-      display: block;
-      font-size: 20px;
-      font-weight: bold;
-      line-height: 1.5;
-      color: @color-black;
-    }
-  }
-}
-
-@media @desktop-width {
-  .review-slider {
-    background: @color-white url('../../img/quotes.png') no-repeat center 40px;
-
-    &__slides-container {
-      margin-top: 60px;
-    }
-
-    &__item {
-      font-size: @font-size-main;
-      line-height: 1.6;
-
-      p {
-        max-width: 720px;
-      }
-    }
-
-    &__quotes {
-      display: none;
-    }
-
-    &__author {
-      font-size: @font-size-main;
-      line-height: 1.6;
-    }
-
-    &__author-title {
-      font-size: 24px;
-      line-height: 1.25;
-    }
-  }
 }

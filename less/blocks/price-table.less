@@ -1,5 +1,6 @@
 .price-table {
-  .centering();
+  margin-left: auto;
+  margin-right: auto;
   border-collapse: collapse;
 
   th, td {
@@ -15,6 +16,35 @@
     text-transform: uppercase;
     border: 2px solid #e5e5e5;
     background: @color-white;
+  }
+
+  &__title--hit-logo {
+    position: relative;
+
+    ::before {
+      content: '';
+      position: absolute;
+      top: -37px;
+      left: -45px;
+      width: 45px;
+      height: 30px;
+      transform: rotate(-45deg);
+      background-color: transparent;
+      border-style: solid;
+      border-width: 27px;
+      border-color: transparent transparent #d22856;
+    }
+
+    ::after {
+      content: 'ХИТ';
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      transform: rotate(-45deg);
+      font-size: @font-size-small;
+      line-height: 30px;
+      color: #ffffff;
+    }
   }
 
   &__check-icon-yes::before,
@@ -95,10 +125,8 @@
     height: 35px;
     font-size: 0;
   }
-}
 
-@media @tablet-width {
-  .price-table {
+  @media @tablet-width {
 
     th, td {
       min-width: 152px;
@@ -129,13 +157,12 @@
     &__check-icon-yes,
     &__check-icon-no {
       float: none;
-      .centering();
+      margin-left: auto;
+      margin-right: auto;
     }
   }
-}
 
-@media @desktop-width {
-  .price-table {
+  @media @desktop-width {
 
     th, td {
       min-width: 233px;

@@ -1,5 +1,28 @@
 .main-menu {
 
+  &__close-button::before,
+  &__close-button::after {
+    content: '';
+    position: absolute;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #ffffff;
+  }
+
+  &__close-button::before {
+    top: 42%;
+    left: -10%;
+    width: 30px;
+    transform: rotate(45deg);
+  }
+
+  &__close-button::after {
+    top: 42%;
+    left: -10%;
+    width: 30px;
+    transform: rotate(-45deg);
+  }
+
   &__item:visited {
     color: @color-white;
   }
@@ -9,26 +32,37 @@
   }
 
   &__toggle {
-    //float: right;
     display: block;
     margin-top: 5px;
+    cursor: pointer;
   }
 
   &__close-button {
-    display: none;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    //margin-top: 5px;
+    border: none;
+    outline: none;
+    background: transparent;
   }
 
   &__wrap {
-    //display: none;
+    display: none;
     position: absolute;
-    top: 100%;
+    top: 0;
     left: 0;
     box-sizing: border-box;
     width: 100%;
     z-index: 1;
   }
 
+  &__wrap--show {
+    display: block;
+  }
+
   &__list {
+    min-width: 300px;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -46,6 +80,14 @@
     }
   }
 
+  &__top-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 20px 0px 20px;
+    box-sizing: border-box;
+  }
+
   &__item {
     font-size: @font-size-main;
     font-weight: bold;
@@ -54,16 +96,20 @@
     text-decoration: none;
     color: @color-white;
   }
-}
 
-@media @tablet-width {
-  .main-menu__toggle {
+  @media @tablet-width {
     margin-top: 20px;
-  }
-}
 
-@media @desktop-width {
-  .main-menu {
+    &__top-item {
+      padding: 27px 6% 35px 6%;
+    }
+
+    &__close-button {
+      margin-top: 10px;
+    }
+  }
+
+  @media @desktop-width {
     width: 70%;
 
     &__toggle {
@@ -78,7 +124,6 @@
     &__list {
       display: flex;
       justify-content: space-between;
-      flex-wrap: wrap;
       background-color: transparent;
 
       li {
@@ -92,11 +137,14 @@
       }
     }
 
+    &__top-item {
+      display: none;
+    }
+
     &__item {
       text-transform: none;
       font-weight: normal;
       line-height: 1;
     }
   }
-
 }

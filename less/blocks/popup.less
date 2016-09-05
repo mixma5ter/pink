@@ -1,14 +1,24 @@
 .popup {
-  display: none;
   position: absolute;
   top: 50%;
+  left: 0;
+  right: 0;
   box-sizing: border-box;
   width: 320px;
-  margin: 0;
-  padding: 40px 20px;
-  background: @color-white;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 14px 30px -15px rgba(0,0,0,0.3);
+
+  &__text-wrapper {
+    padding: 40px 20px;
+    background: @color-white;
+    text-align: center;
+  }
 
   p {
+    width: 270px;
+    margin-left: auto;
+    margin-right: auto;
     font-size: @font-size-small;
     font-weight: 100;
     line-height: 1.7;
@@ -25,5 +35,21 @@
   &__button-wrapper {
     padding: 20px;
     background: @color-grey-light;
+  }
+
+  &--success {
+    display: none;
+
+    p {
+      margin-bottom: 0px;
+    }
+  }
+
+  &--error {
+    display: none;
+
+    p {
+      margin-bottom: 40px;
+    }
   }
 }
