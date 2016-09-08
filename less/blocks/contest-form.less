@@ -1,11 +1,11 @@
 .contest-form {
-  padding: 40px 0;
+  padding: 33px 0 30px 0;
   background: @color-white;
   text-align: center;
 
   &__title {
     width: 280px;
-    margin: 0 auto 30px auto;
+    margin: 0 auto 40px auto;
     font-size: @font-size-small;
     font-weight: normal;
     line-height: 2.14;
@@ -26,6 +26,10 @@
 
     span {
       color: @color-pink;
+    }
+
+    &--desktop {
+      display: none;
     }
   }
 
@@ -64,11 +68,11 @@
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: 1170px;
-    padding-left: 10.3%;
-    padding-right: 10.3%;
+    padding: 80px 10.3% 33px 10.3%;
 
     &__title {
       width: 770px;
+      margin: 0 auto 50px auto;
     }
 
     &__hidden-text {
@@ -77,6 +81,17 @@
 
     &__send-form {
       width: 100%;
+    }
+
+    &__required-text {
+
+      &--mobile {
+        display: none;
+      }
+
+      &--desktop {
+        display: block;
+      }
     }
   }
 }

@@ -40,12 +40,16 @@
 
   &--review {
     padding: 0;
+    margin: 50px auto 47px auto;
     border: none;
   }
 
   &__title-review {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 11px auto;
+  }
+
+  &__name-container {
+    margin-bottom: 43px;
   }
 
   @media @tablet-width {
@@ -63,14 +67,31 @@
 
     &__input-wrap {
       flex-grow: 1;
+      position: relative;
+    }
+
+    &--input-phone::before,
+    &--input-email::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 62px;
+      height: 100%;
+    }
+
+    &--input-phone::before {
+      background: #e5e5e5 url('../../img/phone.png') no-repeat center;
+    }
+
+    &--input-email::before {
+      background: #e5e5e5 url('../../img/email.png') no-repeat center;
     }
 
     &--name {
       display: flex;
       align-items: center;
       width: auto;
-      //margin-left: 4.7%;
-      //margin-right: 4.7%;
     }
 
     &--contacts {
@@ -85,7 +106,7 @@
     &--review {
       order: 4;
       margin: 0 0 40px 0;
-      padding: 40px 8.5%;
+      padding: 40px 9.3%;
       border: 2px solid #e5e5e5;
     }
 
@@ -102,22 +123,23 @@
     &--name {
       margin-left: 0;
       margin-right: 0;
+      margin-bottom: 54px;
     }
 
     &--review {
       width: 100%;
+      margin-bottom: 65px;
+      padding: 30px 6.1% 44px 6.1%;
     }
 
     &--contacts {
-      width: 47%;
+      width: 45.5%;
       margin: 0;
     }
 
-    &__container {
-      width: 42%;
-      margin-left: 5.7%;
-      padding-top: 15px;
-      margin-bottom: 0px;
+    &__name-container {
+      width: 46%;
+      padding-top: 17px;
     }
   }
 }

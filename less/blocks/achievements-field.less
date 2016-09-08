@@ -1,7 +1,6 @@
 .achievements-field {
   box-sizing: border-box;
-  margin-bottom: 20px;
-  padding: 33px 6%;
+  padding: 40px 6% 10px 6%;
   border: none;
   background: @color-grey-light;
 
@@ -9,7 +8,7 @@
     width: 250px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     color: @color-pink;
     font-size: @font-size-small;
     font-weight: normal;
@@ -17,7 +16,12 @@
     text-transform: uppercase;
   }
 
-  &__input-wrap {
+  &__column-wrap {
+    width: 280px;
+    margin: 0 auto;
+  }
+
+  &__column {
     text-align: left;
   }
 
@@ -29,7 +33,7 @@
     order: 3;
     margin: 40px 0;
     margin-top: 0;
-    padding: 33px 8.5%;
+    padding: 33px 9.3%;
     border: 2px solid #e5e5e5;
     background: @color-white;
 
@@ -47,14 +51,32 @@
       margin-bottom: 0;
       padding: 0;
     }
+
+    &__column-wrap {
+      width: auto;
+      margin-left: 0;
+    }
   }
 
   @media @desktop-width {
     width: 100%;
+    margin-bottom: 53px;
+    padding: 41px 6.1% 13px 6.1%;
 
-    &__input-wrap {
-      column-count: 3;
-      column-gap: 50px;
+    &__column-wrap {
+      display: flex;
+      //flex-direction: column;
+      flex-wrap: wrap;
+      //height: 200px;
+      //flex-shrink: 1;
+      justify-content: space-between;
+      //column-count: 3;
+      //column-gap: 10px;
+      //column-fill: balance;
+    }
+
+    &__column {
+      max-width: 33%;
     }
   }
 }

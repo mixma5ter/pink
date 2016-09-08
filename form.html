@@ -51,7 +51,7 @@
           1000 миль на вашу бонусную карту!<span class="contest-form__hidden-text">Пожалуйста, заполните форму ниже:</span></p>
         </div>
 
-        <div class="text-field__container">
+        <div class="text-field__name-container">
           <label class="text-field  text-field--name">
             <div class="text-field__title">Фамилия:</div>
 
@@ -81,47 +81,53 @@
           <div class="achievements-field__title  achievements-field__title--min">Ваши безбашенные достижения в путешествии</div>
           <legend class="achievements-field__title  achievements-field__title--max">Ваши безбашенные достижения в путешествии</legend>
 
-          <div class="achievements-field__input-wrap">
-            <div class="checkbox-field">
-              <input class="checkbox-field__input" type="checkbox" id="checkbox-1" name="user_achievements" checked>
-              <label for="checkbox-1"></label>
+          <div class="achievements-field__column-wrap">
+            <div class="achievements-field__column">
+              <label class="checkbox-field">
+                <input class="checkbox-field__input" type="checkbox" id="checkbox-1" name="user_achievements" checked>
+                <label for="checkbox-1"></label>
 
-              <span class="checkbox-field__input-text">Сделал селфи с акулой</span>
+                <span class="checkbox-field__input-text">Сделал селфи с акулой</span>
+              </label>
+
+              <label class="checkbox-field">
+                <input class="checkbox-field__input" type="checkbox" id="checkbox-2" name="user_achievements" checked>
+                <label for="checkbox-2"></label>
+
+                <span class="checkbox-field__input-text">Обгорел на пляже</span>
+              </label>
             </div>
 
-            <div class="checkbox-field">
-              <input class="checkbox-field__input" type="checkbox" id="checkbox-2" name="user_achievements" checked>
-              <label for="checkbox-2"></label>
+            <div class="achievements-field__column">
+              <label class="checkbox-field">
+                <input class="checkbox-field__input" type="checkbox" id="checkbox-3" name="user_achievements">
+                <label for="checkbox-3"></label>
 
-              <span class="checkbox-field__input-text">Обгорел на пляже</span>
+                <span class="checkbox-field__input-text">Видел Чака Норриса</span>
+              </label>
+
+              <label class="checkbox-field">
+                <input class="checkbox-field__input" type="checkbox" id="checkbox-4" name="user_achievements">
+                <label for="checkbox-4"></label>
+
+                <span class="checkbox-field__input-text">Накупил сувениров</span>
+              </label>
             </div>
 
-            <div class="checkbox-field">
-              <input class="checkbox-field__input" type="checkbox" id="checkbox-3" name="user_achievements">
-              <label for="checkbox-3"></label>
+            <div class="achievements-field__column">
+              <label class="checkbox-field">
+                <input class="checkbox-field__input" type="checkbox" id="checkbox-5" name="user_achievements" checked>
+                <label for="checkbox-5"></label>
 
-              <span class="checkbox-field__input-text">Видел Чака Норриса</span>
-            </div>
+                <span class="checkbox-field__input-text">Удержал башню</span>
+              </label>
 
-            <div class="checkbox-field">
-              <input class="checkbox-field__input" type="checkbox" id="checkbox-4" name="user_achievements">
-              <label for="checkbox-4"></label>
+              <label class="checkbox-field">
+                <input class="checkbox-field__input" type="checkbox" id="checkbox-6" name="user_achievements">
+                <label for="checkbox-6"></label>
 
-              <span class="checkbox-field__input-text">Накупил сувениров</span>
-            </div>
-
-            <div class="checkbox-field">
-              <input class="checkbox-field__input" type="checkbox" id="checkbox-5" name="user_achievements" checked>
-              <label for="checkbox-5"></label>
-
-              <span class="checkbox-field__input-text">Удержал башню</span>
-            </div>
-
-            <div class="checkbox-field">
-              <input class="checkbox-field__input" type="checkbox" id="checkbox-6" name="user_achievements">
-              <label for="checkbox-6"></label>
-
-              <span class="checkbox-field__input-text">Разгромил отель</span>
+                <span class="checkbox-field__input-text">Разгромил отель</span>
+              </label>
             </div>
           </div>
         </fieldset>
@@ -149,7 +155,7 @@
 
           <div class="contacts-fieldset__container">
             <label class="text-field  text-field--contacts">
-              <div class="text-field__input-wrap">
+              <div class="text-field__input-wrap  text-field--input-phone">
                 <input class="text-field__input" type="tel" name="user_phone" placeholder="+7 XXX XXX-XX-XX" required>
               </div>
 
@@ -157,7 +163,7 @@
             </label>
 
             <label class="text-field  text-field--contacts">
-              <div class="text-field__input-wrap">
+              <div class="text-field__input-wrap  text-field--input-email">
                 <input class="text-field__input" type="email" name="user_email" placeholder="Введите почту" required>
               </div>
 
@@ -173,16 +179,22 @@
           <div class="application-field__input-wrap">
             <label class="radio-field">
               <input class="radio-field__input" type="radio" id="radio-1" name="user_application" checked>
+              <label for="radio-1"></label>
+
               <span class="radio-field__input-text">Pink для iOS</span>
             </label>
 
             <label class="radio-field">
               <input class="radio-field__input" type="radio" id="radio-2" name="user_application">
+              <label for="radio-2"></label>
+
               <span class="radio-field__input-text">Pink на Android</span>
             </label>
 
             <label class="radio-field">
               <input class="radio-field__input" type="radio" id="radio-3" name="user_application">
+              <label for="radio-3"></label>
+
               <span class="radio-field__input-text">Windows Phone</span>
             </label>
           </div>
@@ -199,7 +211,8 @@
         <div class="contest-form__send-form">
           <input class="button  button--green  button--send-form" type="submit" value="Отправить форму" name="contest_form_submit">
 
-          <div class="contest-form__required-text"><span>*</span> — обязательные поля</div>
+          <div class="contest-form__required-text  contest-form__required-text--mobile"><span>*</span> — обязательные поля</div>
+          <div class="contest-form__required-text  contest-form__required-text--desktop"><span>*</span> — обязательные для заполнения поля</div>
         </div>
 
         <div class="popup  popup--success">
@@ -233,7 +246,10 @@
 
     <footer class="page-footer">
       <div class="page-footer__data-container">
-        <img class="logo-glasses" src="/img/logo-pink-blue-mobile.svg" width="147" height="40" alt="logo">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logotype-blue-desktop.png">
+          <img class="logo  logo--footer" src="/img/logo-pink-blue-mobile.svg" width="147" height="40" alt="logo">
+        </picture>
 
         <ul class="social-links">
           <li><a class="social-links__icon  social-links__icon--twitter" href="#" title="twitter">twitter</a></li>

@@ -1,19 +1,47 @@
 .checkbox-field {
   display: flex;
   align-items: center;
-  max-width: 280px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 43px;
 
   label {
-    display: inline-block;
     position: relative;
-    width: 38px;
+    min-width: 38px;
     height: 38px;
     margin-right: 30px;
     border: 2px solid #e5e5e5;
     background-color: #ffffff;
+  }
+
+  #checkbox-1:checked ~ label[for="checkbox-1"],
+  #checkbox-2:checked ~ label[for="checkbox-2"],
+  #checkbox-3:checked ~ label[for="checkbox-3"],
+  #checkbox-4:checked ~ label[for="checkbox-4"],
+  #checkbox-5:checked ~ label[for="checkbox-5"],
+  #checkbox-6:checked ~ label[for="checkbox-6"] {
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      height: 2px;
+      border-radius: 5px;
+      background-color: #d4305c;
+    }
+
+    &::before {
+      top: 60%;
+      left: 20%;
+      width: 10px;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      top: 47%;
+      left: 31%;
+      width: 22px;
+      transform: rotate(-47deg);
+    }
   }
 
   &__input {
@@ -23,14 +51,14 @@
   &__input-text {
     font-size: @font-size-main;
     font-weight: normal;
-    line-height: 1.66;
+    line-height: 20px;
   }
 
   @media @tablet-width {
     margin-left: 0;
 
     label {
-      margin-right: 21px;
+      margin-right: 20px;
     }
   }
 
