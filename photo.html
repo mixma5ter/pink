@@ -7,193 +7,228 @@
   </head>
   <body>
     <header class="page-header">
-      <a class="logo" href="index.html">
-        <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="logo">
-      </a>
-
-      <div  class="main-menu">
-        <a class="main-menu__toggle">
-          <img id="burger-button" src="img/icon-menu-burger.svg" width="50" height="24" alt="menu-button">
-          <img id="burger-close-button" class="main-menu__close-button" src="img/icon-menu-cross.svg" width="50" height="24" alt="close-button">
+      <div class="page-header__container">
+        <a class="logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logotype-white-desktop.png">
+            <source media="(min-width: 700px)" srcset="img/logotype-white-tablet.png">
+            <img src="img/logo-pink-white-mobile.svg" alt="Пинк">
+          </picture>
         </a>
 
-        <div class="main-menu__wrap">
-          <ul class="main-menu__list">
-            <li><a class="main-menu__item" href="index.html">Главная</a></li>
-            <li><a class="main-menu__item  main-menu__item--active">Фотографии</a></li>
-            <li><a class="main-menu__item" href="form.html">Конкурс</a></li>
-            <li><a class="main-menu__item" href="#">HTML Academy</a></li>
-          </ul>
+        <div  class="main-menu">
+          <a class="main-menu__toggle">
+            <img id="burger-button" src="img/icon-menu-burger.svg" width="50" height="24" alt="menu-button">
+          </a>
+
+          <div class="main-menu__wrap">
+            <ul class="main-menu__list">
+              <li class="main-menu__top-item">
+                <picture>
+                  <source media="(min-width: 700px)" srcset="img/logotype-white-tablet.png">
+                  <img src="img/logo-pink-white-mobile.svg" alt="Пинк">
+                </picture>
+                <button class="main-menu__close-button" type="button" title="Закрыть"></button>
+              </li>
+              <li><a class="main-menu__item" href="index.html">Главная</a></li>
+              <li><a class="main-menu__item  main-menu__item--active">Фотографии</a></li>
+              <li><a class="main-menu__item" href="form.html">Конкурс</a></li>
+              <li><a class="main-menu__item" href="#">HTML Academy</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
 
     <main>
       <div class="page-title">
-        <h1 class="page-title__text">Фотографии пользователей</h1>
+        <h1 class="page-title__text  page-title__text--photoblog">Фотографии пользователей</h1>
       </div>
 
       <div class="photo-blog">
         <div class="photo-blog__title">
           <p>Взгляните на фотографии, которые выкладывают пользователи!
-          Видите, как не хватает ваших?</p>
+          <br>Видите, как не хватает ваших?</p>
         </div>
 
-        <article class="photo-blog__post">
-          <div class="photo-blog__post-picture">
-            <img src="img/panorama-mobile@1x.jpg" width="280" height="180" alt="picture">
-          </div>
+        <article class="photo-blog__post  photo-blog__post--panarama">
 
-          <div class="photo-blog__post-content">
-            <div class="photo-blog__post-title">
-              <b>Анна</b><span class="photo-blog__post-time">(5 минут назад)</span>
+            <picture class="photo-blog__post-panarama">
+              <source media="(min-width: 1200px)" srcset="img/panorama-desktop.jpg">
+              <source media="(min-width: 700px)" srcset="img/panorama-tablet.jpg">
+              <img src="img/panorama-mobile@1x.jpg" alt="picture">
+            </picture>
+
+
+          <div class="photo-blog__post-wrap">
+            <div class="photo-blog__post-content  photo-blog__post-content--panarama">
+              <div class="photo-blog__post-title">
+                <b>Анна</b> <span class="photo-blog__post-time">(5 минут назад)</span>
+              </div>
+
+              <p>Прыгать или нет? Напишите в коментарии свой совет и
+                смотрите прямую транслацию в перископе, задавайте свои вопросы!</p>
+
+              <a class="photo-blog__like-icon  photo-blog__like-icon--panarama" href="#" title="like">&#x2661;</a>
+              <div class="photo-blog__post-likes  photo-blog__post-likes--panarama">Нравится: 215</div>
             </div>
-
-            <p>Прыгать или нет? Напишите в коментарии свой совет и
-              смотрите прямую транслацию в перископе, задавайте свои вопросы!</p>
-
-            <a class="like-icon" href="#" title="like">&#x2661;</a>
-            <div class="photo-blog__post-likes">Нравится: 215</div>
           </div>
         </article>
 
-        <article class="photo-blog__post">
-          <div class="photo-blog__post-picture">
-            <img src="/img/photo-1-mobile@1x.jpg" width="280" height="180" alt="picture">
-          </div>
-
-          <div class="photo-blog__post-content">
-            <div class="photo-blog__post-title">
-              <b>Левон</b><span class="photo-blog__post-time">(5 часов назад)</span>
+        <div class="photo-blog__post-wrap">
+          <article class="photo-blog__post">
+            <div class="photo-blog__post-picture">
+              <img src="/img/photo-1-mobile@1x.jpg" width="280" height="180" alt="picture">
             </div>
 
-            <p>Вчера он на луну летал, сегодня в руки к нам попал.</p>
+            <div class="photo-blog__post-content">
+              <div class="photo-blog__post-title">
+                <b>Левон</b> <span class="photo-blog__post-time">(5 часов назад)</span>
+              </div>
 
-            <a class="like-icon" href="#" title="like">&#x2661;</a>
-            <div class="photo-blog__post-likes">Нравится: 356</div>
-          </div>
-        </article>
+              <p>Вчера он на луну летал, сегодня в руки к нам попал.</p>
 
-        <article class="photo-blog__post">
-          <div class="photo-blog__post-picture">
-            <img src="img/photo-2-mobile@1x.jpg" width="280" height="180" alt="picture">
-          </div>
+              <a class="photo-blog__like-icon" href="#" title="like">&#x2661;</a>
+              <div class="photo-blog__post-likes">Нравится: 356</div>
+            </div>
+          </article>
 
-          <div class="photo-blog__post-content">
-            <div class="photo-blog__post-title">
-              <b>Антон</b><span class="photo-blog__post-time">(12 часов назад)</span>
+          <article class="photo-blog__post">
+            <div class="photo-blog__post-picture">
+              <img src="img/photo-2-mobile@1x.jpg" width="280" height="180" alt="picture">
             </div>
 
-            <p>Соседи будут рады!</p>
+            <div class="photo-blog__post-content">
+              <div class="photo-blog__post-title">
+                <b>Антон</b> <span class="photo-blog__post-time">(12 часов назад)</span>
+              </div>
 
-            <a class="like-icon" href="#" title="like">&#x2661;</a>
-            <div class="photo-blog__post-likes">Нравится: 666</div>
-          </div>
-        </article>
+              <p>Соседи будут рады!</p>
 
-        <article class="photo-blog__post">
-          <div class="photo-blog__post-picture">
-            <img src="img/photo-3-mobile@1x.jpg" width="280" height="180" alt="picture">
-          </div>
+              <a class="photo-blog__like-icon" href="#" title="like">&#x2661;</a>
+              <div class="photo-blog__post-likes">Нравится: 666</div>
+            </div>
+          </article>
 
-          <div class="photo-blog__post-content">
-            <div class="photo-blog__post-title">
-              <b>Борис</b><span class="photo-blog__post-time">(20 часов назад)</span>
+          <article class="photo-blog__post">
+            <div class="photo-blog__post-picture">
+              <img src="img/photo-3-mobile@1x.jpg" width="280" height="180" alt="picture">
             </div>
 
-            <p>Здесь могла быть ваша цитата о высоком и вечном.</p>
+            <div class="photo-blog__post-content">
+              <div class="photo-blog__post-title">
+                <b>Борис</b> <span class="photo-blog__post-time">(20 часов назад)</span>
+              </div>
 
-            <a class="like-icon" href="#" title="like">&#x2661;</a>
-            <div class="photo-blog__post-likes">Нравится: 215</div>
-          </div>
-        </article>
+              <p>Здесь могла быть ваша цитата о высоком и вечном.</p>
 
-        <article class="photo-blog__post">
-          <div class="photo-blog__post-picture">
-            <img src="img/photo-4-mobile@1x.jpg" width="280" height="180" alt="picture">
-          </div>
+              <a class="photo-blog__like-icon" href="#" title="like">&#x2661;</a>
+              <div class="photo-blog__post-likes">Нравится: 215</div>
+            </div>
+          </article>
 
-          <div class="photo-blog__post-content">
-            <div class="photo-blog__post-title">
-              <b>Сергей</b><span class="photo-blog__post-time">(25 часов назад)</span>
+          <article class="photo-blog__post">
+            <div class="photo-blog__post-picture">
+              <img src="img/photo-4-mobile@1x.jpg" width="280" height="180" alt="picture">
             </div>
 
-            <p>Самая кубанская в мире!</p>
+            <div class="photo-blog__post-content">
+              <div class="photo-blog__post-title">
+                <b>Сергей</b> <span class="photo-blog__post-time">(25 часов назад)</span>
+              </div>
 
-            <a class="like-icon" href="#" title="like">&#x2661;</a>
-            <div class="photo-blog__post-likes">Нравится: 4</div>
-          </div>
-        </article>
+              <p>Самая кубанская в мире!</p>
 
-        <article class="photo-blog__post">
-          <div class="photo-blog__post-picture">
-            <img src="img/photo-5-mobile@1x.jpg" width="280" height="180" alt="picture">
-          </div>
+              <a class="photo-blog__like-icon" href="#" title="like">&#x2661;</a>
+              <div class="photo-blog__post-likes">Нравится: 4</div>
+            </div>
+          </article>
 
-          <div class="photo-blog__post-content">
-            <div class="photo-blog__post-title">
-              <b>Максим</b><span class="photo-blog__post-time">(40 часов назад)</span>
+          <article class="photo-blog__post">
+            <div class="photo-blog__post-picture">
+              <img src="img/photo-5-mobile@1x.jpg" width="280" height="180" alt="picture">
             </div>
 
-            <p>Где снег-то?</p>
+            <div class="photo-blog__post-content">
+              <div class="photo-blog__post-title">
+                <b>Максим</b> <span class="photo-blog__post-time">(40 часов назад)</span>
+              </div>
 
-            <a class="like-icon" href="#" title="like">&#x2661;</a>
-            <div class="photo-blog__post-likes">Нравится: 150</div>
-          </div>
-        </article>
+              <p>Где снег-то?</p>
 
-        <article class="photo-blog__post">
-          <div class="photo-blog__post-picture">
-            <img src="img/photo-6-mobile@1x.jpg" width="280" height="180" alt="picture">
-          </div>
+              <a class="photo-blog__like-icon" href="#" title="like">&#x2661;</a>
+              <div class="photo-blog__post-likes">Нравится: 150</div>
+            </div>
+          </article>
 
-          <div class="photo-blog__post-content">
-            <div class="photo-blog__post-title">
-              <b>Надежда</b><span class="photo-blog__post-time">(45 часов назад)</span>
+          <article class="photo-blog__post">
+            <div class="photo-blog__post-picture">
+              <img src="img/photo-6-mobile@1x.jpg" width="280" height="180" alt="picture">
             </div>
 
-            <p>Всем GM и взаимные лайки!</p>
+            <div class="photo-blog__post-content">
+              <div class="photo-blog__post-title">
+                <b>Надежда</b> <span class="photo-blog__post-time">(45 часов назад)</span>
+              </div>
 
-            <a class="like-icon" href="#" title="like">&#x2661;</a>
-            <div class="photo-blog__post-likes">Нравится: 2560</div>
-          </div>
-        </article>
+              <p>Всем GM и взаимные лайки!</p>
+
+              <a class="photo-blog__like-icon" href="#" title="like">&#x2661;</a>
+              <div class="photo-blog__post-likes">Нравится: 2560</div>
+            </div>
+          </article>
+        </div>
       </div>
 
       <form class="upload-form" action="https://echo.htmlacademy.ru" method="post">
         <div class="upload-form__title">
-          <p>Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
+          <p>Затмите их всех!<br> Выкладывайте все, что накопилось в телефоне!</p>
         </div>
 
-        <fieldset class="upload-form__image-select">
-          <img src="http://placehold.it/100x150" width="100" height="150" alt="upload_photo">
-        </fieldset>
+        <div class="upload-form__content">
+          <fieldset class="upload-form__image-select">
+            <img src="img/photo-7-mobile@1x.jpg"  alt="upload_photo">
+          </fieldset>
 
-        <fieldset class="upload-form__filter-controls">
-          <input type="radio" id="upload-filter-1" name="upload-filter" checked>
-          <label class="upload-form__filter-toggle" for="upload-filter-1"></label>
+          <div class="upload-form__filter-controls">
+            <input type="radio" id="upload-filter-1" name="upload-filter" checked>
+            <label class="upload-form__filter-toggle" for="upload-filter-1"></label>
 
-          <input type="radio" id="upload-filter-2" name="upload-filter">
-          <label class="upload-form__filter-toggle" for="upload-filter-2"></label>
+            <input type="radio" id="upload-filter-2" name="upload-filter">
+            <label class="upload-form__filter-toggle" for="upload-filter-2"></label>
 
-          <input type="radio" id="upload-filter-3" name="upload-filter">
-          <label class="upload-form__filter-toggle" for="upload-filter-3"></label>
-        </fieldset>
+            <input type="radio" id="upload-filter-3" name="upload-filter">
+            <label class="upload-form__filter-toggle" for="upload-filter-3"></label>
+          </div>
 
-        <fieldset class="upload-form__range-controls">
-          <input type="range" id="range-filter-1" name="range-filter">
-        </fieldset>
+          <div class="range-controls">
+            <div class="range-controls__wrap">
+              <input class="range-controls__  range-filter-1" type="range" id="range-filter-1" name="range-filter">
+            </div>
 
-        <fieldset class="upload-form__button-wrap">
-          <button class="button" id="submit-btn" type="submit" value="Запостить"></button>
-          <button class="button" id="reset-btn" type="reset" value="Отмена" disabled></button>
-        </fieldset>
+            <div class="range-controls__wrap">
+              <input class="range-filter-2" type="range" id="range-filter-2" name="range-filter">
+            </div>
+
+            <div class="range-controls__wrap">
+              <input class="range-filter-3" type="range" id="range-filter-3" name="range-filter">
+            </div>
+          </div>
+
+          <div class="upload-form__button-wrap">
+            <button class="button  button__submit-photo  button--active" id="submit-btn" type="submit" value="Запостить">Запостить</button>
+            <button class="button  button__reset-photo  button--disabled" id="reset-btn" type="reset" value="Отмена" disabled>Отмена</button>
+          </div>
+        </div>
       </form>
     </main>
 
     <footer class="page-footer">
       <div class="page-footer__data-container">
-        <img class="logo  logo--footer" src="/img/logo-pink-blue-mobile.svg" width="147" height="40" alt="logo">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logotype-blue-desktop.png">
+          <img class="logo  logo--footer" src="/img/logo-pink-blue-mobile.svg" width="147" height="40" alt="logo">
+        </picture>
 
         <ul class="social-links">
           <li><a class="social-links__icon  social-links__icon--twitter" href="#" title="twitter">twitter</a></li>
@@ -207,5 +242,7 @@
         </a>
       </div>
     </footer>
+
+    <script type="text/javascript" src="js/scripts.js"></script>
   </body>
 </html>

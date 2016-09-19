@@ -1,0 +1,119 @@
+.upload-form {
+
+  &__filter-toggle {
+    display: inline-block;
+  }
+
+  label[for="upload-filter-1"] {
+    width: 44px;
+    height: 44px;
+    background: url('../../img/icon-editor-crop--active.svg') no-repeat center;
+  }
+
+  label[for="upload-filter-2"] {
+    width: 48px;
+    height: 43px;
+    background: url('../../img/icon-editor-fill.svg') no-repeat center;
+  }
+
+  label[for="upload-filter-3"] {
+    width: 32px;
+    height: 32px;
+    background: url('../../img/icon-editor-contrast.svg') no-repeat center;
+  }
+
+  &__title {
+    max-width: 280px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+
+    p {
+      margin: 0;
+      font-size: @font-size-small;
+      line-height: 2.1;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+  }
+
+  &__image-select {
+    margin: 0;
+    padding: 20px 0;
+    border: none;
+    text-align: center;
+  }
+
+  &__filter-controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 280px;
+    margin: 0 auto 30px auto;
+
+    input {
+      display: none;
+    }
+  }
+
+  &__button-wrap {
+    width: 280px;
+    margin: 0 auto;
+    padding: 0;
+    border: none;
+  }
+
+  @media @tablet-width {
+    max-width: 816px;
+    margin: 0 auto;
+
+    &__content {
+      padding: 55px 6% 35px 6%;
+    }
+
+    &__title {
+      max-width: 425px;
+      margin-bottom: 65px;
+
+      p {
+        font-size: @font-size-main;
+        line-height: 2;
+      }
+    }
+
+    &__image-select {
+      float: left;
+      //.clearfix();
+      padding: 0;
+    }
+
+    &__filter-controls {
+      display: none;
+    }
+
+    &__button-wrap {
+      margin: 0 2px 0 auto;
+    }
+  }
+
+  @media @desktop-width {
+    max-width: 1170px;
+    padding: 0 10.3%;
+
+    &__content {
+      padding-bottom: 57px;
+    }
+
+    &__button-wrap {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 410px;
+    }
+  }
+}
