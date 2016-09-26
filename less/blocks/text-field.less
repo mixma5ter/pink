@@ -39,6 +39,7 @@
   }
 
   &--review {
+    position: relative;
     padding: 0;
     margin: 50px auto 47px auto;
     border: none;
@@ -46,6 +47,13 @@
 
   &__title-review {
     margin: 0 auto 11px auto;
+  }
+
+  @-moz-document url-prefix() {
+    &__title-review {
+      .mozilla-legend-centering;
+      top: -40px;
+    }
   }
 
   &__name-container {
@@ -81,11 +89,11 @@
     }
 
     &--input-phone::before {
-      background: #e5e5e5 url('../../img/phone.png') no-repeat center;
+      background: #e5e5e5 url('../img/phone.png') no-repeat center;
     }
 
     &--input-email::before {
-      background: #e5e5e5 url('../../img/email.png') no-repeat center;
+      background: #e5e5e5 url('../img/email.png') no-repeat center;
     }
 
     &--name {
@@ -117,6 +125,12 @@
       padding: 0;
       text-align: center;
     }
+
+    @-moz-document url-prefix() {
+      &__title-review {
+        top: -16px;
+      }
+    }
   }
 
   @media @desktop-width {
@@ -124,6 +138,10 @@
       margin-left: 0;
       margin-right: 0;
       margin-bottom: 54px;
+    }
+
+    &--name:last-child {
+      margin-bottom: 0;
     }
 
     &--review {

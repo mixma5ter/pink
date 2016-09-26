@@ -22,11 +22,18 @@
       line-height: 2.14;
     }
 
+    @-moz-document url-prefix() {
+      &__title {
+        .mozilla-legend-centering;
+      }
+    }
+
     &--min {
       display: none;
     }
 
     &--full {
+      position: relative;
       display: block;
       order: 2;
       padding: 20px 9.3%;

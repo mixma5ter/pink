@@ -29,6 +29,7 @@
   }
 
   @media @tablet-width {
+    position: relative;
     order: 1;
     margin: 40px 0 60px 0;
     padding: 33px 9.3%;
@@ -50,18 +51,21 @@
       padding: 0;
     }
 
+    @-moz-document url-prefix() {
+      &__title--max {
+        .mozilla-legend-centering;
+      }
+    }
+
     &__input-wrap {
       margin-left: 0;
     }
   }
 
   @media @desktop-width {
+    position: relative;
     width: 46%;
-    margin-top: 0;
-    margin-right: 0;
-    margin-bottom: 54px;
-    padding: 33px 7.9%;
-    padding-top: 41px;
-    padding-bottom: 20px;
+    margin: 0 0 54px 0;
+    padding: 41px 7.9% 20px 7.9%;
   }
 }
