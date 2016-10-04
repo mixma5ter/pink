@@ -1,14 +1,38 @@
 .logo {
 
+  &:hover {
+    color: red;
+    cursor: pointer;
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--disabled {
+    cursor: auto;
+
+    &:hover {
+      cursor: auto;
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 1;
+    }
+  }
+
   &--footer {
     margin-bottom: 35px;
   }
-    @media @tablet-width {
+
+  @media @tablet-width {
     margin-top: 10px;
 
-      &--footer {
-        margin-top: 0;
-        margin-bottom: 15px;
-      }
+    &--footer {
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
   }
 }

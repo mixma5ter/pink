@@ -82,7 +82,8 @@ module.exports = function(grunt) {
         bsFiles: {
           src: [
             "build/*.html",
-            "build/css/*.css"
+            "build/css/*.css",
+            "build/js/*.js"
           ]
         },
         options: {
@@ -118,6 +119,13 @@ module.exports = function(grunt) {
           src: ["*.html"],
           dest: "build"
         }]
+      },
+      js: {
+        files: [{
+          expand: true,
+          src: ["js/*.js"],
+          dest: "build"
+        }]
       }
     },
 
@@ -132,6 +140,10 @@ module.exports = function(grunt) {
         options: {
           spawn: false
         }
+      },
+      js: {
+        files: ["js/*.js"],
+        tasks: ["copy:js"]
       }
     }
   });
@@ -145,6 +157,6 @@ module.exports = function(grunt) {
     "postcss",
     "csso",
     "symbols",
-    "imagemin"
+    //"imagemin"
   ]);
 };

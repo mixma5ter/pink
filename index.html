@@ -8,15 +8,17 @@
   <body>
     <header class="page-header">
       <div class="page-header__container">
-        <a class="logo">
+        <a class="logo  logo--disabled">
           <picture>
-            <source media="(min-width: 1200px)" srcset="img/logotype-white-desktop.png">
-            <source media="(min-width: 700px)" srcset="img/logotype-white-tablet.png">
+            <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
+            <source media="(min-width: 700px)" srcset="img/logo-pink-white-tablet.svg">
             <img src="img/logo-pink-white-mobile.svg" alt="Пинк">
           </picture>
         </a>
 
         <div  class="main-menu">
+          <div class="main-menu__overlay"></div>
+
           <a class="main-menu__toggle">
             <img id="burger-button" src="img/icon-menu-burger.svg" width="50" height="24" alt="menu-button">
           </a>
@@ -25,7 +27,7 @@
             <ul class="main-menu__list">
               <li class="main-menu__top-item">
                 <picture>
-                  <source media="(min-width: 700px)" srcset="img/logotype-white-tablet.png">
+                  <source media="(min-width: 700px)" srcset="img/logo-pink-white-tablet.svg">
                   <img src="img/logo-pink-white-mobile.svg" alt="Пинк">
                 </picture>
                 <button class="main-menu__close-button" type="button" title="Закрыть"></button>
@@ -33,7 +35,7 @@
               <li><a class="main-menu__item  main-menu__item--active">Главная</a></li>
               <li><a class="main-menu__item" href="photo.html">Фотографии</a></li>
               <li><a class="main-menu__item" href="form.html">Конкурс</a></li>
-              <li><a class="main-menu__item" href="#">HTML Academy</a></li>
+              <li><a class="main-menu__item" href="https://htmlacademy.ru">HTML Academy</a></li>
             </ul>
           </div>
         </div>
@@ -197,7 +199,7 @@
         </div>
       </section>
 
-      <section class="contacts">
+      <section class="contacts-container">
         <div class="contacts-info">
           <div class="contacts-info__title-wrap">
             <span class="contacts-info__title">Остались вопросы?<br>Свяжитесь с нами!</span>
@@ -221,18 +223,22 @@
           </div>
         </div>
 
-        <div class="contacts__map-wrap">
-          <div class="contacts-map" id="ya-maps"></div>
+        <div class="contacts-map">
+          <div class="contacts-map__inner">
+            <div class="contacts-map__content" id="ya-maps"></div>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="page-footer  page-footer--index-page">
       <div class="page-footer__data-container">
-        <picture>
-          <source media="(min-width: 1200px)" srcset="img/logotype-blue-desktop.png">
-          <img class="logo  logo--footer" src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="logo">
-        </picture>
+        <a class="logo  logo--disabled">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-pink-blue-desktop.svg">
+            <img src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="logo">
+          </picture>
+        </a>
 
         <ul class="social-links">
           <li><a class="social-links__icon  social-links__icon--twitter" href="#" title="twitter">twitter</a></li>
@@ -246,6 +252,9 @@
         </a>
       </div>
     </footer>
-    <script type="text/javascript" src="js/scripts.js"></script>
+
+    <script type="text/javascript" src="js/main-menu.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script type="text/javascript" src="js/ymaps.js"></script>
   </body>
 </html>

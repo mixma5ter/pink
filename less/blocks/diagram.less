@@ -37,11 +37,29 @@
       content: '';
       display: block;
       position: absolute;
-      left: -325px;
-      top: -80px;
-      width: 300px;
-      height: 350px;
-      background: url('../img/24-hours.png') no-repeat center;
+      left: -305px;
+      top: -40px;
+      width: 240px;
+      height: 280px;
+      background: url('../img/icon-timer.svg') no-repeat center;
+      background-size: contain;
+    }
+
+    &__item::after {
+      content: '24';
+      display: block;
+      position: absolute;
+      left: -288px;
+      top: 17px;
+      width: 205px;
+      height: 205px;
+      text-align: center;
+      font-size: 100px;
+      font-weight: bold;
+      line-height: 200px;
+      color: #d22856;
+      background: url('../img/icon-editor-diagram-fill.svg') no-repeat center;
+      background-size: contain;
     }
 
     &__title {
@@ -58,9 +76,19 @@
     background-position: 15% center;
 
     &__item::before {
-      left: -450px;
-      top: -100px;
-      background: url('../img/24-hours_big.png') no-repeat center;
+      left: -345px;
+      top: -93px;
+      width: 300px;
+      height: 345px;
+    }
+
+    &__item::after {
+      left: -321px;
+      top: -24px;
+      width: 253px;
+      height: 254px;
+      font-size: 120px;
+      line-height: 240px;
     }
 
     &__container {

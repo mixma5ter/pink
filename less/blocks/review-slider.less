@@ -40,12 +40,14 @@
 
   &__controls {
     display: flex;
+    .slider-controls;
   }
 
   #btn-1:checked ~ .review-slider__controls label[for="btn-1"],
   #btn-2:checked ~ .review-slider__controls label[for="btn-2"],
   #btn-3:checked ~ .review-slider__controls label[for="btn-3"] {
     box-shadow: 0 0 0 3px #283645;
+    overflow: visible;
     background-color: transparent;
   }
 

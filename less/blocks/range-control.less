@@ -5,102 +5,9 @@
   border: none;
   border-bottom: 1px solid #dddfe0;
 
-  .range-filter-2,
-  .range-filter-3 {
+  &__wrap-1,
+  &__wrap-2 {
     display: none;
-  }
-
-  .range-filter-1,
-  .range-filter-2,
-  .range-filter-3 {
-    -webkit-appearance: none;
-    width: 240px;
-    height: 18px;
-    margin: 0px auto 30px auto;
-    background-color: transparent;
-    outline: none;
-    border: none;
-  }
-
-  .range-filter-1::-webkit-slider-runnable-track,
-  .range-filter-2::-webkit-slider-runnable-track,
-  .range-filter-3::-webkit-slider-runnable-track {
-    height: 2px;
-    background-color: @color-black;
-  }
-
-  .range-filter-1::-webkit-slider-thumb,
-  .range-filter-2::-webkit-slider-thumb,
-  .range-filter-3::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    box-sizing: content-box;
-    width: 14px;
-    height: 14px;
-    margin-top: -7px;
-    border: 2px solid #d22856;
-    border-radius: 50%;
-    background-color: @color-white;
-    cursor: pointer;
-  }
-
-  .range-filter-1::-moz-range-track,
-  .range-filter-2::-moz-range-track,
-  .range-filter-3::-moz-range-track {
-    -moz-appearance: none;
-    width: 240px;
-    height: 2px;
-    background-color: @color-black;
-    outline: none;
-    border: none;
-  }
-
-  .range-filter-1::-moz-range-thumb,
-  .range-filter-2::-moz-range-thumb,
-  .range-filter-3::-moz-range-thumb {
-    -moz-appearance: none;
-    width: 14px;
-    height: 14px;
-    border: 2px solid #d22856;
-    border-radius: 50%;
-    background-color: @color-white;
-    cursor: pointer;
-  }
-
-  .range-filter-1::-ms-fill-lower,
-  .range-filter-2::-ms-fill-lower,
-  .range-filter-3::-ms-fill-lower,
-  .range-filter-1::-ms-fill-upper,
-  .range-filter-2::-ms-fill-upper,
-  .range-filter-3::-ms-fill-upper {
-    background: transparent;
-  }
-
-  .range-filter-1::-ms-tooltip,
-  .range-filter-2::-ms-tooltip,
-  .range-filter-3::-ms-tooltip {
-    display: none;
-  }
-
-  .range-filter-1::-ms-track,
-  .range-filter-2::-ms-track,
-  .range-filter-3::-ms-track {
-    width: 240px;
-    height: 0px;
-    background-color: @color-black;
-    color: transparent;
-    border-color: transparent;
-  }
-
-  .range-filter-1::-ms-thumb,
-  .range-filter-2::-ms-thumb,
-  .range-filter-3::-ms-thumb {
-    width: 14px;
-    height: 14px;
-    padding: 0;
-    border: 2px solid #d22856;
-    border-radius: 50%;
-    background-color: @color-white;
-    cursor: pointer;
   }
 
   @media @tablet-width {
@@ -109,44 +16,34 @@
     border: none;
 
     &__wrap {
+      display: block;
+      position: relative;
       height: 45px;
       margin-bottom: 30px;
       margin-top: 11px;
       border-bottom: 1px solid #dddfe0;
-    }
 
-    .range-filter-1,
-    .range-filter-2,
-    .range-filter-3 {
-      display: block;
-      position: relative;
-      width: 202px;
-      margin-bottom: 0;
-      margin-left: 55px;
-    }
+      &::before {
+        content: '';
+        position: absolute;
+        top: -5px;
+        left: 0px;
+        width: 27px;
+        height: 27px;
+        background: grey;
+      }
 
-    .range-filter-1::before,
-    .range-filter-2::before,
-    .range-filter-3::before {
-      content: '';
-      position: absolute;
-      top: -5px;
-      left: -55px;
-      width: 27px;
-      height: 27px;
-      background: grey;
-    }
+      &-1::before {
+        background: url('../img/icon-editor-crop--active-small.svg') no-repeat center;
+      }
 
-    .range-filter-1::before {
-      background: url('../img/icon-editor-crop--active-small.svg') no-repeat center;
-    }
+      &-2::before {
+        background: url('../img/icon-editor-fil--active-small.svg') no-repeat center;
+      }
 
-    .range-filter-2::before {
-      background: url('../img/icon-editor-fil--active-small.svg') no-repeat center;
-    }
-
-    .range-filter-3::before {
-      background: url('../img/icon-editor-contrast--active-small.svg') no-repeat center;
+      &-3::before {
+        background: url('../img/icon-editor-contrast--active-small.svg') no-repeat center;
+      }
     }
   }
 
@@ -157,38 +54,30 @@
 
     &__wrap {
       margin-bottom: 26px;
-    }
 
-    .range-filter-1,
-    .range-filter-2,
-    .range-filter-3 {
-      width: 288px;
-      margin-bottom: 0;
-      margin-left: 92px;
-    }
+      &-1::before {
+        top: -14px;
+        left: 0;
+        width: 44px;
+        height: 44px;
+        background: url('../img/icon-editor-crop--active.svg') no-repeat center;
+      }
 
-    .range-filter-1::before {
-      top: -14px;
-      left: -91px;
-      width: 44px;
-      height: 44px;
-      background: url('../img/icon-editor-crop--active.svg') no-repeat center;
-    }
+      &-2::before {
+        top: -10px;
+        left: 0;
+        width: 48px;
+        height: 48px;
+        background: url('../img/icon-editor-fil--active.svg') no-repeat center;
+      }
 
-    .range-filter-2::before {
-      top: -10px;
-      left: -91px;
-      width: 48px;
-      height: 43px;
-      background: url('../img/icon-editor-fil--active.svg') no-repeat center;
-    }
-
-    .range-filter-3::before {
-      top: -7px;
-      left: -84px;
-      width: 32px;
-      height: 32px;
-      background: url('../img/icon-editor-contrast--active.svg') no-repeat center;
+      &-3::before {
+        top: -7px;
+        left: 4px;
+        width: 36px;
+        height: 36px;
+        background: url('../img/icon-editor-contrast--active.svg') no-repeat center;
+      }
     }
   }
 }
