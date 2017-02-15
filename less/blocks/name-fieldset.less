@@ -1,0 +1,57 @@
+.name-fieldset {
+  margin-bottom: 43px;
+
+  &__item {
+    display: block;
+    width: 280px;
+    margin: 0 auto 20px auto;
+    text-align: left;
+  }
+
+  &__field-name {
+    margin-left: 23px;
+    color: @color-pink;
+    font-size: @font-size-small;
+    font-weight: normal;
+    line-height: 2.14;
+    text-transform: uppercase;
+  }
+
+  &__input-wrap {
+    position: relative;
+    display: block;
+  }
+
+  @media @tablet-width {
+
+    &__item {
+      display: flex;
+      align-items: center;
+      width: auto;
+    }
+
+    &__field-name {
+      margin-left: 0;
+      margin-right: 20px;
+    }
+
+    &__input-wrap {
+      flex-grow: 1;
+    }
+  }
+
+  @media @desktop-width {
+    width: 46%;
+    padding-top: 17px;
+
+    &__item {
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 54px;
+    }
+
+    &__item:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

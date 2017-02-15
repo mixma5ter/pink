@@ -1,14 +1,13 @@
-.achievements-field {
+.application-fieldset {
   box-sizing: border-box;
-  padding: 40px 6% 10px 6%;
-  border: none;
+  padding: 33px 6% 7px 6%;
   background: @color-grey-light;
 
   &__title {
-    width: 250px;
+    max-width: 220px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     color: @color-pink;
     font-size: @font-size-small;
     font-weight: normal;
@@ -16,24 +15,22 @@
     text-transform: uppercase;
   }
 
-  &__column-wrap {
+  &__input-wrap {
+    display: flex;
+    flex-direction: column;
     width: 280px;
     margin: 0 auto;
+    align-items: flex-start;
   }
 
-  &__column {
-    text-align: left;
-  }
-
-  &__title--max {
+  &__title--desktop {
     display: none;
   }
 
   @media @tablet-width {
     position: relative;
-    order: 3;
-    margin: 40px 0;
-    margin-top: 0;
+    order: 1;
+    margin: 40px 0 60px 0;
     padding: 33px 9.3%;
     border: 2px solid #e5e5e5;
     background: @color-white;
@@ -43,48 +40,32 @@
       text-align: center;
     }
 
-    &__title--min {
+    &__title--mobile {
       display: none;
     }
 
-    &__title--max {
+    &__title--desktop {
       display: block;
-      min-width: 436px;
+      min-width: 367px;
       margin-bottom: 0;
       padding: 0;
     }
 
     @-moz-document url-prefix() {
-      &__title--max {
+      &__title--desktop {
         .mozilla-legend-centering;
       }
     }
 
-    &__column-wrap {
-      width: auto;
+    &__input-wrap {
       margin-left: 0;
     }
   }
 
   @media @desktop-width {
-    width: 100%;
-    margin-bottom: 53px;
-    padding: 41px 6.1% 13px 6.1%;
-
-    &__column-wrap {
-      display: flex;
-      //flex-direction: column;
-      flex-wrap: wrap;
-      //height: 200px;
-      //flex-shrink: 1;
-      justify-content: space-between;
-      //column-count: 3;
-      //column-gap: 10px;
-      //column-fill: balance;
-    }
-
-    &__column {
-      max-width: 33%;
-    }
+    position: relative;
+    width: 46%;
+    margin: 0 0 54px 0;
+    padding: 41px 7.9% 20px 7.9%;
   }
 }

@@ -6,8 +6,20 @@
   font-family: @font-family-main;
   text-decoration: none;
 
-  img {
+  svg {
     vertical-align: middle;
+  }
+
+  &:hover {
+    svg {
+      fill: @color-blue-dark;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: #bec2c7;
+    }
   }
 
   &:link,
@@ -17,7 +29,7 @@
   }
 
   &__text {
-    margin-right: 30px;
+    margin-right: 11px;
     font-size: @font-size-small;
     font-weight: normal;
     line-height: 1.28;

@@ -1,60 +1,90 @@
 .main-menu {
 
-  &__close-button::before,
-  &__close-button::after {
+  &--closed .main-menu__toggle:hover::before {
+    background-color: @color-pink-dark;
+    box-shadow: 0 9px 0 0 @color-pink-dark,
+    0 18px 0 0 @color-pink-dark;
+  }
+
+  &--opened .main-menu__toggle:hover::before,
+  &--opened .main-menu__toggle:hover::after {
+    background-color: @color-pink-dark;
+  }
+
+  &--closed .main-menu__toggle::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 50px;
+    height: 4px;
+    background-color: @color-white;
+    box-shadow: 0 9px 0 0 @color-white,
+    0 18px 0 0 @color-white;
+  }
+
+  &--opened .main-menu__toggle::before,
+  &--opened .main-menu__toggle::after {
     content: '';
     position: absolute;
+    top: 8px;
+    right: 5px;
+    width: 30px;
     height: 5px;
-    border-radius: 5px;
+    border-radius: 2px;
     background-color: #ffffff;
   }
 
-  &__close-button::before {
-    top: 42%;
-    left: -10%;
-    width: 30px;
-    transform: rotate(45deg);
+  &--opened .main-menu__toggle {
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
   }
 
-  &__close-button::after {
-    top: 42%;
-    left: -10%;
-    width: 30px;
-    transform: rotate(-45deg);
+  &__item {
+
+    a:visited   {
+      color: @color-white;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    a:active {
+      opacity: 0.5;
+      color: @color-white;
+    }
   }
 
-  &__item:visited {
-    color: @color-white;
-  }
+  &__item--active {
 
-  &__item--active:hover {
-    cursor: default;
-  }
+    a:hover {
+      color: @color-pink-dark;
+      cursor: default;
+    }
 
-  &__overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: none;
-    z-index: 4;
+    a:active {
+      color: @color-white;
+    }
   }
 
   &__toggle {
     display: block;
-    margin-top: 5px;
-    cursor: pointer;
-  }
-
-  &__close-button {
-    position: relative;
-    width: 30px;
-    height: 30px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 23px;
     border: none;
+    z-index: 9;
+    background: none;
+    cursor: pointer;
     outline: none;
-    background: transparent;
   }
 
   &__wrap {
@@ -67,13 +97,8 @@
     z-index: 5;
   }
 
-  &__overlay--show,
-  &__wrap--show {
-    display: block;
-  }
-
   &__list {
-    min-width: 280px;
+    min-width: 320px;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -91,16 +116,10 @@
     }
   }
 
-  &__top-item {
-    display: flex;
-    align-items: center;
+  &__item a {
+    display: block;
+    width: 100%;
     height: 65px;
-    justify-content: space-between;
-    padding: 4px 20px 0px 20px;
-    box-sizing: border-box;
-  }
-
-  &__item {
     font-size: @font-size-main;
     font-weight: bold;
     line-height: 65px;
@@ -109,21 +128,25 @@
     color: @color-white;
   }
 
-  @media @tablet-width {
-    margin-top: 20px;
-
-    &__top-item {
-      height: auto;
-      padding: 27px 4.7% 35px 4.7%;
+  @media (max-width: 1199px) {
+    &--closed .main-menu__list {
+      display: none;
     }
+  }
 
-    &__close-button {
-      margin-top: 10px;
+  @media @tablet-width {
+
+    &__toggle {
+      display: block;
+      position: absolute;
+      top: 46px;
+      right: 40px;
     }
   }
 
   @media @desktop-width {
-    width: 65%;
+    box-sizing: border-box;
+    padding-top: 20px;
 
     &__toggle {
       display: none;
@@ -137,6 +160,8 @@
     &__list {
       display: flex;
       justify-content: space-between;
+      width: 65%;
+      margin-left: auto;
       background-color: transparent;
 
       li {
@@ -150,13 +175,14 @@
       }
     }
 
-    &__top-item {
-      display: none;
+    &__item {
+      height: auto;
     }
 
-    &__item {
+    &__item a{
       text-transform: none;
       font-weight: normal;
+      height: auto;
       line-height: 1;
     }
   }

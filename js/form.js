@@ -1,79 +1,124 @@
-var form = document.querySelector('.contest-form');
-var form_tag = document.querySelector('form');
-var send_form = form.querySelector('.button--send-form');
-//var popup = form.querySelectorAll('.popup');
-var popup_success = form.querySelector('.popup--success');
-var popup_error = form.querySelector('.popup--error');
-var close = form.querySelectorAll('.button--popup-form');
-
-var user_name = form.querySelector('[name=user_name]');
-var user_surname = form.querySelector('[name=user_surname]');
-var user_phone = form.querySelectorAll('[name=user_phone]');
-var user_email = form.querySelectorAll('[name=user_email]');
-var user_review = form.querySelector('[name=user_review]');
-var storage_user_name = localStorage.getItem('user_name');
-var storage_user_surname = localStorage.getItem('user_surname');
-var storage_user_phone = localStorage.getItem('user_phone');
-var storage_user_email = localStorage.getItem('user_email');
+(function(){
+  var form = document.querySelector('.review-form'),
+      inputField = form.querySelectorAll('.text-field__input'),
+      sendForm = form.querySelector('.button--send-form'),
+      popupError = form.querySelector('.popup--error'),
+      popupSuccess = form.querySelector('.popup--success'),
+      closePopup = form.querySelectorAll('.button--popup-form');
 
 
-window.onload = function() {
-  if(storage_user_surname && storage_user_name && storage_user_phone && storage_user_email) {
-    user_surname.value = storage_user_surname;
-    user_name.value = storage_user_name;
-    user_phone.value = storage_user_phone;
-    user_email.value = storage_user_email;
-    user_review.focus();
-  } else {
-    user_surname.focus();
+  for (var l = 0; l < inputField.length; l++) {
+
+    inputField[l].addEventListener('focus', function() {
+      this.classList.remove('error');
+      var parent = this.parentNode;
+      var message = parent.querySelector('.error-text');
+      if(message) parent.removeChild(message);
+
+      var helpText = this.getAttribute('title');
+      if(!helpText) return;
+
+      var helpBlock = document.createElement('div');
+
+      helpBlock.textContent = helpText;
+      helpBlock.className = 'help-message';
+      this.parentNode.appendChild(helpBlock);
+    });
+
+    inputField[l].addEventListener('blur', function() {
+      var helpBlock = form.querySelector('.help-message');
+      if(helpBlock) this.parentNode.removeChild(helpBlock);
+    });
   }
-};
 
-//
-//for (var i = 0; i < close.length; i++) {
-//  form_tag.addEventListener('submit', function(event){
-//    if (!user_name.value || !user_surname.value || !user_phone[i].value || !user_email[i].value || !user_review.value) {
-//      event.preventDefault();
-//      popup_error.classList.add('popup--show');
-//    } else {
-//      popup_success.classList.add('popup--show');
-//      localStorage.setItem('user_name', user_name.value);
-//      localStorage.setItem('user_surname', user_surname.value);
-//      localStorage.setItem('user_phone', user_phone.value);
-//      localStorage.setItem('user_email', user_email.value);
-//    }
-//  });
-//};
+  function showCover() {
+    var coverDiv = document.createElement('div');
+    coverDiv.id = 'cover-div';
+    document.body.appendChild(coverDiv);
+  };
 
-for (var i = 0; i < close.length; i++) {
-  send_form.addEventListener('click', function(event){
-    if (!user_name.value || !user_surname.value || !user_phone[i].value || !user_email[i].value || !user_review.value) {
-      event.preventDefault();
-      popup_error.classList.add('popup--show');
-    } else {
-      popup_success.classList.add('popup--show');
-      localStorage.setItem('user_name', user_name.value);
-      localStorage.setItem('user_surname', user_surname.value);
-      localStorage.setItem('user_phone', user_phone.value);
-      localStorage.setItem('user_email', user_email.value);
+  function hideCover() {
+    document.body.removeChild(document.getElementById('cover-div'));
+  };
+
+
+  sendForm.addEventListener('click', validate);
+
+  function validate(evt) {
+    evt.preventDefault();
+
+    var inputs = form.querySelectorAll('[data-error]');
+
+    clear(inputs, function() {
+      checkIsEmpty(inputs);
+    });
+
+    function checkIsEmpty(inputs) {
+      var isEmpty = false;
+
+      for (var i = 0; i < inputs.length; i++) {
+        var input = inputs[i];
+
+        var pattern = input.getAttribute('pattern');
+
+        pattern = new RegExp(pattern);
+
+        if(pattern.test(input.value) !== true) {
+            isEmpty = true;
+            markInput(input);
+            showCover();
+            popupError.classList.add('popup--show');
+            return false;
+        }
       }
-  });
-};
+      showCover();
+      popupSuccess.classList.add('popup--show');
+    }
 
-window.addEventListener('keydown', function(event) {
-  if (event.keyCode === 27) {
-    if (popup_error.classList.contains('popup--show') || popup_success.classList.contains('popup--show')) {
-      event.preventDefault();
-      popup_error.classList.remove('popup--show');
-      popup_success.classList.remove('popup--show');
+    function markInput(input) {
+      input.classList.add('error');
+      var text = input.getAttribute('data-error');
+
+      if (!text) return;
+
+      var div = document.createElement('div');
+
+      div.textContent = text;
+      div.className = 'error-text';
+      input.parentNode.appendChild(div);
+    }
+
+    function clear(inputsItem, callback) {
+      for (var i = 0; i < inputsItem.length; i++) {
+        var input = inputsItem[i];
+        var parent = input.parentNode;
+        var message = parent.querySelector('.error-text');
+
+        input.classList.remove('error');
+        if(message) parent.removeChild(message);
+      }
+
+      if(callback) callback();
     }
   }
-});
 
-for (var i = 0; i < close.length; i++) {
-  close[i].addEventListener('click', function(event) {
-    event.preventDefault();
-    popup_error.classList.remove('popup--show');
-    popup_success.classList.remove('popup--show');
+  window.addEventListener('keydown', function(evt) {
+    if (evt.keyCode === 27 || evt.keyCode === 13) {
+      if (popupError.classList.contains('popup--show') || popupSuccess.classList.contains('popup--show')) {
+        evt.preventDefault();
+        hideCover();
+        popupError.classList.remove('popup--show');
+        popupSuccess.classList.remove('popup--show');
+      }
+    }
   });
-};
+
+  for (var i = 0; i < closePopup.length; i++) {
+    closePopup[i].addEventListener('click', function(evt) {
+      evt.preventDefault();
+      hideCover();
+      popupError.classList.remove('popup--show');
+      popupSuccess.classList.remove('popup--show');
+    });
+  };
+}());

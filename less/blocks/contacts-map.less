@@ -5,7 +5,7 @@
   &__inner {
     position: relative;
     width: 100%;
-    padding-top: 76%;
+    padding-top: 67%;
   }
 
   &__content {
@@ -33,7 +33,6 @@
   }
 
   @media (min-width: 500px) {
-    //max-height: 290px;
     max-height: none;
 
     &__inner {
@@ -65,103 +64,37 @@
   }
 
   @media (min-width: 1000px) {
+    max-height: 550px;
 
     &__inner {
-      padding-top: 45%;
+      padding-top: 55%;
     }
 
     &__content {
-      background: url('../img/bg-map-desktop@1x.png') no-repeat bottom;
+      background: url('../img/bg-map-desktop@1x.png') no-repeat center;
       background-size: cover;
 
       &::before {
         height: 131px;
+        background: url('../img/bg-triangle-white-footer.svg') no-repeat center -110px;
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    &__content {
+      background: url('../img/bg-map-desktop@1x.png') no-repeat center -110px;
+      background-size: cover;
+
+      &::before {
         background: url('../img/bg-triangle-white-footer.svg') no-repeat center -90px;
       }
     }
   }
 
-  @media (min-width: 1400px) {
-
+  @media (min-width: 1500px) {
     &__inner {
       padding-top: 40%;
-    }
-
-    &__content {
-      background: url('../img/bg-map-desktop@1x.png') no-repeat  0 -220px;
-      background-size: cover;
-
-      &::before {
-        height: 151px;
-        background: url('../img/bg-triangle-white-footer.svg') no-repeat center -70px;
-      }
-    }
-  }
-
-  @media (min-width: 1600px) {
-    &__inner {
-      padding-top: 35%;
-    }
-  }
-
-  @media (min-width: 1700px) {
-    //max-height: 600px;
-
-    &__content {
-      background: url('../img/bg-map-desktop@1x.png') no-repeat  0 -300px;
-      background-size: cover;
-
-      &::before {
-        background: url('../img/bg-triangle-white-footer.svg') no-repeat center -70px;
-      }
-    }
-  }
-
-  @media (min-width: 2000px) {
-    //max-height: 600px;
-
-    &__inner {
-      padding-top: 30%;
-    }
-
-    &__content {
-      background: url('../img/bg-map-desktop@1x.png') no-repeat  0 -400px;
-      background-size: cover;
-
-      &::before {
-        height: 181px;
-        background: url('../img/bg-triangle-white-footer.svg') no-repeat center -40px;
-      }
-    }
-  }
-
-  @media (min-width: 2200px) {
-    //max-height: 650px;
-    &__inner {
-      padding-top: 25%;
-    }
-
-    &__content {
-      background: url('../img/bg-map-desktop@1x.png') no-repeat  0 -440px;
-      background-size: cover;
-
-      &::before {
-        height: 211px;
-        background: url('../img/bg-triangle-white-footer.svg') no-repeat center -10px;
-      }
-    }
-  }
-
-  @media (min-width: 2400px) {
-    //max-height: 670px;
-
-    &__content {
-      background: url('../img/bg-map-desktop@1x.png') no-repeat  0 -530px;
-      background-size: cover;
-
-      &::before {
-        //background:  url('../img/bg-triangle-white-footer.svg') no-repeat center -10px;
-      }
     }
   }
 }

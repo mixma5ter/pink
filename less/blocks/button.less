@@ -12,20 +12,58 @@
   font-weight: bold;
   text-decoration: none;
 
+  &--download:link,
+  &--download:active,
+  &--download:visited {
+    color: @color-white;
+  }
+
+  &--download:hover {
+    background-color: @color-white;
+    color: #d22856;
+  }
+
+  &--download:active {
+    color: #f1becc;
+  }
+
+  &--send-form:hover,
+  &--popup-form:hover {
+    background-color: #1c9b5e;
+  }
+
+  &--send-form:active,
+  &--popup-form:active {
+    color: #61b98f;
+  }
+
+  &--active:hover {
+    background-color: #d22856;
+    color: @color-white;
+  }
+
+  &--active:active {
+    color: #e06989;
+  }
+
+  &--disabled:hover {
+    opacity: 1;
+  }
+
+  &--disabled:active {
+    color: #cbced2;
+    background-color: #b5b9be;
+  }
+
   &--active {
     color: #d22856;
     border: 3px solid #d22856;
   }
 
   &--disabled {
-    color: #dddfe0;
-    border: 3px solid #dddfe0;
-  }
-
-  &--download:link,
-  &--download:active,
-  &--download:visited {
-    color: @color-white;
+    color: #b5b9be;
+    border: 3px solid #b5b9be;
+    opacity: 0.6;
   }
 
   &--download {

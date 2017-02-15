@@ -17,11 +17,7 @@ module.exports = function(grunt) {
         options: {
           processors: [
             require("autoprefixer")({browsers: [
-              "last 1 version",
-              "last 2 Chrome versions",
-              "last 2 Firefox versions",
-              "last 2 Opera versions",
-              "last 2 Edge versions"
+              "last 2 versions"
             ]}),
             require("css-mqpacker")({
               sort: true
@@ -46,7 +42,7 @@ module.exports = function(grunt) {
     imagemin: {
       images: {
         options: {
-          optimizationlevel: 3
+          optimizationlevel: 4
         },
         files: [{
           expand: true,
@@ -91,6 +87,7 @@ module.exports = function(grunt) {
           watchTask: true,
           notify: false,
           open: true,
+          cors: true,
           ui: false
         }
       }
@@ -156,7 +153,7 @@ module.exports = function(grunt) {
     "less",
     "postcss",
     "csso",
-    "symbols",
-    //"imagemin"
+    //"symbols",
+    "imagemin"
   ]);
 };

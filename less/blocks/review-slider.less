@@ -1,6 +1,6 @@
 .review-slider {
   position: relative;
-  padding: 30px 6%;
+  padding: 45px 6%;
   background: @color-white;
 
   input {
@@ -26,6 +26,7 @@
   }
 
   &__title {
+    margin-bottom: 15px;
     color: @color-black;
     font-size: @font-size-main;
     font-weight: bold;
@@ -52,144 +53,186 @@
   }
 
   @media @tablet-width {
-      padding: 30px 5.7%;
+    padding: 35px 5.7% 45px;
 
-      &__item {
-        width: 100%;
-        font-size: @font-size-main;
-        line-height: 1.6;
+    &__item {
+      width: 100%;
+      font-size: @font-size-main;
+      line-height: 1.6;
 
-        p {
-          max-width: 630px;
-          margin-left: auto;
-          margin-right: auto;
-        }
-      }
-
-      &__title {
-        display: none;
-      }
-
-      &__author {
-        display: block;
-        width: 300px;
-        font-size: @font-size-small;
-        font-weight: normal;
-        line-height: 2.14;
-      }
-
-      &__author-title {
-        display: block;
-        font-size: 20px;
-        font-weight: bold;
-        line-height: 1.5;
-        color: @color-black;
+      p {
+        max-width: 630px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
       }
     }
 
+    &__title {
+      display: none;
+    }
+
+    &__author {
+      display: block;
+      width: 300px;
+      font-size: @font-size-small;
+      font-weight: normal;
+      line-height: 2.14;
+    }
+
+    &__author-title {
+      display: block;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 1.5;
+      color: @color-black;
+    }
+  }
+
   @media @desktop-width {
-      background: @color-white url('../img/quotes.png') no-repeat center 40px;
 
-      &__slides-container {
-        margin-top: 60px;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 55px;
+      left: 0;
+      right: 0;
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+      background: @color-white url('../img/icon-quotes.svg') no-repeat center;
+    }
+
+    &__slides-container {
+      margin-top: 150px;
+    }
+
+    &__item {
+      font-size: @font-size-main;
+      line-height: 1.6;
+
+      p {
+        max-width: 720px;
       }
+    }
 
-      &__item {
-        font-size: @font-size-main;
-        line-height: 1.6;
+    &__quotes {
+      display: none;
+    }
 
-        p {
-          max-width: 720px;
-        }
-      }
+    &__author {
+      font-size: @font-size-main;
+      line-height: 1.6;
+    }
 
-      &__quotes {
+    &__author-title {
+      font-size: 24px;
+      line-height: 1.25;
+    }
+
+    &__controls {
+      display: block;
+      top: 53%;
+      height: 50px;
+      width: 950px;
+      margin: 0 auto;
+
+      label {
         display: none;
+        position: relative;
+        width: 25px;
+        height: 45px;
+        border-radius: 0;
       }
+    }
 
-      &__author {
-        font-size: @font-size-main;
-        line-height: 1.6;
-      }
+    #btn-1:checked ~ .review-slider__controls label[for="btn-3"],
+    #btn-2:checked ~ .review-slider__controls label[for="btn-1"],
+    #btn-3:checked ~ .review-slider__controls label[for="btn-2"] {
+      display: block;
+      background-color: transparent;
+      float: left;
 
-      &__author-title {
-        font-size: 24px;
-        line-height: 1.25;
-      }
-
-      &__controls {
-        display: block;
-        top: 45%;
-        height: 50px;
-        max-width: 950px;
-        margin: 0 auto;
-
-        label {
-          display: none;
-          position: relative;
-          width: 25px;
-          height: 45px;
-          border-radius: 0;
-        }
-      }
-
-      #btn-1:checked ~ .review-slider__controls label[for="btn-3"],
-      #btn-2:checked ~ .review-slider__controls label[for="btn-1"],
-      #btn-3:checked ~ .review-slider__controls label[for="btn-2"] {
-        display: block;
-        background-color: transparent;
-        float: left;
-
+      &:hover {
         &::before,
         &::after {
-          content: '';
-          position: absolute;
-          left: -3px;
-          width: 30px;
-          height: 2px;
-          background-color: #bec2c7;
-        }
-
-        &::before {
-          top: 12px;
-          transform: rotate(-45deg);
-        }
-
-        &::after {
-          bottom: 11px;
-          transform: rotate(45deg);
+          opacity: 1;
         }
       }
 
-      #btn-1:checked ~ .review-slider__controls label[for="btn-2"],
-      #btn-2:checked ~ .review-slider__controls label[for="btn-3"],
-      #btn-3:checked ~ .review-slider__controls label[for="btn-1"] {
-        display: block;
-        background-color: transparent;
-        float: right;
-
+      &:active {
         &::before,
         &::after {
-          content: '';
-          position: absolute;
-          right: -3px;
-          width: 30px;
-          height: 2px;
-          background-color: #bec2c7;
+          opacity: 0.3;
         }
+      }
 
-        &::before {
-          top: 12px;
-          transform: rotate(45deg);
-        }
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        left: -3px;
+        width: 30px;
+        height: 2px;
+        background-color: #7e868f;
+        opacity: 0.6;
+      }
 
+      &::before {
+        top: 12px;
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        bottom: 11px;
+        transform: rotate(45deg);
+      }
+    }
+
+    #btn-1:checked ~ .review-slider__controls label[for="btn-2"],
+    #btn-2:checked ~ .review-slider__controls label[for="btn-3"],
+    #btn-3:checked ~ .review-slider__controls label[for="btn-1"] {
+      display: block;
+      background-color: transparent;
+      float: right;
+
+      &:hover {
+        &::before,
         &::after {
-          bottom: 11px;
-          transform: rotate(-45deg);
+          opacity: 1;
         }
+      }
+
+      &:active {
+        &::before,
+        &::after {
+          opacity: 0.3;
+        }
+      }
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        right: -3px;
+        width: 30px;
+        height: 2px;
+        background-color: #7e868f;
+        opacity: 0.6;
+      }
+
+      &::before {
+        top: 12px;
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        bottom: 11px;
+        transform: rotate(-45deg);
       }
     }
   }
+}
 
 #btn-1:checked ~ .review-slider__slides-container .review-slider__slides {
   transform: translate(0);

@@ -10,10 +10,6 @@
     font-size: @font-size-small;
     font-weight: normal;
     line-height: 2.14;
-
-    p {
-      margin: 0;
-    }
   }
 
   &__post {
@@ -52,7 +48,6 @@
   &__post-picture {
     display: block;
     line-height: 0;
-    //height: 180px;
   }
 
   &__post-content {
@@ -71,7 +66,7 @@
     }
   }
 
-  &__post-title {
+  &__post-author {
     font-size: @font-size-small;
     line-height: 1.7;
   }
@@ -83,7 +78,7 @@
     color: #79818a;
   }
 
-  &__like-icon {
+  &__heart-icon {
     display: inline-block;
     height: 26px;
     margin-right: 13px;
@@ -111,19 +106,20 @@
       font-size: @font-size-main;
       line-height: 1.6;
 
-      p {
-        br {
-          display: none;
-        }
+      br {
+        display: none;
       }
     }
 
     &__post {
+      display: flex;
+      flex-direction: column;
       max-width: none;
       width: 300px;
       margin: 0 0 21px 0;
 
       &--panarama {
+        display: block;
         width: 100%;
       }
     }
@@ -146,13 +142,16 @@
     }
 
     &__post-content {
+      position: relative;
+      flex-grow: 1;
+      width: 100%;
       max-width: none;
       margin: 0 auto;
       padding: 19px;
 
       p {
         margin: 0;
-        margin-bottom: 6px;
+        margin-bottom: 36px;
         font-size: @font-size-small;
         line-height: 1.7;
       }
@@ -161,6 +160,10 @@
         position: relative;
         max-width: 816px;
         margin: 0 auto 50px auto;
+
+        p {
+          margin-bottom: 16px;
+        }
       }
     }
 
@@ -169,20 +172,15 @@
       flex-direction: row;
       justify-content: space-between;
       flex-wrap: wrap;
-      min-width: 620px;
       max-width: 816px;
       margin: 0 auto;
-      padding: 0 6%;
+      padding: 0 5%;
     }
 
-    &__like-icon {
-      float: right;
-
-      &::after {
-        content: '';
-        display: table;
-        clear: both;
-      }
+    &__heart-icon {
+      position: absolute;
+      bottom: 19px;
+      right: 19px;
 
       &--panarama {
         position: absolute;
@@ -192,17 +190,14 @@
     }
 
     &__post-likes {
-      float: left;
-
-      &::after {
-        content: '';
-        display: table;
-        clear: both;
-      }
+      position: absolute;
+      bottom: 19px;
+      left: 19px;
 
       &--panarama {
         position: absolute;
         top: 23px;
+        left: auto;
         right: 70px;
       }
     }

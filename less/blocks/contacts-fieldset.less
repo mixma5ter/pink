@@ -1,16 +1,46 @@
 .contacts-fieldset {
   margin: 0;
   padding: 30px 0 35px 0;
-  border: none;
 
-  &--full {
+  &__title {
     display: none;
   }
 
+  &__item {
+    display: block;
+    width: 280px;
+    margin: 0 auto 20px auto;
+    text-align: left;
+  }
+
+  &__field-name {
+    margin-left: 23px;
+    color: @color-pink;
+    font-size: @font-size-small;
+    font-weight: normal;
+    line-height: 2.14;
+    text-transform: uppercase;
+
+    &--desktop {
+      display: none;
+    }
+  }
+
+  &__input-wrap {
+    position: relative;
+    display: block;
+  }
+
   @media @tablet-width {
+    position: relative;
+    display: block;
+    order: 2;
     margin-bottom: 60px;
+    padding: 20px 9.3%;
+    border: 2px solid #e6e6e6;
 
     &__title {
+      display: block;
       min-width: 260px;
       margin-left: auto;
       margin-right: auto;
@@ -23,6 +53,45 @@
       line-height: 2.14;
     }
 
+    &__item {
+      width: 100%;
+    }
+
+    &__field-name {
+      margin-top: 15px;
+      margin-left: 19px;
+
+      &--mobile {
+        display: none;
+      }
+
+      &--desktop {
+        display: block;
+      }
+    }
+
+    &__input-wrap {
+      flex-grow: 1;
+
+      &--phone-icon::before,
+      &--email-icon::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 62px;
+        height: 100%;
+      }
+
+      &--phone-icon::before {
+        background: #e5e5e5 url('../img/icon-phone.svg') no-repeat center;
+      }
+
+      &--email-icon::before {
+        background: #e5e5e5 url('../img/icon-mail.svg') no-repeat center;
+      }
+    }
+
     @-moz-document url-prefix() {
       &__title {
         .mozilla-legend-centering;
@@ -32,21 +101,16 @@
     &--min {
       display: none;
     }
-
-    &--full {
-      position: relative;
-      display: block;
-      order: 2;
-      padding: 20px 9.3%;
-      border: 2px solid #e6e6e6;
-    }
   }
 
   @media @desktop-width {
-    &--full {
-      width: 100%;
-      margin-bottom: 52px;
-      padding: 30px 6.1% 17px 6.1%;
+    width: 100%;
+    margin-bottom: 52px;
+    padding: 30px 6.1% 17px 6.1%;
+
+    &__item {
+      width: 45.5%;
+      margin: 0;
     }
 
     &__container {

@@ -1,0 +1,54 @@
+.review-fieldset {
+  position: relative;
+  display: block;
+  width: 280px;
+  margin: 50px auto 47px auto;
+  padding: 0;
+  text-align: left;
+
+  &__title {
+    margin: 0 auto 11px auto;
+    font-size: @font-size-small;
+    font-weight: normal;
+    line-height: 2.14;
+    text-transform: uppercase;
+    color: @color-pink;
+  }
+
+  &__input-wrap {
+    position: relative;
+  }
+
+  @-moz-document url-prefix() {
+    &__title-review {
+      .mozilla-legend-centering;
+      top: -40px;
+    }
+  }
+
+  @media @tablet-width {
+    width: auto;
+    margin: 0 0 40px 0;
+    padding: 40px 9.3%;
+    border: 2px solid #e5e5e5;
+    order: 4;
+
+    &__title {
+      min-width: 260px;
+      padding: 0;
+      text-align: center;
+    }
+
+    @-moz-document url-prefix() {
+      &__title-review {
+        top: -16px;
+      }
+    }
+  }
+
+  @media @desktop-width {
+    width: 100%;
+    margin-bottom: 65px;
+    padding: 30px 6.1% 44px 6.1%;
+  }
+}

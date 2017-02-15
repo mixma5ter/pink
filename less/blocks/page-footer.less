@@ -1,6 +1,5 @@
 .page-footer {
-  padding: 33px 4.7%;
-  padding-bottom: 0;
+  padding: 33px 5.8% 0 5.8%;
   background: @color-white;
   text-align: center;
 
@@ -8,8 +7,35 @@
     display: none;
   }
 
+  &__logo {
+    display: block;
+    margin-bottom: 35px;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    &--disabled {
+      cursor: auto;
+
+      &:hover {
+        cursor: auto;
+        opacity: 1;
+      }
+
+      &:active {
+        opacity: 1;
+      }
+    }
+  }
+
   @media @tablet-width {
-    padding-bottom: 33px;
+    padding: 35px 5.8%;
 
     &--index-page {
       display: block;
@@ -22,11 +48,14 @@
       max-width: 816px;
       margin: 0 auto;
     }
+
+    &__logo {
+      margin-bottom: 10px;
+    }
   }
 
   @media @desktop-width {
-    padding-left: 10.3%;
-    padding-right: 10.3%;
+    padding: 70px 10.3%;
 
     &__data-container {
       max-width: 1170px;

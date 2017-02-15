@@ -1,14 +1,13 @@
-.application-field {
+.achievements-fieldset {
   box-sizing: border-box;
-  padding: 33px 6% 7px 6%;
-  border: none;
+  padding: 40px 6% 10px 6%;
   background: @color-grey-light;
 
   &__title {
-    max-width: 220px;
+    width: 250px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     color: @color-pink;
     font-size: @font-size-small;
     font-weight: normal;
@@ -16,22 +15,24 @@
     text-transform: uppercase;
   }
 
-  &__input-wrap {
-    display: flex;
-    flex-direction: column;
+  &__column-wrap {
     width: 280px;
     margin: 0 auto;
-    align-items: flex-start;
   }
 
-  &__title--max {
+  &__column {
+    text-align: left;
+  }
+
+  &__title--desktop {
     display: none;
   }
 
   @media @tablet-width {
     position: relative;
-    order: 1;
-    margin: 40px 0 60px 0;
+    order: 3;
+    margin: 40px 0;
+    margin-top: 0;
     padding: 33px 9.3%;
     border: 2px solid #e5e5e5;
     background: @color-white;
@@ -41,32 +42,42 @@
       text-align: center;
     }
 
-    &__title--min {
+    &__title--mobile {
       display: none;
     }
 
-    &__title--max {
+    &__title--desktop {
       display: block;
-      min-width: 367px;
+      min-width: 436px;
       margin-bottom: 0;
       padding: 0;
     }
 
     @-moz-document url-prefix() {
-      &__title--max {
+      &__title--desktop {
         .mozilla-legend-centering;
       }
     }
 
-    &__input-wrap {
+    &__column-wrap {
+      width: auto;
       margin-left: 0;
     }
   }
 
   @media @desktop-width {
-    position: relative;
-    width: 46%;
-    margin: 0 0 54px 0;
-    padding: 41px 7.9% 20px 7.9%;
+    width: 100%;
+    margin-bottom: 53px;
+    padding: 41px 6.1% 13px 6.1%;
+
+    &__column-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__column {
+      max-width: 33%;
+    }
   }
 }

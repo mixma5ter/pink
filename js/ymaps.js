@@ -23,11 +23,11 @@ ymaps.ready(function () {
       iconImageOffset: [0, 0]
     });
   myMap.geoObjects.add(myPlacemark);
-  myMap.controls.remove("rulerControl");
-  myMap.controls.remove("searchControl");
-  myMap.controls.remove("trafficControl");
-  myMap.controls.remove("typeSelector");
-  myMap.controls.remove("zoomControl");
-  myMap.controls.remove("geolocationControl");
-  myMap.controls.remove("routeEditor");
+  myMap.controls.remove('rulerControl');
+  myMap.controls.remove('searchControl');
+  myMap.controls.remove('trafficControl');
+  myMap.controls.remove('typeSelector');
+  myMap.controls.remove('zoomControl');
+  myMap.controls.remove('geolocationControl');
+  myMap.controls.remove('routeEditor');
 });

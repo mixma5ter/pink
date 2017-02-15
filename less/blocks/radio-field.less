@@ -5,7 +5,15 @@
   margin: auto 0;
   margin-bottom: 35px;
 
-  label {
+  .radio-field__checkbox {
+    &:hover {
+      border-color: #283645;
+    }
+
+    &:active {
+      border-color: #d22856;
+    }
+
     display: inline-block;
     position: relative;
     width: 35px;
@@ -16,9 +24,10 @@
     background-color: #ffffff;
   }
 
-  #radio-1:checked ~ label[for="radio-1"],
-  #radio-2:checked ~ label[for="radio-2"],
-  #radio-3:checked ~ label[for="radio-3"] {
+  #radio-1:checked ~ .radio-field__checkbox,
+  #radio-2:checked ~ .radio-field__checkbox,
+  #radio-3:checked ~ .radio-field__checkbox {
+
     &::before {
       content: '';
       position: absolute;
