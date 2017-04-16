@@ -1,27 +1,6 @@
 .download-app {
   background-color: #1d2631;
 
-  &::before {
-    content: '';
-    display: block;
-    height: 463px;
-    background:
-      url('../img/iphone-hand-mobile@1x.png') no-repeat 40% bottom,
-      url('../img/bg-back-mobile@1x.jpg') no-repeat center;
-    background-size: auto, cover;
-
-    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-      background:
-              url('../img/iphone-hand-mobile@2x.png') no-repeat 40% bottom,
-              url('../img/bg-back-mobile@2x.jpg') no-repeat center;
-      background-size: 260px, cover;
-    }
-  }
-
-  &__icon:visited {
-    color: @color-white;
-  }
-
   &__content {
     padding: 20px;
     text-align: center;
@@ -32,8 +11,7 @@
   }
 
   &__icons-list {
-    margin: 0;
-    margin-bottom: 10px;
+    margin: 0 0 10px;
     padding: 0;
     font-size: 0;
     list-style: none;
@@ -50,31 +28,54 @@
     width: 50px;
     height: 60px;
     text-decoration: none;
+
+    &:visited {
+      color: @color-white;
+    }
+
+    &--apple {
+      height: 56px;
+      background: url('../img/logo-apple.svg') no-repeat center;
+    }
+
+    &--android {
+      height: 51px;
+      background: url('../img/logo-android.svg') no-repeat center;
+    }
+
+    &--windows {
+      height: 50px;
+      background: url('../img/logo-microsoft.svg') no-repeat center;
+    }
   }
 
   &__text {
     width: 240px;
     margin-left: auto;
     margin-right: auto;
-    font-size: @font-size-small;
+    font-size: @fs-14;
     font-weight: 100;
-    line-height: 1.7;
+    line-height: @lh-24;
     color: @color-white;
   }
 
-  &__icon--apple {
-    height: 56px;
-    background: url('../img/logo-apple.svg') no-repeat center;
-  }
+  @media @mobile-width-only {
+    &::before {
+      content: '';
+      display: block;
+      height: 463px;
+      background:
+              url('../img/iphone-hand-mobile@1x.png') no-repeat 40% bottom,
+              url('../img/bg-back-mobile@1x.jpg') no-repeat center;
+      background-size: auto, cover;
 
-  &__icon--android {
-    height: 51px;
-    background: url('../img/logo-android.svg') no-repeat center;
-  }
-
-  &__icon--windows {
-    height: 50px;
-    background: url('../img/logo-microsoft.svg') no-repeat center;
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background:
+                url('../img/iphone-hand-mobile@2x.png') no-repeat 40% bottom,
+                url('../img/bg-back-mobile@2x.jpg') no-repeat center;
+        background-size: 260px, cover;
+      }
+    }
   }
 
   @media @tablet-width {
@@ -85,7 +86,7 @@
     background-color: #1d2631;
     background-size: 600px, cover;
 
-    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    @media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
       background:
               url('../img/iphone-hand-tablet@2x.png') no-repeat center bottom,
               url('../img/bg-back-tablet@2x.jpg') no-repeat center;
@@ -100,29 +101,28 @@
     &__content {
       padding: 0;
       width: 300px;
-      margin: 0 auto;
-      margin-right: 62%;
+      margin: 0 62% 0 auto;
     }
 
     &__title {
       display: block;
       max-width: 200px;
       margin: 0 auto 35px;
-      font-size: @font-size-title-big;
+      font-size: @fs-40;
       font-weight: 100;
-      line-height: 1.3;
+      line-height: @lh-52;
       color: @color-white;
     }
   }
 
-  @media (min-width: 1200px) {
+  @media @desktop-width {
     background:
       url('../img/iphone-hand-desktop@1x.png') no-repeat center bottom,
       url('../img/bg-back-desktop@1x.jpg') no-repeat center;
     background-color: #1d2631;
     background-size: 750px, cover;
 
-    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    @media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
       background:
               url('../img/iphone-hand-desktop@2x.png') no-repeat center bottom,
               url('../img/bg-back-desktop@2x.jpg') no-repeat center;

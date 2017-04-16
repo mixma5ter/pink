@@ -1,14 +1,12 @@
 .button {
   display: block;
   box-sizing: border-box;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
   padding: 15px;
   border: 2px solid white;
   border-radius: 30px;
   font-family: @font-family-main;
-  font-size: @font-size-main;
+  font-size: @fs-18;
   font-weight: bold;
   text-decoration: none;
 
@@ -28,12 +26,12 @@
   }
 
   &--send-form:hover,
-  &--popup-form:hover {
+  &--popup-close:hover {
     background-color: #1c9b5e;
   }
 
   &--send-form:active,
-  &--popup-form:active {
+  &--popup-close:active {
     color: #61b98f;
   }
 
@@ -74,7 +72,7 @@
   }
 
   &--send-form,
-  &--popup-form {
+  &--popup-close {
     width: 280px;
     margin-top: 20px;
     padding: 18px 0;
@@ -82,7 +80,7 @@
     border-radius: 5px;
     color: @color-white;
     background-color: @color-green;
-    line-height: 1.66;
+    line-height: @lh-30;
     text-transform: uppercase;
   }
 
@@ -94,6 +92,7 @@
   &__reset-photo {
     min-width: 280px;
     background-color: transparent;
+    outline: none;
   }
 
   &__reset-photo {
@@ -102,11 +101,12 @@
 
   @media @tablet-width {
     &--send-form {
+      float: left;
       width: 300px;
       margin: 0;
     }
 
-    &--popup-form {
+    &--popup-close {
       width: 300px;
     }
 
@@ -118,12 +118,15 @@
   }
 
   @media @desktop-width {
-
     &__submit-photo,
     &__reset-photo {
       min-width: 184px;
       margin: 0;
       padding: 12px 15px;
+    }
+
+    &__submit-photo {
+      margin-right: 5px;
     }
   }
 }

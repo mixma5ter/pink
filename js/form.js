@@ -4,7 +4,7 @@
       sendForm = form.querySelector('.button--send-form'),
       popupError = form.querySelector('.popup--error'),
       popupSuccess = form.querySelector('.popup--success'),
-      closePopup = form.querySelectorAll('.button--popup-form');
+      closePopup = form.querySelectorAll('.button--popup-close');
 
 
   for (var l = 0; l < inputField.length; l++) {
@@ -33,12 +33,12 @@
 
   function showCover() {
     var coverDiv = document.createElement('div');
-    coverDiv.id = 'cover-div';
+    coverDiv.classList.add('cover-div');
     document.body.appendChild(coverDiv);
   };
 
   function hideCover() {
-    document.body.removeChild(document.getElementById('cover-div'));
+    document.body.removeChild(document.querySelector('.cover-div'));
   };
 
 
@@ -60,6 +60,8 @@
         var input = inputs[i];
 
         var pattern = input.getAttribute('pattern');
+
+        if (!pattern) pattern = '^[А-Яа-яЁё \s \n \. \, \;]+$' ;
 
         pattern = new RegExp(pattern);
 

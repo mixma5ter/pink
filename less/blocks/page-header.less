@@ -43,7 +43,6 @@
   }
 
   @media @tablet-width {
-
     &__wrap {
       height: 110px;
     }
@@ -70,15 +69,14 @@
   }
 
   @media @desktop-width {
-    height: 110px;
-    padding: 27px 10.3%;
+    min-height: 110px;
 
     &__wrap {
       height: 0px;
     }
 
     &__logo {
-      position: static;
+      left: 130px;
     }
 
     &__logo-desktop {
@@ -89,9 +87,5 @@
     &__logo-tablet {
       display: none;
     }
-  }
-
-  @media (min-width: 1600px) {
-    padding: 27px 165px;
   }
 }

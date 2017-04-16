@@ -2,21 +2,25 @@
   position: relative;
   display: block;
   width: 280px;
-  margin: 50px auto 47px auto;
+  margin: 50px auto 47px;
   padding: 0;
-  text-align: left;
 
   &__title {
-    margin: 0 auto 11px auto;
-    font-size: @font-size-small;
+    margin: 0 auto 11px;
+    font-size: @fs-14;
     font-weight: normal;
-    line-height: 2.14;
+    line-height: @lh-30;
     text-transform: uppercase;
     color: @color-pink;
   }
 
   &__input-wrap {
     position: relative;
+    height: 160px;
+  }
+
+  &__input {
+    height: 100%;
   }
 
   @-moz-document url-prefix() {
@@ -28,7 +32,7 @@
 
   @media @tablet-width {
     width: auto;
-    margin: 0 0 40px 0;
+    margin: 0 0 40px;
     padding: 40px 9.3%;
     border: 2px solid #e5e5e5;
     order: 4;
@@ -49,6 +53,6 @@
   @media @desktop-width {
     width: 100%;
     margin-bottom: 65px;
-    padding: 30px 6.1% 44px 6.1%;
+    padding: 30px 6.1% 44px;
   }
 }

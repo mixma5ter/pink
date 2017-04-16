@@ -1,6 +1,6 @@
 .contacts-fieldset {
   margin: 0;
-  padding: 30px 0 35px 0;
+  padding: 30px 0 35px;
 
   &__title {
     display: none;
@@ -9,16 +9,16 @@
   &__item {
     display: block;
     width: 280px;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 20px;
     text-align: left;
   }
 
   &__field-name {
     margin-left: 23px;
     color: @color-pink;
-    font-size: @font-size-small;
+    font-size: @fs-14;
     font-weight: normal;
-    line-height: 2.14;
+    line-height: @lh-30;
     text-transform: uppercase;
 
     &--desktop {
@@ -32,9 +32,9 @@
   }
 
   @media @tablet-width {
+    order: 2;
     position: relative;
     display: block;
-    order: 2;
     margin-bottom: 60px;
     padding: 20px 9.3%;
     border: 2px solid #e6e6e6;
@@ -42,15 +42,14 @@
     &__title {
       display: block;
       min-width: 260px;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 0 auto;
       padding: 0;
-      font-size: @font-size-small;
-      text-transform: uppercase;
-      text-align: center;
+      font-size: @fs-14;
       color: @color-pink;
       font-weight: normal;
-      line-height: 2.14;
+      line-height: @lh-30;
+      text-transform: uppercase;
+      text-align: center;
     }
 
     &__item {
@@ -58,8 +57,7 @@
     }
 
     &__field-name {
-      margin-top: 15px;
-      margin-left: 19px;
+      margin: 15px 0 0 19px;
 
       &--mobile {
         display: none;
@@ -106,7 +104,7 @@
   @media @desktop-width {
     width: 100%;
     margin-bottom: 52px;
-    padding: 30px 6.1% 17px 6.1%;
+    padding: 30px 6.1% 17px;
 
     &__item {
       width: 45.5%;

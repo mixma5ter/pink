@@ -1,20 +1,20 @@
 .photo-blog {
-  padding: 40px 0 22px 0;
+  padding: 40px 0 22px;
   background: @color-white;
   font-family: @font-family-main;
   text-align: center;
 
   &__title {
     width: 280px;
-    margin: 5px auto 50px auto;
-    font-size: @font-size-small;
+    margin: 5px auto 50px;
+    font-size: @fs-14;
     font-weight: normal;
-    line-height: 2.14;
+    line-height: @lh-30;
   }
 
   &__post {
     max-width: 280px;
-    margin: 0 auto 21px auto;
+    margin: 0 auto 21px;
 
     &--panarama{
       max-width: none;
@@ -37,8 +37,8 @@
       content: 'панорама дня';
       width: 140px;
       height: 36px;
-      font-size: @font-size-extra-small;
-      line-height: 36px;
+      font-size: @fs-12;
+      line-height: @lh-36;
       text-transform: uppercase;
       color: @color-white;
       background-color: #d22856;
@@ -59,28 +59,26 @@
     background-color: #f2f2f2;
 
     p {
-      margin: 0;
-      margin-bottom: 6px;
-      font-size: @font-size-small;
-      line-height: 1.7;
+      margin: 0 0 6px;
+      font-size: @fs-14;
+      line-height: @lh-24;
     }
   }
 
   &__post-author {
-    font-size: @font-size-small;
-    line-height: 1.7;
+    font-size: @fs-14;
+    line-height: @lh-24;
   }
 
   &__post-time {
     text-transform: uppercase;
-    font-size: @font-size-extra-small;
-    line-height: 2;
+    font-size: @fs-12;
+    line-height: @lh-24;
     color: #79818a;
   }
 
   &__heart-icon {
-    display: inline-block;
-    height: 26px;
+    line-height: @lh-26;
     margin-right: 13px;
     font-size: 22px;
     font-weight: bold;
@@ -91,8 +89,8 @@
 
   &__post-likes {
     display: inline-block;
-    font-size: @font-size-extra-small;
-    line-height: 1.5;
+    font-size: @fs-12;
+    line-height: @lh-18;
     text-transform: uppercase;
     color: #d43560;
   }
@@ -102,9 +100,9 @@
 
     &__title {
       width: 440px;
-      margin: 50px auto 78px auto;
-      font-size: @font-size-main;
-      line-height: 1.6;
+      margin: 50px auto 78px;
+      font-size: @fs-18;
+      line-height: @lh-30;
 
       br {
         display: none;
@@ -116,7 +114,7 @@
       flex-direction: column;
       max-width: none;
       width: 300px;
-      margin: 0 0 21px 0;
+      margin: 0 0 21px;
 
       &--panarama {
         display: block;
@@ -150,16 +148,15 @@
       padding: 19px;
 
       p {
-        margin: 0;
-        margin-bottom: 36px;
-        font-size: @font-size-small;
-        line-height: 1.7;
+        margin: 0 0 36px;
+        font-size: @fs-14;
+        line-height: @lh-24;
       }
 
       &--panarama {
         position: relative;
         max-width: 816px;
-        margin: 0 auto 50px auto;
+        margin: 0 auto 50px;
 
         p {
           margin-bottom: 16px;
@@ -177,10 +174,18 @@
       padding: 0 5%;
     }
 
+    &__post-author {
+      max-width: 350px;
+    }
+
     &__heart-icon {
       position: absolute;
       bottom: 19px;
       right: 19px;
+      display: block;
+      max-width: 20px;
+      max-height: 30px;
+      overflow: hidden;
 
       &--panarama {
         position: absolute;
@@ -193,6 +198,9 @@
       position: absolute;
       bottom: 19px;
       left: 19px;
+      max-width: 150px;
+      max-height: 20px;
+      overflow: hidden;
 
       &--panarama {
         position: absolute;
@@ -204,7 +212,6 @@
   }
 
   @media @desktop-width {
-
     &__title {
       width: 580px;
     }
@@ -221,10 +228,9 @@
     }
 
     &__post-content {
-
       p {
-        font-size: @font-size-small;
-        line-height: 1.7;
+        font-size: @fs-14;
+        line-height: @lh-24;
       }
 
       &--panarama {

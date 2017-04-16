@@ -4,16 +4,16 @@
   &__item {
     display: block;
     width: 280px;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 20px;
     text-align: left;
   }
 
   &__field-name {
     margin-left: 23px;
     color: @color-pink;
-    font-size: @font-size-small;
+    font-size: @fs-14;
     font-weight: normal;
-    line-height: 2.14;
+    line-height: @lh-30;
     text-transform: uppercase;
   }
 
@@ -23,7 +23,6 @@
   }
 
   @media @tablet-width {
-
     &__item {
       display: flex;
       align-items: center;
@@ -37,6 +36,7 @@
 
     &__input-wrap {
       flex-grow: 1;
+      min-width: 400px;
     }
   }
 
@@ -45,13 +45,15 @@
     padding-top: 17px;
 
     &__item {
-      margin-left: 0;
-      margin-right: 0;
-      margin-bottom: 54px;
+      margin: 0 0 54px;
     }
 
     &__item:last-child {
       margin-bottom: 0;
+    }
+
+    &__input-wrap {
+      min-width: 300px;
     }
   }
 }

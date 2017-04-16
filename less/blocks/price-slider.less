@@ -1,7 +1,6 @@
 .price-slider {
   position: relative;
-  padding-top: 100px;
-  padding-bottom: 60px;
+  padding: 100px 0 60px;
   background: @color-grey-light url('../img/bg-triangle-white.svg') no-repeat center -30px;
 
   input {
@@ -21,8 +20,27 @@
 
   &__controls {
     display: flex;
-    .slider-controls;
+    .slider-controls();
     bottom: 40px;
+  }
+
+  @media @mobile-width-only {
+    #btn-4:checked ~ .price-slider__slides-container .price-slider__slides {
+      transform: translate(0);
+    }
+    #btn-5:checked ~ .price-slider__slides-container .price-slider__slides {
+      transform: translate(-33.3%);
+    }
+    #btn-6:checked ~ .price-slider__slides-container .price-slider__slides {
+      transform: translate(-66.6%);
+    }
+
+    #btn-4:checked ~ .price-slider__controls label[for='btn-4'],
+    #btn-5:checked ~ .price-slider__controls label[for='btn-5'],
+    #btn-6:checked ~ .price-slider__controls label[for='btn-6'] {
+      box-shadow: 0 0 0 3px #283645;
+      background-color: transparent;
+    }
   }
 
   @media @tablet-width {
@@ -30,35 +48,8 @@
       display: none;
     }
 
-    #btn-4:checked ~ .price-slider__slides-container .price-slider__slides,
-    #btn-5:checked ~ .price-slider__slides-container .price-slider__slides,
-    #btn-6:checked ~ .price-slider__slides-container .price-slider__slides {
-      transform: translate(-33.3%);
+    &__slides {
+      width: auto;
     }
   }
-
-  @media (min-width: 1800px) {
-    padding-top: 170px;
-    background: @color-grey-light url('../img/bg-triangle-white.svg') no-repeat center 0px;
-  }
 }
-
-#btn-4:checked ~ .price-slider__slides-container .price-slider__slides {
-  transform: translate(0);
-}
-#btn-5:checked ~ .price-slider__slides-container .price-slider__slides {
-  transform: translate(-33.3%);
-}
-#btn-6:checked ~ .price-slider__slides-container .price-slider__slides {
-  transform: translate(-66.6%);
-}
-
-#btn-4:checked ~ .price-slider__controls label[for="btn-4"],
-#btn-5:checked ~ .price-slider__controls label[for="btn-5"],
-#btn-6:checked ~ .price-slider__controls label[for="btn-6"] {
-  box-shadow: 0 0 0 3px #283645;
-  background-color: transparent;
-}
-
-
-

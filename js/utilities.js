@@ -1,7 +1,7 @@
 (function() {
   var phoneInput = document.getElementById('zipCode');
   var emailInput = document.getElementById('emailField');
-  var media = "(min-width: 700px)"
+  var media = '(min-width: 700px)';
 
   window.onload = placeHolderChange;
   window.onresize = placeHolderChange;

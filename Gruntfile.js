@@ -146,14 +146,12 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask("serve", ["browserSync", "watch"]);
-  grunt.registerTask("symbols", ["svgmin", "svgstore"]);
   grunt.registerTask("build", [
     "clean",
     "copy",
     "less",
     "postcss",
     "csso",
-    //"symbols",
     "imagemin"
   ]);
 };

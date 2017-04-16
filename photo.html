@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="icon" href="img/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="img/favicon-32x32.png" sizes="32x32" type="image/png">
     <title>HTML Academy: Пинк</title>
   </head>
   <body>
@@ -69,7 +71,7 @@
           <li class="main-menu__item"><a href="index.html">Главная</a></li>
           <li class="main-menu__item  main-menu__item--active"><a>Фотографии</a></li>
           <li class="main-menu__item"><a href="form.html">Конкурс</a></li>
-          <li class="main-menu__item"><a href="https://htmlacademy.ru">HTML Academy</a></li>
+          <li class="main-menu__item"><a href="https://htmlacademy.ru" target="_blank">HTML Academy</a></li>
         </ul>
       </nav>
     </header>
@@ -87,7 +89,7 @@
 
         <article class="photo-blog__post  photo-blog__post--panarama">
           <picture class="photo-blog__post-panarama">
-            <source media="(min-width: 1200px)" srcset="img/panorama-desktop@2x.jpg">
+            <source media="(min-width: 1200px)" srcset="img/panorama-desktop@2x.jpg 2x">
             <source media="(min-width: 700px)" srcset="img/panorama-tablet@2x.jpg">
             <img src="img/panorama-mobile@2x.jpg" alt="picture">
           </picture>
@@ -265,8 +267,8 @@
           </div>
 
           <div class="upload-form__button-wrap">
-            <button class="button  button__submit-photo  button--active" id="submit-btn" type="submit" value="Запостить">Запостить</button>
-            <button class="button  button__reset-photo  button--disabled" id="reset-btn" type="reset" value="Отмена">Отмена</button>
+            <input class="button  button__submit-photo  button--active" id="submit-btn" type="submit" value="Запостить">
+            <input class="button  button__reset-photo  button--disabled" id="reset-btn" type="reset" value="Отмена">
           </div>
         </div>
       </form>
@@ -287,7 +289,7 @@
           <li><a class="social-links__icon  social-links__icon--youtube" href="#youtube" title="youtube">youtube</a></li>
         </ul>
 
-        <a class="developer" href="https://htmlacademy.ru/">
+        <a class="developer" href="https://htmlacademy.ru/" target="_blank">
           <span class="developer__text">Разработано</span>
 
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve" fill="#d22856">

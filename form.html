@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="icon" href="img/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="img/favicon-32x32.png" sizes="32x32" type="image/png">
     <title>HTML Academy: Пинк</title>
   </head>
   <body>
@@ -69,7 +71,7 @@
           <li class="main-menu__item"><a href="index.html">Главная</a></li>
           <li class="main-menu__item"><a href="photo.html">Фотографии</a></li>
           <li class="main-menu__item  main-menu__item--active"><a>Конкурс</a></li>
-          <li class="main-menu__item"><a href="https://htmlacademy.ru">HTML Academy</a></li>
+          <li class="main-menu__item"><a href="https://htmlacademy.ru" target="_blank">HTML Academy</a></li>
         </ul>
       </nav>
     </header>
@@ -168,7 +170,7 @@
               <span class="contacts-fieldset__field-name  contacts-fieldset__field-name--mobile">Номерок телефончика</span>
 
               <span class="contacts-fieldset__input-wrap  contacts-fieldset__input-wrap--phone-icon">
-                <input id="zipCode" class="text-field__input" type="text" name="user_phone" pattern="\+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" data-error="Ошибка, укажите номер"  title="+7(888)888-88-88" required>
+                <input class="text-field__input" id="zipCode" type="text" name="user_phone" pattern="\+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="Номер, пожалуйста" data-error="Ошибка, укажите номер" title="+7(888)888-88-88" required>
               </span>
 
               <span class="contacts-fieldset__field-name  contacts-fieldset__field-name--desktop">Номер телефона</span>
@@ -178,7 +180,7 @@
               <span class="contacts-fieldset__field-name  contacts-fieldset__field-name--mobile">Адресок почты</span>
 
               <span class="contacts-fieldset__input-wrap  contacts-fieldset__input-wrap--email-icon">
-                <input id="emailField" class="text-field__input" type="email" name="user_email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" data-error="Ошибка, перепроверьте почту" title="your-mail@domain.ru" required>
+                <input class="text-field__input" id="emailField" type="email" name="user_email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" placeholder="E-mail, пожалуйста" data-error="Ошибка, перепроверьте почту" title="your-mail@domain.ru" required>
               </span>
 
               <span class="contacts-fieldset__field-name  contacts-fieldset__field-name--desktop">Адрес почты</span>
@@ -215,7 +217,7 @@
           <legend class="review-fieldset__title">Опишите свои эмоции</legend>
 
           <div class="review-fieldset__input-wrap">
-            <textarea class="text-field__input" name="user_review" rows="5" placeholder="Можно прям в красках, не стесняясь в выражениях" pattern="[^@\[\]{}]+$" data-error="Ошибка, оставьте отзыв" required></textarea>
+            <textarea class="review-fieldset__input  text-field__input" name="user_review" placeholder="Можно прям в красках, не стесняясь в выражениях" data-error="Ошибка, оставьте отзыв" title="Только русские буквы" required></textarea>
           </div>
         </fieldset>
 
@@ -235,7 +237,7 @@
           </div>
 
           <div class="popup__button-wrapper">
-            <button class="button  button--popup-form" type="button">Закрыть окно</button>
+            <input class="button  button--popup-close" type="button" value="Закрыть окно">
           </div>
         </div>
 
@@ -245,7 +247,7 @@
 
             <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
 
-            <button class="button  button--popup-form" type="button">Ok</button>
+            <input class="button  button--popup-close" type="button" value="Ok">
           </div>
         </div>
       </form>
@@ -266,7 +268,7 @@
           <li><a class="social-links__icon  social-links__icon--youtube" href="#youtube" title="youtube">youtube</a></li>
         </ul>
 
-        <a class="developer" href="https://htmlacademy.ru/">
+        <a class="developer" href="https://htmlacademy.ru/" target="_blank">
           <span class="developer__text">Разработано</span>
 
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve" fill="#d22856">

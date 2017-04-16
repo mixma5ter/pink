@@ -2,21 +2,21 @@
   display: flex;
   align-items: center;
   max-width: 280px;
-  margin: auto 0;
-  margin-bottom: 35px;
+  margin: auto 0 35px;
+  cursor: pointer;
 
-  .radio-field__checkbox {
-    &:hover {
-      border-color: #283645;
-    }
+  &:hover .radio-field__checkbox {
+    border-color: #283645;
+  }
 
-    &:active {
-      border-color: #d22856;
-    }
+  &:active .radio-field__checkbox {
+    border-color: #d22856;
+  }
 
+  &__checkbox {
     display: inline-block;
     position: relative;
-    width: 35px;
+    min-width: 35px;
     height: 35px;
     margin-right: 30px;
     border: 2px solid #e5e5e5;
@@ -24,10 +24,7 @@
     background-color: #ffffff;
   }
 
-  #radio-1:checked ~ .radio-field__checkbox,
-  #radio-2:checked ~ .radio-field__checkbox,
-  #radio-3:checked ~ .radio-field__checkbox {
-
+  &__input:checked ~ .radio-field__checkbox {
     &::before {
       content: '';
       position: absolute;
@@ -48,9 +45,9 @@
   }
 
   &__input-text {
-    font-size: @font-size-main;
+    font-size: @fs-18;
     font-weight: normal;
-    line-height: 1.66;
+    line-height: @lh-30;
   }
 
   @media @desktop-width {

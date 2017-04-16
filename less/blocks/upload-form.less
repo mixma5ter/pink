@@ -1,34 +1,33 @@
 .upload-form {
-
-  &__filter-toggle {
-    display: inline-block;
-  }
-
-  label[for="upload-filter-1"] {
+  label[for='upload-filter-1'] {
     width: 44px;
     height: 44px;
     background: url('../img/icon-editor-crop--active.svg') no-repeat center;
   }
 
-  label[for="upload-filter-2"] {
+  label[for='upload-filter-2'] {
     width: 48px;
     height: 48px;
     background: url('../img/icon-editor-fill.svg') no-repeat center;
   }
 
-  label[for="upload-filter-3"] {
+  label[for='upload-filter-3'] {
     width: 32px;
     height: 32px;
     background: url('../img/icon-editor-contrast.svg') no-repeat center;
+  }
+
+  &__filter-toggle {
+    display: inline-block;
   }
 
   &__title {
     max-width: 280px;
     margin: 0 auto 40px;
     text-align: center;
-    font-size: @font-size-small;
+    font-size: @fs-14;
     font-weight: normal;
-    line-height: 2.1;
+    line-height: @lh-30;
   }
 
   &__content {
@@ -52,7 +51,7 @@
     justify-content: space-around;
     align-items: center;
     width: 280px;
-    margin: 0 auto 30px auto;
+    margin: 0 auto 30px;
 
     input {
       display: none;
@@ -71,14 +70,14 @@
     margin: 0 auto;
 
     &__content {
-      padding: 55px 6% 35px 6%;
+      padding: 55px 6% 35px;
     }
 
     &__title {
       max-width: 425px;
       margin-bottom: 65px;
-      font-size: @font-size-main;
-      line-height: 2;
+      font-size: @fs-18;
+      line-height: @lh-36;
     }
 
     &__image-select {

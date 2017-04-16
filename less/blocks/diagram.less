@@ -5,14 +5,13 @@
 
   &__item {
     position: relative;
-    margin: 50px 0;
-    margin-left: 50%;
+    margin: 50px 0 50px 50%;
 
     p {
       margin-bottom: 15px;
-      font-size: @font-size-small;
+      font-size: @fs-14;
       font-weight: normal;
-      line-height: 1.7;
+      line-height: @lh-24;
     }
   }
 
@@ -20,16 +19,16 @@
     display: block;
     margin-bottom: 15px;
     color: @color-black;
-    font-size: @font-size-title-min;
+    font-size: @fs-30;
     font-weight: bold;
-    line-height: 1.2;
+    line-height: @lh-36;
   }
 
   &__link {
     color: @color-pink;
-    font-size: @font-size-small;
+    font-size: @fs-14;
     font-weight: normal;
-    line-height: 1.7;
+    line-height: @lh-24;
   }
 
   @media @tablet-width {
@@ -113,8 +112,8 @@
       max-width: 530px;
 
       p {
-        font-size: @font-size-main;
-        line-height: 1.66;
+        font-size: @fs-18;
+        line-height: @lh-30;
 
         br {
           display: none;
@@ -123,8 +122,8 @@
     }
 
     &__link {
-      font-size: @font-size-main;
-      line-height: 1.66;
+      font-size: @fs-18;
+      line-height: @lh-30;
     }
   }
 }

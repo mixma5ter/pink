@@ -1,8 +1,8 @@
 .price-table {
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   border-collapse: collapse;
+  word-break: break-all;
 
   th, td {
     box-sizing: border-box;
@@ -11,9 +11,9 @@
   }
 
   td {
-    font-size: @font-size-small;
+    font-size: @fs-14;
     font-weight: normal;
-    line-height: 2.14;
+    line-height: @lh-30;
     text-transform: uppercase;
     border: 2px solid #e5e5e5;
     background: @color-white;
@@ -22,7 +22,7 @@
   &__title--hit-logo {
     position: relative;
 
-    ::before {
+    &::before {
       content: '';
       position: absolute;
       top: -37px;
@@ -36,15 +36,15 @@
       border-color: transparent transparent #d22856;
     }
 
-    ::after {
+    &::after {
       content: 'ХИТ';
       position: absolute;
       top: 10px;
       left: 10px;
       transform: rotate(-45deg);
-      font-size: @font-size-small;
+      font-size: @fs-14;
       font-weight: bold;
-      line-height: 30px;
+      line-height: @lh-30;
       color: #ffffff;
     }
   }
@@ -97,18 +97,18 @@
 
   &__title {
     color: @color-white;
-    font-size: @font-size-main;
+    font-size: @fs-18;
     font-weight: bold;
-    line-height: 1.66;
+    line-height: @lh-30;
     text-transform: uppercase;
     background: @color-blue-dark;
     border: 2px solid #e5e5e5;
   }
 
   &__price {
-    font-size: @font-size-big;
+    font-size: @fs-24;
     font-weight: 100;
-    line-height: 1.25;
+    line-height: @lh-30;
   }
 
   &__check-icon-yes,
@@ -121,7 +121,7 @@
   }
 
   @media @tablet-width {
-    width: auto;
+    width: 80%;
 
     th, td {
       min-width: 152px;
@@ -134,14 +134,14 @@
     &__title--hit-logo {
       position: relative;
 
-      ::before {
+      &::before {
         top: -29px;
         left: -37px;
         width: 30px;
         height: 15px;
       }
 
-      ::after {
+      &::after {
         top: 5px;
         left: 6px;
       }
@@ -157,41 +157,39 @@
 
     &__title {
       font-size: 16px;
-      line-height: 1.87;
+      line-height: @lh-30;
     }
 
     &__price {
-      font-size: @font-size-main;
-      line-height: 1.66;
+      font-size: @fs-18;
+      line-height: @lh-30;
     }
 
     &__check-icon-yes,
     &__check-icon-no {
       float: none;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 0 auto;
     }
   }
 
   @media @desktop-width {
-
     th, td {
       min-width: 233px;
     }
 
     td {
-      font-size: @font-size-main;
-      line-height: 1.66;
+      font-size: @fs-18;
+      line-height: @lh-30;
     }
 
     &__title {
-      font-size: @font-size-main;
-      line-height: 1.66;
+      font-size: @fs-18;
+      line-height: @lh-30;
     }
 
     &__price {
       font-size: 24px;
-      line-height: 1.25;
+      line-height: @lh-30;
     }
   }
 }

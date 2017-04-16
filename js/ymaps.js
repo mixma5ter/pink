@@ -19,7 +19,7 @@ ymaps.ready(function () {
       // Размеры метки.
       iconImageSize: [36, 36],
       // Смещение левого верхнего угла иконки относительно
-      // её "ножки" (точки привязки).
+      // её 'ножки' (точки привязки).
       iconImageOffset: [0, 0]
     });
   myMap.geoObjects.add(myPlacemark);

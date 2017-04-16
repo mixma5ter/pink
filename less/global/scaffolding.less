@@ -1,5 +1,7 @@
 body {
   margin: 0 auto;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   background-color: #f2f2f2;
   color: @color-blue-dark;
   font-family: opensans, Arial, sans-serif;
@@ -19,7 +21,7 @@ fieldset {
   border: none;
 }
 
-#cover-div {
+.cover-div {
   position: fixed;
   top: 0;
   left: 0;
@@ -37,7 +39,7 @@ fieldset {
 .review-form .help-message {
   position: absolute;
   display: block;
-  font-size: @font-size-small;
+  font-size: @fs-14;
   text-transform: none;
   color: @color-pink-dark;
 }
