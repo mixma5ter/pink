@@ -38,25 +38,71 @@
 
   <section class="user-form">
     <form class="user-form__wrapper">
-      <fieldset></fieldset>
+      <fieldset class="user-form__name">
+        <label for="user-surname">Фамилия:
+          <input name="surname" type="text" id="user-surname" placeholder="Укажите фамилию" required>
+        </label>
+        <label for="user-name">Имя:
+          <input name="name" type="text" id="user-name" placeholder="Введите ваше имя" required>
+        </label>
+        <label for="user-midname">Отчество:
+          <input name="midname" type="text" id="user-midname" placeholder="Ну и отчество тоже">
+        </label>
+      </fieldset>
 
       <fieldset>
         <legend>С каким приложением путешествовали?</legend>
+        <label for="pink-ios">Pink для iOS
+          <input name="app-type" type="radio" id="pink-ios" value="ios" checked>
+        </label>
+        <label for="pink-android">Pink для Android
+          <input name="app-type" type="radio" id="pink-android" value="android">
+        </label>
+        <label for="pink-windows">Windows Phone
+          <input name="app-type" type="radio" id="pink-windows" value="windows">
+        </label>
       </fieldset>
 
       <fieldset>
         <legend>Контактная информация</legend>
+        <label for="user-phone">Номер телефона
+          <input name="tel" type="tel" id="user-phone" placeholder="+7 XXX XXX-XX-XX">
+        </label>
+        <label for="user-email">Адрес почты
+          <input name="email" type="email" id="user-email" placeholder="Введите почту" required>
+        </label>
       </fieldset>
 
       <fieldset>
         <legend>Ваши безбашенные достижения в путешествии</legend>
+        <label for="checkbox-1">Сделал селфи с акулой
+          <input name="checkbox-1" type="checkbox" id="checkbox-1" checked>
+        </label>
+        <label for="checkbox-2">Обгорел на пляже
+          <input name="checkbox-2" type="checkbox" id="checkbox-2" checked>
+        </label>
+        <label for="checkbox-3">Видел Чака Норриса
+          <input name="checkbox-3" type="checkbox" id="checkbox-3">
+        </label>
+        <label for="checkbox-4">Накупил сувениров
+          <input name="checkbox-4" type="checkbox" id="checkbox-4">
+        </label>
+        <label for="checkbox-5">Удержал башню
+          <input name="checkbox-5" type="checkbox" id="checkbox-5" checked>
+        </label>
+        <label for="checkbox-5">Разгромил отель
+          <input name="checkbox-5" type="checkbox" id="checkbox-6">
+        </label>
       </fieldset>
 
       <fieldset>
         <legend>Опишите свои эмоции</legend>
+        <label for="user-text">
+          <textarea name="description" id="user-text" rows="5" cols="50">Можно прям в красках, не стесняясь в выражениях</textarea>
+        </label>
       </fieldset>
 
-      <input type="submit">
+      <input name="form-send-btn" type="submit" value="Отправить форму">
       <p><sup>*</sup> — обязательные <span class="hidden">для заполнения</span> поля</p>
     </form>
   </section>
