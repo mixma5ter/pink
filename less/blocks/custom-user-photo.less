@@ -1,19 +1,32 @@
 .custom-user-photo {
-  font-family: @font-family;
-  font-size: @fs-14;
-  line-height: @lh-30;
-  font-weight: normal;
-  color: @color-blue-dark;
-  background-color: @color-white-dark;
+  &__title {
+    font-size: @fs-14;
+    line-height: @lh-30;
+    font-weight: normal;
+    text-align: center;
+    margin: 0;
+    padding: 50px 20px;
+  }
+  &__wrapper {
+    padding: 20px;
+    background-color: @color-white-dark;
+  }
   &__btn {
+    display: block;
     font-size: @fs-18;
     line-height: @lh-18;
     font-weight: bold;
-  }
-  &__send {
     color: @color-pink-dark;
+    background-color: @color-white-dark;
+    box-sizing: border-box;
+    border: 3px solid @color-pink-dark;
+    border-radius: 28px;
+    width: 280px;
+    height: 56px;
+    margin: 20px 0;
   }
   &__delete {
-  color: @color-blue-dark;
+    color: @color-blue-dark-transp;
+    border-color: @color-blue-dark-transp;
   }
 }
