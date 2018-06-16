@@ -122,55 +122,45 @@
       </div>
     </section>
 
-    <section class="price-table">
-      <div class="price-table__wrapper  slider">
-        <input class="price-table__input" type="radio" name="price-table" id="price-table-input-1">
-        <input class="price-table__input" type="radio" name="price-table" id="price-table-input-2" checked>
-        <input class="price-table__input" type="radio" name="price-table" id="price-table-input-3">
-        <div class="price-table__items">
-          <div class="price-table__item  slider__item">
-            <div class="price-table__item-title">
-              <p>База</p>
-              <p class="price-table__price">1,99 USD</p>
-            </div>
-            <div class="price-table__description">
-              <span>Розовый фильтр</span>
-              <span>Смайлики</span>
-              <span>Комментарии</span>
-            </div>
-          </div>
-        </div>
-        <div class="price-table__items">
-          <div class="price-table__item  slider__item">
-            <div class="price-table__item-title">
-              <p>Стандарт</p>
-              <p class="price-table__price">3,99 USD</p>
-            </div>
-            <div class="price-table__description">
-              <span>Розовый фильтр</span>
-              <span>Смайлики</span>
-              <span>Комментарии</span>
-            </div>
-          </div>
-        </div>
-        <div class="price-table__items">
-          <div class="price-table__item  slider__item">
-            <div class="price-table__item-title">
-              <p>Анлим</p>
-              <p class="price-table__price">9,99 USD</p>
-            </div>
-            <div class="price-table__description">
-              <span>Розовый фильтр</span>
-              <span>Смайлики</span>
-              <span>Комментарии</span>
-            </div>
-          </div>
-        </div>
-        <div class="price-table__toggles  slider__toggles">
-          <label class="price-table__toggle  slide__toggle" for="price-table-input-1"></label>
-          <label class="price-table__toggle  slide__toggle" for="price-table-input-2"></label>
-          <label class="price-table__toggle  slide__toggle" for="price-table-input-3"></label>
-        </div>
+    <section class="price-slider">
+      <input class="price-slider__input" type="radio" name="price-table" id="price-table-input-1">
+      <input class="price-slider__input" type="radio" name="price-table" id="price-table-input-2" checked>
+      <input class="price-slider__input" type="radio" name="price-table" id="price-table-input-3">
+      <table class="price-table">
+        <tr>
+          <th class="price-table__title">
+            <p>База</p>
+            <p class="price-table__price">1,99 USD</p>
+          </th>
+          <th class="price-table__title">
+            <p>Стандарт</p>
+            <p class="price-table__price">3,99 USD</p>
+          </th>
+          <th class="price-table__title">
+            <p>Анлим</p>
+            <p class="price-table__price">9,99 USD</p>
+          </th>
+        </tr>
+        <tr>
+          <td>Розовый фильтр</td>
+          <td>Розовый фильтр</td>
+          <td>Розовый фильтр</td>
+        </tr>
+        <tr>
+          <td>Смайлики</td>
+          <td>Смайлики</td>
+          <td>Смайлики</td>
+        </tr>
+        <tr>
+          <td>Комментарии</td>
+          <td>Комментарии</td>
+          <td>Комментарии</td>
+        </tr>
+      </table>
+      <div class="price-slider__toggles  slider__toggles">
+        <label class="price-table__toggle  slide__toggle" for="price-table-input-1"></label>
+        <label class="price-table__toggle  slide__toggle" for="price-table-input-2"></label>
+        <label class="price-table__toggle  slide__toggle" for="price-table-input-3"></label>
       </div>
     </section>
 
