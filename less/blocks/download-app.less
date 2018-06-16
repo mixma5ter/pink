@@ -1,24 +1,32 @@
 .download-app {
-  font-family: @font-family;
-  font-size: @fs-14;
-  line-height: @lh-24;
-  font-weight: 100;
   color: @color-white;
   background-color: @color-blue;
-}
-
-.download-app__image {
-  background: url("../../img/bg-back-mobile@1x.jpg") no-repeat 0 0;
-}
-
-.download-app__btn {
-  font-family: @font-family;
-  font-size: @fs-18;
-  line-height: @lh-18;
-  font-weight: bold;
-  text-decoration: none;
-  color: @color-white;
-  border: 3px solid @color-white;
-  border-radius: 29px;
-  padding: 15px 27px;
+  &__image {
+    background: url("../../img/bg-back-mobile@1x.jpg") no-repeat 0 0;
+  }
+  &__content {
+    padding: 20px;
+    text-align: center;
+  }
+  &__title {}
+  &__title--hidden {
+    display: none;
+  }
+  &__btn {
+    font-size: @fs-18;
+    line-height: @lh-18;
+    font-weight: bold;
+    text-decoration: none;
+    color: @color-white;
+    border: 3px solid @color-white;
+    border-radius: 29px;
+    padding: 15px 27px;
+  }
+  &__links {}
+  &__text {
+    font-size: @fs-14;
+    line-height: @lh-24;
+    font-weight: 100;
+    color: @color-white;
+  }
 }
