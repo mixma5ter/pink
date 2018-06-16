@@ -1,18 +1,23 @@
 .page-header {
-  font-family: @font-family;
+  background-color: @color-black-transp;
+}
+
+.main-nav {
   font-size: @fs-18;
   line-height: @lh-32;
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
   color: @color-white;
-  background-color: @color-black-transp;
-  & a {
+  background-color: @color-blue;
+  &__items {
+    list-style: none;
+  }
+  &__item {
+    text-align: center;
+  }
+  &__link {
     text-decoration: none;
     color: @color-white;
   }
-}
-
-.main-nav {
-  background-color: @color-blue;
 }
