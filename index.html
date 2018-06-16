@@ -7,203 +7,206 @@
 </head>
 <body>
 
-<header class="page-header">
-  <div class="page-header__logo">
-    <img src="http://placehold.it/150x100" width="150" height="100" alt="Логотип PINK">
-  </div>
-  <nav class="main-nav  main-nav--closed">
-    <button class="main-nav__toggle" type="button">Меню</button>
-    <div class="main-nav__wrapper">
+<div class="page-wrapper">
+
+  <header class="page-header">
+    <div class="page-header__wrapper">
+      <a class="page-header__logo">
+        <img src="http://placehold.it/150x100" width="150" height="100" alt="Логотип PINK">
+      </a>
+    </div>
+    <nav class="main-nav  main-nav--closed">
+      <button class="main-nav__toggle" type="button">Меню</button>
       <ul class="main-nav__items">
         <li class="main-nav__item  main-nav__item--active"><a>Главная</a></li>
         <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
         <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
         <li class="main-nav__item"><a href="https://htmlacademy.ru/">HMTL Academy</a></li>
       </ul>
-    </div>
-  </nav>
-</header>
+    </nav>
+  </header>
 
-<main>
-
-  <section class="download-app">
-    <div class="download-app__image">
-      <img src="http://placehold.it/150x100" width="150" height="100" alt="Изображение приложения">
-    </div>
-    <h2 class="download-app__title  download-app__title--hidden">
-      Взгляните на жизнь иначе!
-    </h2>
-    <a class="download-app__btn" href="https://www.apple.com/lae/itunes/">Скачать приложение</a>
-    <div class="download-app__links">
-      <a class="download-app__link  download-app__link--apple" href="https://www.apple.com/lae/itunes">iTunes</a>
-      <a class="download-app__link  download-app__link--android" href="https://play.google.com/store">Google Play</a>
-      <a class="download-app__link  download-app__link--windows"
-         href="https://www.microsoft.com/ru-ru/store/appsvnext/windows">Windows</a>
-    </div>
-    <p>
-      Доступно для iPhone, iPad, Android,<br>
-      Windows Phone, OS X, Windows 8
-    </p>
-  </section>
-
-  <section class="features">
-    <h2 class="features__title">
-      Устали от серости мегаполиса?<br>
-      Нам есть, что вам предложить!
-    </h2>
-    <ul class="features__items">
-      <li class="features__item">
-        <h3 class="features__item-title">Поднимает настроение</h3>
-        <p>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-      </li>
-      <li class="features__item">
-        <h3 class="features__item-title">Меняет мир вокруг</h3>
-        <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы
-          усилить эффект</p>
-      </li>
-      <li class="features__item">
-        <h3 class="features__item-title">Заводит новых друзей</h3>
-        <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
-      </li>
-    </ul>
-  </section>
-
-  <section class="promo  promo--hidden">
-    <div class="promo__image">
-      <img src="http://placehold.it/150x100" width="150" height="100" alt="Промо изображение">
-    </div>
-    <h3 class="promo__title">Эффект на 24 часа!</h3>
-    <p>Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится
-      целые сутки!</p>
-    <a href="#Findmore">Узнать больше об исследовании</a>
-  </section>
-
-  <section class="reviews">
-    <div class="reviews__wrapper  slider">
-      <input class="slider__input" type="radio" name="reviews" id="reviews-input-1" checked>
-      <input class="slider__input" type="radio" name="reviews" id="reviews-input-2">
-      <input class="slider__input" type="radio" name="reviews" id="reviews-input-3">
-      <div class="reviews__items">
-        <blockquote class="reviews__item  slider__item">
-          <cite class="reviews__author-name">Николай Петров</cite>
-          <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я
-            познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-          <p>25 лет, водитель трамвая</p>
-        </blockquote>
-        <blockquote class="reviews__item  slider__item">
-          <cite class="reviews__author-name">Николай Петров</cite>
-          <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я
-            познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-          <p>25 лет, водитель трамвая</p>
-        </blockquote>
-        <blockquote class="reviews__item  slider__item">
-          <cite class="reviews__author-name">Николай Петров</cite>
-          <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я
-            познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-          <p>25 лет, водитель трамвая</p>
-        </blockquote>
+  <main>
+    <section class="download-app">
+      <div class="download-app__image">
+        <img src="http://placehold.it/150x100" width="150" height="100" alt="Изображение приложения">
       </div>
-      <div class="reviews__toggles  slider__toggles">
-        <label class="review__toggle  slider__toggle" for="reviews-input-1"></label>
-        <label class="review__toggle  slider__toggle" for="reviews-input-2"></label>
-        <label class="review__toggle  slider__toggle" for="reviews-input-3"></label>
+      <h2 class="download-app__title  download-app__title--hidden">
+        Взгляните на жизнь иначе!
+      </h2>
+      <a class="download-app__btn" href="https://www.apple.com/lae/itunes/">Скачать приложение</a>
+      <div class="download-app__links">
+        <a class="download-app__link  download-app__link--apple" href="https://www.apple.com/lae/itunes">iTunes</a>
+        <a class="download-app__link  download-app__link--android" href="https://play.google.com/store">Google Play</a>
+        <a class="download-app__link  download-app__link--windows"
+           href="https://www.microsoft.com/ru-ru/store/appsvnext/windows">Windows</a>
       </div>
-    </div>
-  </section>
+      <p>
+        Доступно для iPhone, iPad, Android,<br>
+        Windows Phone, OS X, Windows 8
+      </p>
+    </section>
 
-  <section class="price-table">
-    <div class="price-table__wrapper  slider">
-      <input class="price-table__input" type="radio" name="price-table" id="price-table-input-1">
-      <input class="price-table__input" type="radio" name="price-table" id="price-table-input-2" checked>
-      <input class="price-table__input" type="radio" name="price-table" id="price-table-input-3">
-      <div class="price-table__items">
-        <div class="price-table__item  slider__item">
-          <div class="price-table__item-title">
-            <p>База</p>
-            <p class="price-table__price">1,99 USD</p>
-          </div>
-          <div class="price-table__description">
-            <span>Розовый фильтр</span>
-            <span>Смайлики</span>
-            <span>Комментарии</span>
-          </div>
+    <section class="features">
+      <h2 class="features__title">
+        Устали от серости мегаполиса?<br>
+        Нам есть, что вам предложить!
+      </h2>
+      <ul class="features__items">
+        <li class="features__item">
+          <h3 class="features__item-title">Поднимает настроение</h3>
+          <p>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+        </li>
+        <li class="features__item">
+          <h3 class="features__item-title">Меняет мир вокруг</h3>
+          <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы
+            усилить эффект</p>
+        </li>
+        <li class="features__item">
+          <h3 class="features__item-title">Заводит новых друзей</h3>
+          <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="promo  promo--hidden">
+      <div class="promo__image">
+        <img src="http://placehold.it/150x100" width="150" height="100" alt="Промо изображение">
+      </div>
+      <h3 class="promo__title">Эффект на 24 часа!</h3>
+      <p>Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится
+        целые сутки!</p>
+      <a href="#Findmore">Узнать больше об исследовании</a>
+    </section>
+
+    <section class="reviews">
+      <div class="reviews__wrapper  slider">
+        <input class="slider__input" type="radio" name="reviews" id="reviews-input-1" checked>
+        <input class="slider__input" type="radio" name="reviews" id="reviews-input-2">
+        <input class="slider__input" type="radio" name="reviews" id="reviews-input-3">
+        <div class="reviews__items">
+          <blockquote class="reviews__item  slider__item">
+            <cite class="reviews__author-name">Николай Петров</cite>
+            <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я
+              познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+            <p>25 лет, водитель трамвая</p>
+          </blockquote>
+          <blockquote class="reviews__item  slider__item">
+            <cite class="reviews__author-name">Николай Петров</cite>
+            <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я
+              познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+            <p>25 лет, водитель трамвая</p>
+          </blockquote>
+          <blockquote class="reviews__item  slider__item">
+            <cite class="reviews__author-name">Николай Петров</cite>
+            <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я
+              познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+            <p>25 лет, водитель трамвая</p>
+          </blockquote>
+        </div>
+        <div class="reviews__toggles  slider__toggles">
+          <label class="review__toggle  slider__toggle" for="reviews-input-1"></label>
+          <label class="review__toggle  slider__toggle" for="reviews-input-2"></label>
+          <label class="review__toggle  slider__toggle" for="reviews-input-3"></label>
         </div>
       </div>
-      <div class="price-table__items">
-        <div class="price-table__item  slider__item">
-          <div class="price-table__item-title">
-            <p>Стандарт</p>
-            <p class="price-table__price">3,99 USD</p>
-          </div>
-          <div class="price-table__description">
-            <span>Розовый фильтр</span>
-            <span>Смайлики</span>
-            <span>Комментарии</span>
-          </div>
-        </div>
-      </div>
-      <div class="price-table__items">
-        <div class="price-table__item  slider__item">
-          <div class="price-table__item-title">
-            <p>Анлим</p>
-            <p class="price-table__price">9,99 USD</p>
-          </div>
-          <div class="price-table__description">
-            <span>Розовый фильтр</span>
-            <span>Смайлики</span>
-            <span>Комментарии</span>
-          </div>
-        </div>
-      </div>
-      <div class="price-table__toggles  slider__toggles">
-        <label class="price-table__toggle  slide__toggle" for="price-table-input-1"></label>
-        <label class="price-table__toggle  slide__toggle" for="price-table-input-2"></label>
-        <label class="price-table__toggle  slide__toggle" for="price-table-input-3"></label>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="contacts">
-    <h3 class="contacts__title">
-      Остались вопросы?<br>
-      Свяжитесь с нами!
-    </h3>
-    <div class="contacts__item">
-      <h4>Звоните:</h4>
-      <a class="contacts__tel" href="tel:+78125556666">+7 (812) 555-66-66</a>
-    </div>
-    <div class="contacts__item">
-      <h4>Пишите:</h4>
-      <a class="contacts__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-    </div>
-    <div class="contacts__item">
-      <h4>Приезжайте в гости::</h4>
-      <a class="contacts__address" href="https://yandex.ru/maps/-/CBe5uVqS9B">
-        ул. Большая Конюшенная, 19/8
+    <section class="price-table">
+      <div class="price-table__wrapper  slider">
+        <input class="price-table__input" type="radio" name="price-table" id="price-table-input-1">
+        <input class="price-table__input" type="radio" name="price-table" id="price-table-input-2" checked>
+        <input class="price-table__input" type="radio" name="price-table" id="price-table-input-3">
+        <div class="price-table__items">
+          <div class="price-table__item  slider__item">
+            <div class="price-table__item-title">
+              <p>База</p>
+              <p class="price-table__price">1,99 USD</p>
+            </div>
+            <div class="price-table__description">
+              <span>Розовый фильтр</span>
+              <span>Смайлики</span>
+              <span>Комментарии</span>
+            </div>
+          </div>
+        </div>
+        <div class="price-table__items">
+          <div class="price-table__item  slider__item">
+            <div class="price-table__item-title">
+              <p>Стандарт</p>
+              <p class="price-table__price">3,99 USD</p>
+            </div>
+            <div class="price-table__description">
+              <span>Розовый фильтр</span>
+              <span>Смайлики</span>
+              <span>Комментарии</span>
+            </div>
+          </div>
+        </div>
+        <div class="price-table__items">
+          <div class="price-table__item  slider__item">
+            <div class="price-table__item-title">
+              <p>Анлим</p>
+              <p class="price-table__price">9,99 USD</p>
+            </div>
+            <div class="price-table__description">
+              <span>Розовый фильтр</span>
+              <span>Смайлики</span>
+              <span>Комментарии</span>
+            </div>
+          </div>
+        </div>
+        <div class="price-table__toggles  slider__toggles">
+          <label class="price-table__toggle  slide__toggle" for="price-table-input-1"></label>
+          <label class="price-table__toggle  slide__toggle" for="price-table-input-2"></label>
+          <label class="price-table__toggle  slide__toggle" for="price-table-input-3"></label>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacts">
+      <h3 class="contacts__title">
+        Остались вопросы?<br>
+        Свяжитесь с нами!
+      </h3>
+      <div class="contacts__item">
+        <h4>Звоните:</h4>
+        <a class="contacts__tel" href="tel:+78125556666">+7 (812) 555-66-66</a>
+      </div>
+      <div class="contacts__item">
+        <h4>Пишите:</h4>
+        <a class="contacts__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+      </div>
+      <div class="contacts__item">
+        <h4>Приезжайте в гости::</h4>
+        <a class="contacts__address" href="https://yandex.ru/maps/-/CBe5uVqS9B">
+          ул. Большая Конюшенная, 19/8
+        </a>
+      </div>
+      <div class="contacts__map">
+        <img src="http://placehold.it/150x100" width="150" height="100" alt="Карта">
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer  hidden">
+    <div class="page-footer__wrapper">
+      <a class="page-footer__logo" href="index.html">
+        <img src="http://placehold.it/150x100" width="150" height="100" alt="Логотип PINK">
       </a>
+      <div class="page-footer__social">
+        <a class="social-link  social-link--tw" href="#Twitter">Twitter</a>
+        <a class="social-link  social-link--fb" href="#Facebook">Facebook</a>
+        <a class="social-link  social-link--yt" href="#YouTube">YouTube</a>
+      </div>
+      <div class="page-footer__copyright">Разработано:
+        <a class="page-footer__copyright-link" href="https://htmlacademy.ru/">HTML Academy
+          <img src="http://placehold.it/150x100" width="150" height="100" alt="Логотип HTML Academy">
+        </a>
+      </div>
     </div>
-    <div class="contacts__map">
-      <img src="http://placehold.it/150x100" width="150" height="100" alt="Карта">
-    </div>
-  </section>
-</main>
+  </footer>
 
-<footer class="page-footer  hidden">
-  <div class="page-footer__wrapper">
-    <a class="page-footer__logo" href="index.html">
-      <img src="http://placehold.it/150x100" width="150" height="100" alt="Логотип PINK">
-    </a>
-    <div class="page-footer__social">
-      <a class="social-link  social-link--tw" href="#Twitter">Twitter</a>
-      <a class="social-link  social-link--fb" href="#Facebook">Facebook</a>
-      <a class="social-link  social-link--yt" href="#YouTube">YouTube</a>
-    </div>
-    <div class="page-footer__copyright">Разработано:
-      <a class="page-footer__copyright-link" href="https://htmlacademy.ru/">HTML Academy
-        <img src="http://placehold.it/150x100" width="150" height="100" alt="Логотип HTML Academy">
-      </a>
-    </div>
-  </div>
-</footer>
+</div>
 </body>
 </html>

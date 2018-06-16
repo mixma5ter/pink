@@ -7,191 +7,196 @@
 </head>
 <body>
 
-<header class="page-header">
-  <div class="page-header__logo">
-    <img src="http://placehold.it/150x100" width="150" height="100" alt="Логотип PINK">
-  </div>
-  <nav class="main-nav  main-nav--closed">
-    <button class="main-nav__toggle" type="button">Меню</button>
-    <div class="main-nav__wrapper">
+<div class="page-wrapper">
+
+  <header class="page-header">
+    <div class="page-header__wrapper">
+      <a class="page-header__logo">
+        <img src="http://placehold.it/150x100" width="150" height="100" alt="Логотип PINK">
+      </a>
+    </div>
+    <nav class="main-nav  main-nav--closed">
+      <button class="main-nav__toggle" type="button">Меню</button>
       <ul class="main-nav__items">
-        <li class="main-nav__item"><a href="index.html">Главная</a></li>
-        <li class="main-nav__item  main-nav__item--active"><a>Фотографии</a></li>
+        <li class="main-nav__item  main-nav__item--active"><a>Главная</a></li>
+        <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
         <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
         <li class="main-nav__item"><a href="https://htmlacademy.ru/">HMTL Academy</a></li>
       </ul>
-    </div>
-  </nav>
-</header>
+    </nav>
+  </header>
 
-<main>
-  <section class="page-title">
-    <h1>
-      Фотографии<br>
-      пользователей
-    </h1>
-  </section>
+  <main>
+    <section class="page-title">
+      <h1>
+        Фотографии<br>
+        пользователей
+      </h1>
+    </section>
 
-  <section class="photo-blog">
-    <h2 class="photo-blog__title">
-      Взгляните на фотографии, которые выкладывают пользователи!
-      <br>
-      Видите, как не хватает ваших?
-    </h2>
+    <section class="photo-blog">
+      <h2 class="photo-blog__title">
+        Взгляните на фотографии, которые выкладывают пользователи!
+        <br>
+        Видите, как не хватает ваших?
+      </h2>
 
-    <article class="photo-blog__post  photo-blog__post--panorama">
-      <picture class="photo-blog__post-panorama">
-        <img src="http://placehold.it/150x100" width="150" height="100" alt="Picture">
-      </picture>
-      <div class="photo-blog__post-content  photo-blog__post-content--panorama">
-        <div class="photo-blog__post-author">
-          <cite class="photo-blog__post-author-name">Анна</cite>
-          <time class="photo-blog__post-time">(5 минут назад)</time>
-        </div>
-        <p class="photo-blog__post-description">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе, задавайте свои
-          вопросы!</p>
-        <div class="photo-blog__post-likes">Нравится: 215</div>
-      </div>
-    </article>
-
-    <div class="photo-blog__post-wrapper">
-      <article class="photo-blog__post">
-        <picture class="photo-blog__post-picture">
+      <article class="photo-blog__post  photo-blog__post--panorama">
+        <picture class="photo-blog__post-panorama">
           <img src="http://placehold.it/150x100" width="150" height="100" alt="Picture">
         </picture>
-        <div class="photo-blog__post-content">
+        <div class="photo-blog__post-content  photo-blog__post-content--panorama">
           <div class="photo-blog__post-author">
-            <cite class="photo-blog__post-author-name">Левон</cite>
-            <time class="photo-blog__post-time">(5 часов назад)</time>
+            <cite class="photo-blog__post-author-name">Анна</cite>
+            <time class="photo-blog__post-time">(5 минут назад)</time>
           </div>
-          <p>Вчера он на луну летал, сегодня в руки к нам попал.</p>
-          <div class="photo-blog__post-likes">Нравится: 356</div>
-        </div>
-      </article>
-
-      <article class="photo-blog__post">
-      <picture class="photo-blog__post-picture">
-        <img src="http://placehold.it/150x100" width="150" height="100" alt="Picture">
-      </picture>
-      <div class="photo-blog__post-content">
-        <div class="photo-blog__post-author">
-          <cite class="photo-blog__post-author-name">Антон</cite>
-          <time class="photo-blog__post-time">(12 часов назад)</time>
-        </div>
-        <p>Соседи будут рады!</p>
-        <div class="photo-blog__post-likes">Нравится: 666</div>
-      </div>
-    </article>
-
-      <article class="photo-blog__post">
-        <picture class="photo-blog__post-picture">
-          <img src="http://placehold.it/150x100" width="150" height="100" alt="Picture">
-        </picture>
-        <div class="photo-blog__post-content">
-          <div class="photo-blog__post-author">
-            <cite class="photo-blog__post-author-name">Борис</cite>
-            <time class="photo-blog__post-time">(20 часов назад)</time>
-          </div>
-          <p>Здесь могла быть ваша цитата о высоком и вечном.</p>
+          <p class="photo-blog__post-description">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе,
+            задавайте свои
+            вопросы!</p>
           <div class="photo-blog__post-likes">Нравится: 215</div>
         </div>
       </article>
 
-      <article class="photo-blog__post">
-        <picture class="photo-blog__post-picture">
-          <img src="http://placehold.it/150x100" width="150" height="100" alt="Picture">
-        </picture>
-        <div class="photo-blog__post-content">
-          <div class="photo-blog__post-author">
-            <cite class="photo-blog__post-author-name">Сергей</cite>
-            <time class="photo-blog__post-time">(25 часов назад)</time>
+      <div class="photo-blog__post-wrapper">
+        <article class="photo-blog__post">
+          <picture class="photo-blog__post-picture">
+            <img src="http://placehold.it/150x100" width="150" height="100" alt="Picture">
+          </picture>
+          <div class="photo-blog__post-content">
+            <div class="photo-blog__post-author">
+              <cite class="photo-blog__post-author-name">Левон</cite>
+              <time class="photo-blog__post-time">(5 часов назад)</time>
+            </div>
+            <p>Вчера он на луну летал, сегодня в руки к нам попал.</p>
+            <div class="photo-blog__post-likes">Нравится: 356</div>
           </div>
-          <p>Самая кубанская в мире!</p>
-          <div class="photo-blog__post-likes">Нравится: 4</div>
-        </div>
-      </article>
+        </article>
 
-      <article class="photo-blog__post">
-        <picture class="photo-blog__post-picture">
-          <img src="http://placehold.it/150x100" width="150" height="100" alt="Picture">
-        </picture>
-        <div class="photo-blog__post-content">
-          <div class="photo-blog__post-author">
-            <cite class="photo-blog__post-author-name">Максим</cite>
-            <time class="photo-blog__post-time">(40 часов назад)</time>
+        <article class="photo-blog__post">
+          <picture class="photo-blog__post-picture">
+            <img src="http://placehold.it/150x100" width="150" height="100" alt="Picture">
+          </picture>
+          <div class="photo-blog__post-content">
+            <div class="photo-blog__post-author">
+              <cite class="photo-blog__post-author-name">Антон</cite>
+              <time class="photo-blog__post-time">(12 часов назад)</time>
+            </div>
+            <p>Соседи будут рады!</p>
+            <div class="photo-blog__post-likes">Нравится: 666</div>
           </div>
-          <p>Где снег-то?</p>
-          <div class="photo-blog__post-likes">Нравится: 150</div>
-        </div>
-      </article>
+        </article>
 
-      <article class="photo-blog__post">
-        <picture class="photo-blog__post-picture">
-          <img src="http://placehold.it/150x100" width="150" height="100" alt="Picture">
-        </picture>
-        <div class="photo-blog__post-content">
-          <div class="photo-blog__post-author">
-            <cite class="photo-blog__post-author-name">Надежда</cite>
-            <time class="photo-blog__post-time">(45 часов назад)</time>
+        <article class="photo-blog__post">
+          <picture class="photo-blog__post-picture">
+            <img src="http://placehold.it/150x100" width="150" height="100" alt="Picture">
+          </picture>
+          <div class="photo-blog__post-content">
+            <div class="photo-blog__post-author">
+              <cite class="photo-blog__post-author-name">Борис</cite>
+              <time class="photo-blog__post-time">(20 часов назад)</time>
+            </div>
+            <p>Здесь могла быть ваша цитата о высоком и вечном.</p>
+            <div class="photo-blog__post-likes">Нравится: 215</div>
           </div>
-          <p>Всем GM и взаимные лайки!</p>
-          <div class="photo-blog__post-likes">Нравится: 2560</div>
-        </div>
-      </article>
-    </div>
-  </section>
+        </article>
 
-  <section class="custom-user-photo">
-    <h3>
-      Затмите их всех!<br>
-      Выкладывайте все, что накопилось в телефоне!
-    </h3>
-    <div class="custom-user-photo__wrapper">
-      <div class="custom-user-photo__img">
-        <img src="http://placehold.it/150x100" width="150" height="100" alt="Ваше изображение">
+        <article class="photo-blog__post">
+          <picture class="photo-blog__post-picture">
+            <img src="http://placehold.it/150x100" width="150" height="100" alt="Picture">
+          </picture>
+          <div class="photo-blog__post-content">
+            <div class="photo-blog__post-author">
+              <cite class="photo-blog__post-author-name">Сергей</cite>
+              <time class="photo-blog__post-time">(25 часов назад)</time>
+            </div>
+            <p>Самая кубанская в мире!</p>
+            <div class="photo-blog__post-likes">Нравится: 4</div>
+          </div>
+        </article>
+
+        <article class="photo-blog__post">
+          <picture class="photo-blog__post-picture">
+            <img src="http://placehold.it/150x100" width="150" height="100" alt="Picture">
+          </picture>
+          <div class="photo-blog__post-content">
+            <div class="photo-blog__post-author">
+              <cite class="photo-blog__post-author-name">Максим</cite>
+              <time class="photo-blog__post-time">(40 часов назад)</time>
+            </div>
+            <p>Где снег-то?</p>
+            <div class="photo-blog__post-likes">Нравится: 150</div>
+          </div>
+        </article>
+
+        <article class="photo-blog__post">
+          <picture class="photo-blog__post-picture">
+            <img src="http://placehold.it/150x100" width="150" height="100" alt="Picture">
+          </picture>
+          <div class="photo-blog__post-content">
+            <div class="photo-blog__post-author">
+              <cite class="photo-blog__post-author-name">Надежда</cite>
+              <time class="photo-blog__post-time">(45 часов назад)</time>
+            </div>
+            <p>Всем GM и взаимные лайки!</p>
+            <div class="photo-blog__post-likes">Нравится: 2560</div>
+          </div>
+        </article>
       </div>
-      <div class="custom-user-photo__settings">
-        <div class="custom-user-photo__setting">
-          <div class="setting__scale">
-            <div class="setting__bar"></div>
-          </div>
-          <div class="setting__toggle"></div>
-        </div>
-        <div class="custom-user-photo__setting">
-          <div class="setting__scale">
-            <div class="setting__bar"></div>
-          </div>
-          <div class="setting__toggle"></div>
-        </div>
-        <div class="custom-user-photo__setting">
-          <div class="setting__scale">
-            <div class="setting__bar"></div>
-          </div>
-          <div class="setting__toggle"></div>
-        </div>
-        <button class="custom-user-photo__btn  custom-user-photo__send" type="button">Запостить</button>
-        <button class="custom-user-photo__btn  custom-user-photo__delete" type="button">Отмена</button>
-      </div>
-    </div>
-  </section>
-</main>
+    </section>
 
-<footer class="page-footer  hidden">
-  <div class="page-footer__wrapper">
-    <a class="page-footer__logo" href="index.html">
-      <img src="http://placehold.it/150x100" width="150" height="100" alt="Логотип PINK">
-    </a>
-    <div class="page-footer__social">
-      <a class="social-link  social-link--tw" href="#Twitter">Twitter</a>
-      <a class="social-link  social-link--fb" href="#Facebook">Facebook</a>
-      <a class="social-link  social-link--yt" href="#YouTube">YouTube</a>
-    </div>
-    <div class="page-footer__copyright">Разработано:
-      <a class="page-footer__copyright-link" href="https://htmlacademy.ru/">HTML Academy
-        <img src="http://placehold.it/150x100" width="150" height="100" alt="Логотип HTML Academy">
+    <section class="custom-user-photo">
+      <h3>
+        Затмите их всех!<br>
+        Выкладывайте все, что накопилось в телефоне!
+      </h3>
+      <div class="custom-user-photo__wrapper">
+        <div class="custom-user-photo__img">
+          <img src="http://placehold.it/150x100" width="150" height="100" alt="Ваше изображение">
+        </div>
+        <div class="custom-user-photo__settings">
+          <div class="custom-user-photo__setting">
+            <div class="setting__scale">
+              <div class="setting__bar"></div>
+            </div>
+            <div class="setting__toggle"></div>
+          </div>
+          <div class="custom-user-photo__setting">
+            <div class="setting__scale">
+              <div class="setting__bar"></div>
+            </div>
+            <div class="setting__toggle"></div>
+          </div>
+          <div class="custom-user-photo__setting">
+            <div class="setting__scale">
+              <div class="setting__bar"></div>
+            </div>
+            <div class="setting__toggle"></div>
+          </div>
+          <button class="custom-user-photo__btn  custom-user-photo__send" type="button">Запостить</button>
+          <button class="custom-user-photo__btn  custom-user-photo__delete" type="button">Отмена</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer  hidden">
+    <div class="page-footer__wrapper">
+      <a class="page-footer__logo" href="index.html">
+        <img src="http://placehold.it/150x100" width="150" height="100" alt="Логотип PINK">
       </a>
+      <div class="page-footer__social">
+        <a class="social-link  social-link--tw" href="#Twitter">Twitter</a>
+        <a class="social-link  social-link--fb" href="#Facebook">Facebook</a>
+        <a class="social-link  social-link--yt" href="#YouTube">YouTube</a>
+      </div>
+      <div class="page-footer__copyright">Разработано:
+        <a class="page-footer__copyright-link" href="https://htmlacademy.ru/">HTML Academy
+          <img src="http://placehold.it/150x100" width="150" height="100" alt="Логотип HTML Academy">
+        </a>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
+
+</div>
 </body>
 </html>
