@@ -5,6 +5,9 @@
     text-align: center;
     padding: 30px;
   }
+  &__wrapper {
+    margin: 0 auto;
+  }
 }
 
 .name-fieldset {
@@ -18,6 +21,9 @@
     margin-left: 20px;
   }
   &__input {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
     font-size: @fs-18;
     line-height: @lh-30;
     padding: 10px 20px;
@@ -41,6 +47,7 @@
   }
   &__item {
     display: block;
+    text-align: center;
     font-size: @fs-18;
     line-height: @lh-30;
     color: @color-blue-dark;
@@ -58,6 +65,9 @@
     margin-left: 20px;
   }
   &__input {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
     font-size: @fs-18;
     line-height: @lh-30;
     padding: 10px 20px;
@@ -81,6 +91,7 @@
   }
   &__item {
     display: block;
+    text-align: center;
     font-size: @fs-18;
     line-height: @lh-30;
     color: @color-blue-dark;
@@ -101,18 +112,20 @@
     padding: 20px 40px;
   }
   &__text {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
     font-size: @fs-18;
     line-height: @lh-30;
-    box-sizing: border-box;
-    width: 280px;
-    height: 201px;
+    padding: 10px 20px;
     border: 2px solid @color-white-dark;
-    padding: 20px;
   }
 }
 
 .form-send-btn {
-  margin: 20px;
+  display: block;
+  cursor: pointer;
+  margin: 20px auto;
   font-size: @fs-18;
   line-height: @lh-30;
   font-weight: bold;
