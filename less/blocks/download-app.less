@@ -8,9 +8,11 @@
     background-color: @color-blue;
     background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
     background-repeat: no-repeat, no-repeat;
-    background-position: 0 175px, center 0;
+    background-position: 40% bottom, center center;
   }
   &__content {
+    max-width: 320px;
+    margin: 0 auto;
     padding: 20px;
     text-align: center;
   }
@@ -27,7 +29,8 @@
     box-sizing: border-box;
     border: 3px solid @color-white;
     border-radius: 28px;
-    width: 280px;
+    min-width: 280px;
+    max-width: 320px;
     height: 56px;
     margin: 0 auto;
     padding: 15px;
@@ -46,21 +49,55 @@
     background-color: @color-blue;
     background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
     background-repeat: no-repeat, no-repeat;
-    background-position: right 80px bottom 0, center 0;
+    background-position: 70% bottom, center center;
     background-size: auto, cover;
     &::before {
       content: none;
     }
     &__content {
+      width: 300px;
+      margin-right: 60%;
+      padding: 40px;
       padding-top: 150px;
-      margin-right: 322px;
     }
     &__title {
       display: block;
       font-size: @fs-40;
       line-height: @lh-40;
       font-weight: 100;
-      margin: 20px 50px;
+      padding: 20px 50px;
+    }
+    &__text {
+      font-size: @fs-18;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .download-app {
+    background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 70% bottom, center center;
+    background-size: auto, cover;
+    &::before {
+      content: none;
+    }
+    &__content {
+      width: 300px;
+      margin-left: 90px;
+      margin-right: auto;
+      padding: 40px;
+      padding-top: 150px;
+    }
+    &__title {
+      display: block;
+      font-size: @fs-50;
+      line-height: @lh-50;
+      padding: 20px;
+    }
+    &__btn {
+      font-size: @fs-21;
+      max-width: 340px;
     }
   }
 }
