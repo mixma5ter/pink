@@ -1,10 +1,32 @@
 .page-header {
-  margin: 0;
-  padding: 20px;
-  background-color: @color-black-transp;
+  position: absolute;
+  top: 0;
+  z-index: 11;
+  &__wrapper {
+    box-sizing: border-box;
+    width: @mobile-width;
+    min-height: 66px;
+    margin: 0;
+    background-color: @color-black-transp;
+  }
+  &__logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  &__toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
 }
 
 .main-nav {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  box-sizing: border-box;
+  width: @mobile-width;
   font-size: @fs-18;
   line-height: @lh-32;
   font-weight: bold;
@@ -14,13 +36,44 @@
   background-color: @color-blue;
   &__items {
     list-style: none;
+    margin: 0;
     padding: 0;
   }
   &__item {
     text-align: center;
+    padding: 16px 0;
+    border-top: 1px solid @color-black;
   }
   &__link {
     text-decoration: none;
     color: @color-white;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    &__wrapper {
+      width: @tablet-width;
+      min-height: 110px;
+    }
+    &__logo {
+      top: 40px;
+      left: 40px;
+    }
+  }
+  .main-nav {
+    width: @tablet-width;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    &__wrapper {
+      width: @desktop-width;
+    }
+    &__logo {
+      top: 40px;
+      left: 130px;
+    }
   }
 }

@@ -1,15 +1,20 @@
 .download-app {
   color: @color-white;
   background-color: @color-blue;
-  &__image {
-    background: url("../img/bg-back-mobile@1x.jpg") no-repeat center 0;
+  &::before {
+    content: "";
+    display: block;
+    height: 458px;
+    background-color: @color-blue;
+    background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 0 175px, center 0;
   }
   &__content {
     padding: 20px;
     text-align: center;
   }
-  &__title {}
-  &__title--hidden {
+  &__title {
     display: none;
   }
   &__btn {
@@ -33,5 +38,29 @@
     line-height: @lh-24;
     font-weight: 100;
     color: @color-white;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .download-app {
+    background-color: @color-blue;
+    background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 80px bottom 0, center 0;
+    background-size: auto, cover;
+    &::before {
+      content: none;
+    }
+    &__content {
+      padding-top: 150px;
+      margin-right: 322px;
+    }
+    &__title {
+      display: block;
+      font-size: @fs-40;
+      line-height: @lh-40;
+      font-weight: 100;
+      margin: 20px 50px;
+    }
   }
 }
