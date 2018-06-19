@@ -1,3 +1,55 @@
-.promo--hidden {
+.promo {
   display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .promo {
+    display: block;
+    background-color: @color-white;
+    &__wrapper {
+      max-width: 400px;
+      margin-left: 50%;
+      padding: 40px 0;
+      padding-right: 40px;
+    }
+    &__title {
+      max-width: 170px;
+      font-size: @fs-30;
+      line-height: @lh-36;
+      font-weight: bold;
+      margin: 0;
+    }
+    &__text {
+      padding: 20px 0;
+    }
+    &__link {
+      color: @color-pink-dark;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo {
+    font-size: @fs-18;
+    line-height: @lh-30;
+    background-color: @color-white-dark;
+    &__wrapper {
+      max-width: 60%;
+      margin: 0;
+      margin-left: 40%;
+      padding: 40px 0;
+      padding-right: 130px;
+    }
+    &__title {
+      font-size: @fs-30;
+      line-height: @lh-30;
+      font-weight: bold;
+      width: auto;
+      max-width: 580px;
+      margin: 0;
+    }
+    &__text {
+      width: auto;
+    }
+  }
 }
