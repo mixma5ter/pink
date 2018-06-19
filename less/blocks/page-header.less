@@ -72,18 +72,21 @@
   .main-nav {
     display: block;
     position: absolute;
-    top: 25px;
+    top: 30px;
     right: 0;
+    font-size: @fs-18;
+    line-height: @lh-18;
+    font-weight: normal;
+    text-transform: none;
     width: 65%;
     height: 110px;
     background-color: transparent;
-    &__items {
-
-
-    }
     &__item {
       display: inline-block;
       border: none;
+    }
+    &__link:hover {
+      text-decoration: underline;
     }
   }
 }

@@ -2,15 +2,26 @@
   background-color: @color-white-dark;
   text-align: center;
   &__title-wrapper {
+    min-height: 50px;
     background-color: @color-white;
+  }
+  &__centered-container {
+    box-sizing: border-box;
+    max-width: 500px;
+    margin: 0 auto;
     padding: 20px;
   }
   &__title {
     font-size: @fs-24;
-    line-height: @lh-24;
+    line-height: 1.2;
     font-weight: 100;
+    margin: 0;
+    padding: 0;
   }
   &__items-wrapper {
+    box-sizing: border-box;
+    width: @mobile-width;
+    margin: 0 auto;
     padding: 20px;
   }
   &__items {
@@ -27,5 +38,30 @@
     line-height: @lh-24;
     font-weight: bold;
     color: @color-black;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .features {
+    &__centered-container {
+      max-width: 900px;
+      padding: 50px 40px;
+    }
+    &__title {
+      font-size: @fs-40;
+      font-weight: 100;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .features {
+    &__centered-container {
+      max-width: 1200px;
+      padding: 70px 130px;
+    }
+    &__title {
+      font-size: @fs-50;
+    }
   }
 }
