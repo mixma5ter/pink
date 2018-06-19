@@ -1,6 +1,9 @@
 .reviews {
   text-align: center;
-  &__wrapper {}
+  &__wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+  }
   &__items {}
   &__item {
     font-size: @fs-14;
@@ -16,3 +19,7 @@
     color: @color-black;
   }
 }
+
+@media (min-width: @tablet-width) {}
+
+@media (min-width: @desktop-width) {}

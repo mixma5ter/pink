@@ -1,7 +1,31 @@
+@font-face {
+  font-weight: normal;
+  font-family: 'opensans';
+  font-style: normal;
+  src: url('../../fonts/opensans.woff') format('woff'),
+url('../../fonts/opensans.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: 'opensans';
+  font-style: normal;
+  src: url('../../fonts/opensansbold.woff') format('woff'),
+url('../../fonts/opensansbold.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 100;
+  font-family: 'opensans';
+  font-style: normal;
+  src: url('../../fonts/opensanslight.woff') format('woff'),
+url('../../fonts/opensanslight.woff2') format('woff2');
+}
+
 body {
-  font-family: 'Open Sans', 'Arial', sans-serif;
   font-size: @fs-14;
   line-height: @lh-24;
+  font-family: 'opensans', Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   color: @color-blue-dark;
@@ -15,4 +39,15 @@ p {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.visually-hidden{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
