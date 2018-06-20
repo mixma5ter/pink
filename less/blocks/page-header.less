@@ -1,28 +1,30 @@
 .page-header {
   position: absolute;
   top: 0;
-  z-index: 11;
   width: 100%;
+  max-width: @desktop-width;
   min-height: 66px;
   &__wrapper {
     min-height: 66px;
-    margin: 0;
     background-color: @color-black-transp;
+  }
+  &__wrapper--open {
+    background-color: @color-blue;
+  }
+  &__wrapper--closed {
+    background-color: @color-black-transp;
+  }
+  &__wrapper--nojs {
+    background-color: @color-blue;
   }
   &__logo {
     position: absolute;
     top: 20px;
     left: 20px;
   }
-  &__toggle {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
 }
 
 .main-nav {
-  display: none;
   font-size: @fs-18;
   line-height: @lh-32;
   font-weight: bold;
@@ -30,6 +32,19 @@
   text-decoration: none;
   color: @color-white;
   background-color: @color-blue;
+  &__toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: block;
+    width: 50px;
+    height: 25px;
+    font-size: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
   &__items {
     margin: 0;
     padding: 0;
@@ -44,49 +59,125 @@
     text-decoration: none;
     color: @color-white;
     padding: 16px 20px;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .page-header {
-    width: 100%;
-    &__wrapper {
-      min-height: 110px;
+    &:hover {
+      color: @color-pink-dark;
     }
-    &__logo {
-      top: 40px;
-      left: 40px;
+    &:active {
+      color: @color-pink-dark-transp;
     }
   }
 }
 
-@media (min-width: @desktop-width) {
-  .page-header {
-    width: @desktop-width;
-    &__wrapper {}
-    &__logo {
-      top: 40px;
-      left: 130px;
-    }
-  }
-  .main-nav {
-    display: block;
+.main-nav--closed .main-nav__toggle {
+  &::before {
+    content: "";
     position: absolute;
-    top: 30px;
+    top: 0;
     right: 0;
-    font-size: @fs-18;
-    line-height: @lh-18;
-    font-weight: normal;
-    text-transform: none;
-    width: 65%;
-    height: 110px;
-    background-color: transparent;
-    &__item {
-      display: inline-block;
-      border: none;
-    }
-    &__link:hover {
-      text-decoration: underline;
-    }
+    width: 50px;
+    height: 4px;
+    background-color: @color-white;
+    box-shadow: 0 10px 0 0 @color-white,
+    0 20px 0 0 @color-white;
+  }
+  &:hover::before {
+    background-color: @color-pink-dark;
+    box-shadow: 0 10px 0 0 @color-pink-dark,
+    0 20px 0 0 @color-pink-dark;
+  }
+  &:active::before {
+    background-color: @color-pink-dark-transp;
+    box-shadow: 0 10px 0 0 @color-pink-dark-transp,
+    0 20px 0 0 @color-pink-dark-transp;
   }
 }
+
+.main-nav--open .main-nav__toggle {
+  width: 25px;
+  height: 25px;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 25px;
+    height: 4px;
+    background-color: @color-white;
+  }
+  &::before {
+    transform: rotate(45deg);
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+  &:hover::before,
+  &:hover::after {
+    background-color: @color-pink-dark;
+  }
+  &:active::before,
+  &:active::after {
+    background-color: @color-pink-dark-transp;
+  }
+}
+
+.main-nav--closed .main-nav__items {
+  display: none;
+}
+
+.main-nav--nojs .main-nav__items {
+    display: block;
+  }
+
+//@media (min-width: @tablet-width) {
+//  .page-header {
+//    //width: 100%;
+//    &__wrapper {
+//      min-height: 110px;
+//    }
+//    &__logo {
+//      top: 40px;
+//      left: 40px;
+//    }
+//    &__nav-btn {
+//      top: 40px;
+//      right: 40px;
+//    }
+//  }
+//}
+//
+//@media (min-width: @desktop-width) {
+//  .page-header {
+//    width: @desktop-width;
+//    &__wrapper {
+//      background-color: @color-black-transp;
+//    }
+//    &__logo {
+//      top: 40px;
+//      left: 130px;
+//    }
+//    &__nav-btn {
+//      display: none;
+//    }
+//  }
+//  .main-nav {
+//    display: block;
+//    position: absolute;
+//    top: 30px;
+//    right: 0;
+//    font-size: @fs-18;
+//    line-height: @lh-18;
+//    font-weight: normal;
+//    text-transform: none;
+//    width: 65%;
+//    height: 110px;
+//    background-color: transparent;
+//    &__item {
+//      display: inline-block;
+//      border: none;
+//    }
+//    &__link:hover {
+//      text-decoration: underline;
+//    }
+//  }
+//}
