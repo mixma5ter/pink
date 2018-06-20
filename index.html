@@ -93,23 +93,46 @@
       </div>
     </section>
 
-    <section class="reviews">
-      <input class="slider__input" type="radio" name="reviews" id="reviews-input-1" checked>
-      <input class="slider__input" type="radio" name="reviews" id="reviews-input-2">
-      <input class="slider__input" type="radio" name="reviews" id="reviews-input-3">
-      <div class="reviews__wrapper  slider">
-        <div class="reviews__items">
-          <blockquote class="reviews__item  slider__item">
-            <cite class="reviews__author-name">Николай Петров</cite>
+    <section class="reviews-slider">
+      <input class="reviews-slider__input" type="radio" name="reviews-slider" id="slider-input-1" checked>
+      <input class="reviews-slider__input" type="radio" name="reviews-slider" id="slider-input-2">
+      <input class="reviews-slider__input" type="radio" name="reviews-slider" id="slider-input-3">
+      <div class="reviews-slider__slides">
+        <blockquote class="reviews-slider__slide">
+          <div class="reviews-slider__author">
+            <cite class="reviews-slider__author-name">Николай Петров</cite>
+            <span class="reviews-slider__author-info">25 лет, водитель трамвая</span>
+          </div>
+          <div class="reviews-slider__author-text">
             <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я
               познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-          </blockquote>
-        </div>
-        <div class="reviews__toggles  slider__toggles">
-          <label class="review__toggle  slider__toggle" for="reviews-input-1"></label>
-          <label class="review__toggle  slider__toggle" for="reviews-input-2"></label>
-          <label class="review__toggle  slider__toggle" for="reviews-input-3"></label>
-        </div>
+          </div>
+        </blockquote>
+        <blockquote class="reviews-slider__slide">
+          <div class="reviews-slider__author">
+            <cite class="reviews-slider__author-name">Петр Николаев</cite>
+            <span class="reviews-slider__author-info">25 лет, пассажир трамвая</span>
+          </div>
+          <div class="reviews-slider__author-text">
+            <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я
+              познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          </div>
+        </blockquote>
+        <blockquote class="reviews-slider__slide">
+          <div class="reviews-slider__author">
+            <cite class="reviews-slider__author-name">Петров Николай Иванович</cite>
+            <span class="reviews-slider__author-info">55 лет, осмотрщик-ремонтник вагонов пассажирских</span>
+          </div>
+          <div class="reviews-slider__author-text">
+            <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я
+              познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          </div>
+        </blockquote>
+      </div>
+      <div class="reviews-slider__toggles">
+        <label class="reviews-slider__toggle" for="slider-input-1"></label>
+        <label class="reviews-slider__toggle" for="slider-input-2"></label>
+        <label class="reviews-slider__toggle" for="slider-input-3"></label>
       </div>
     </section>
 
@@ -227,10 +250,10 @@
 </script>
 
 <!--<script>-->
-  <!--var a, w = document.createTreeWalker(document, NodeFilter.SHOW_TEXT);-->
-  <!--while (a = w.nextNode()) {-->
-    <!--if (a.textContent.trim().length) a.textContent = 'Одиннадцатиклассница пошла посмотреть на достопримечательность, она шла долго, несколько строчек, пока не пришла'-->
-  <!--}-->
+<!--var a, w = document.createTreeWalker(document, NodeFilter.SHOW_TEXT);-->
+<!--while (a = w.nextNode()) {-->
+<!--if (a.textContent.trim().length) a.textContent = 'Одиннадцатиклассница пошла посмотреть на достопримечательность, она шла долго, несколько строчек, пока не пришла'-->
+<!--}-->
 <!--</script>-->
 
 </body>
