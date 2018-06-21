@@ -14,9 +14,7 @@
   &__wrapper--closed {
     background-color: @color-black-transp;
   }
-  &__wrapper--nojs {
-    background-color: @color-blue;
-  }
+
   &__logo {
     position: absolute;
     top: 20px;
@@ -122,10 +120,6 @@
   }
 }
 
-.main-nav--nojs .main-nav__items {
-  display: block;
-}
-
 @media (min-width: @tablet-width) {
   .page-header {
     &__wrapper {
@@ -177,7 +171,6 @@
     }
     &__items {
       display: flex;
-
       max-width: 790px;
       align-items: center;
       flex-grow: 1;
@@ -197,5 +190,9 @@
     &__link:active {
       text-decoration: none;
     }
+  }
+
+  .main-nav--nojs .main-nav__items {
+    display: flex;
   }
 }

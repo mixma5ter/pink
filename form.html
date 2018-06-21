@@ -11,21 +11,21 @@
 <div class="page-wrapper">
 
   <header class="page-header">
-    <div class="page-header__wrapper">
+    <div class="page-header__wrapper  page-header__wrapper--open">
       <a class="page-header__logo">
         <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип PINK">
       </a>
     </div>
-    <nav class="main-nav  main-nav--closed">
-      <button class="main-nav__toggle" type="button">Меню</button>
+    <nav class="main-nav  main-nav--open">
+      <button class="main-nav__toggle" type="button">Открыть меню</button>
       <ul class="main-nav__items">
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="index.html">Главная</a>
+        <li class="main-nav__item  main-nav__item--active">
+          <a class="main-nav__link active-link" href="index.html">Главная</a>
         </li>
         <li class="main-nav__item">
           <a class="main-nav__link" href="photo.html">Фотографии</a>
         </li>
-        <li class="main-nav__item  main-nav__item--active">
+        <li class="main-nav__item">
           <a class="main-nav__link">Конкурс</a>
         </li>
         <li class="main-nav__item">
@@ -121,24 +121,58 @@
     </section>
   </main>
 
-  <footer class="page-footer  hidden">
+  <footer class="page-footer">
     <div class="page-footer__wrapper">
-      <a class="page-footer__logo" href="index.html">
+      <a class="page-footer__item  page-footer__logo" href="index.html">
         <img src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Логотип PINK">
       </a>
-      <div class="page-footer__social">
-        <a class="social-link  social-link--tw" href="#Twitter">Twitter</a>
-        <a class="social-link  social-link--fb" href="#Facebook">Facebook</a>
-        <a class="social-link  social-link--yt" href="#YouTube">YouTube</a>
+      <div class="page-footer__item  page-footer__social">
+        <a class="page-footer__social-link  page-footer__social-link--tw" href="#Twitter">Twitter</a>
+        <a class="page-footer__social-link  page-footer__social-link--fb" href="#Facebook">Facebook</a>
+        <a class="page-footer__social-link  page-footer__social-link--yt" href="#YouTube">YouTube</a>
       </div>
-      <div class="page-footer__copyright">Разработано:
+      <div class="page-footer__item  page-footer__copyright">Разработано:
         <a class="page-footer__copyright-link" href="https://htmlacademy.ru/">HTML Academy
-          <img class="logo-htmlacademy" src="img/logo-htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
+          <img class="logo-htmlacademy" src="img/logo-htmlacademy.svg" width="27" height="34"
+               alt="Логотип HTML Academy">
         </a>
       </div>
     </div>
   </footer>
 
 </div>
+
+<script>
+  var navMain = document.querySelector('.main-nav');
+  var navToggle = document.querySelector('.main-nav__toggle');
+  var pageHeader = document.querySelector('.page-header__wrapper');
+
+  pageHeader.classList.remove('page-header__wrapper--open');
+  pageHeader.classList.add('page-header__wrapper--closed');
+  navMain.classList.remove('main-nav--open');
+  navMain.classList.add('main-nav--closed');
+
+  navToggle.addEventListener('click', function () {
+    if (navMain.classList.contains('main-nav--closed')) {
+      navMain.classList.remove('main-nav--closed');
+      navMain.classList.add('main-nav--open');
+      pageHeader.classList.remove('page-header__wrapper--closed');
+      pageHeader.classList.add('page-header__wrapper--open');
+    } else {
+      navMain.classList.add('main-nav--closed');
+      navMain.classList.remove('main-nav--open');
+      pageHeader.classList.add('page-header__wrapper--closed');
+      pageHeader.classList.remove('page-header__wrapper--open');
+    }
+  })
+</script>
+
+<!--<script>-->
+<!--var a, w = document.createTreeWalker(document, NodeFilter.SHOW_TEXT);-->
+<!--while (a = w.nextNode()) {-->
+<!--if (a.textContent.trim().length) a.textContent = 'Одиннадцатиклассница пошла посмотреть на достопримечательность, она шла долго, несколько строчек, пока не пришла'-->
+<!--}-->
+<!--</script>-->
+
 </body>
 </html>
