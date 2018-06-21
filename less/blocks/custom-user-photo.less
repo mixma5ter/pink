@@ -7,7 +7,10 @@
     padding: 50px 20px;
   }
   &__wrapper {
+    box-sizing: border-box;
+    //max-width: 940px;
     text-align: center;
+    margin: 0 auto;
     padding: 20px;
     background-color: @color-white-dark;
   }
@@ -28,5 +31,22 @@
   &__delete {
     color: @color-blue-dark-transp;
     border-color: @color-blue-dark-transp;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .custom-user-photo {
+    &__title {
+      font-size: @fs-18;
+      padding: 50px 20px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .custom-user-photo {
+    &__wrapper {
+      margin: 0 130px;
+    }
   }
 }

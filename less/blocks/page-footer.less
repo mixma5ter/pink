@@ -4,10 +4,10 @@
   &__wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
   }
   &__item {
-    flex-basis: 30%;
+    //flex-basis: 30%;
     align-self: center;
     margin: 20px 0;
   }
@@ -44,8 +44,15 @@
 
 @media (min-width: @tablet-width) {
   .page-footer {
+    padding: 20px 40px;
     &__wrapper {
       flex-direction: row;
     }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    padding: 20px 130px;
   }
 }
