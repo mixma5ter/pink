@@ -34,7 +34,34 @@
     margin: 0 auto;
     padding: 15px;
   }
-  &__links {}
+  &__btn:hover {
+    color: @color-pink-dark;
+    background-color: @color-white;
+  }
+  &__btn:active {
+    color: @color-pink-dark-transp;
+    background-color: @color-white;
+  }
+  &__links {
+    //vertical-align: bottom;
+  }
+  &__link {
+    font-size: 0;
+    display: inline-block;
+    vertical-align: bottom;
+    width: 50px;
+    height: 60px;
+    margin: 20px 10px;
+  }
+  &__link--apple {
+    background: url("../img/logo-apple.svg") no-repeat 2px 2px;
+  }
+  &__link--android {
+    background: url("../img/logo-android.svg") no-repeat 3px 10px;
+  }
+  &__link--windows {
+    background: url("../img/logo-microsoft.svg") no-repeat 3px 13px;
+  }
   &__text {
     font-size: @fs-14;
     line-height: @lh-24;
