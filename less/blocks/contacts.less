@@ -1,25 +1,30 @@
 .contacts-info {
   text-align: center;
+  margin-bottom: 20px;
   &__title {
     font-size: @fs-24;
     line-height: @lh-24;
     font-weight: 100;
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px;
   }
   &__items {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0 20px;
   }
   &__item {
     font-size: @fs-14;
     line-height: @lh-18;
     font-weight: bold;
     padding: 0 20px;
+    margin-bottom: 20px;
     width: 240px;
+    & h3 {
+      margin: 5px 0;
+    }
   }
   &__data {
     font-size: @fs-24;
@@ -48,7 +53,7 @@
 
 @media (min-width: @tablet-width) {
   .contacts-info {
-    padding: 40px;
+    padding: 0 40px;
     &__title {
       font-size: @fs-40;
       line-height: 1.2;
@@ -62,6 +67,7 @@
 
 @media (min-width: @desktop-width) {
   .contacts-info {
+    margin-bottom: 0;
     padding: 40px 130px;
     &__title {
       font-size: @fs-50;
