@@ -1,17 +1,18 @@
 .contacts-info {
-  margin: 0;
-  padding: 20px;
   text-align: center;
   &__title {
     font-size: @fs-24;
     line-height: @lh-24;
     font-weight: 100;
+    margin: 0 auto;
+    padding: 20px;
   }
   &__items {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 0 auto;
+    padding: 20px;
   }
   &__item {
     font-size: @fs-14;
@@ -35,6 +36,14 @@
     color: rgba(40, 54, 69, 0.3);
     text-decoration: none;
   }
+}
+
+.contacts__map {
+  margin: 0 auto;
+  width: auto;
+  height: 200px;
+  background: @color-white url("../img/bg-map-mobile@1x.png") no-repeat center 0;
+  background-size: cover;
 }
 
 @media (min-width: @tablet-width) {
