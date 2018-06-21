@@ -1,12 +1,23 @@
 .page-title {
   margin: 0;
-  padding: 80px 20px 40px;
+  padding: 80px 20px 60px;
   background: @color-blue url("../img/bg-back-mobile@1x.jpg") no-repeat center 0;
+  background-size: cover;
+  background-position: center;
   &__text {
     font-size: @fs-24;
-    line-height: @lh-30;
+    line-height: 1.2;
     font-weight: 100;
     color: @color-white;
     text-align: center;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-title {
+    padding: 150px 20px 100px;
+    &__text {
+      font-size: @fs-50;
+    }
   }
 }
