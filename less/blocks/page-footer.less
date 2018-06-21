@@ -1,9 +1,49 @@
 .page-footer {
   text-align: center;
   padding: 20px;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  &__item {
+    margin: 20px 0;
+  }
+  &__logo {}
+  &__social {}
+  &__social-link {
+    font-size: 0;
+    display: inline-block;
+    vertical-align: bottom;
+    width: 45px;
+    height: 45px;
+    margin: 0 6px;
+    border: 3px solid @color-blue-dark-transp;
+    border-radius: 50%;
+    &--tw {
+      background: url("../img/icon-twitter.svg") no-repeat center center;
+    }
+    &--fb {
+      background: url("../img/icon-facebook.svg") no-repeat center center;
+    }
+    &--yt {
+      background: url("../img/icon-youtube.svg") no-repeat center center;
+    }
+  }
   &__copyright {
     font-size: @fs-14;
     line-height: @lh-18;
     font-weight: normal;
+  }
+  &__copyright-link {
+    font-size: 0;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    &__wrapper {
+      flex-direction: row;
+    }
   }
 }
