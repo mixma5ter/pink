@@ -64,7 +64,8 @@
         </fieldset>
 
         <fieldset class="achievements-fieldset">
-          <span class="achievements-fieldset__title">Ваши безбашенные достижения в путешествии</span>
+          <legend class="achievements-fieldset__title  achievements-fieldset__title--desktop">Ваши безбашенные достижения в путешествии</legend>
+          <span class="achievements-fieldset__title  achievements-fieldset__title--mobile-only">Ваши безбашенные достижения в путешествии</span>
           <label class="achievements-fieldset__item" for="checkbox-1">Сделал селфи с акулой
             <input name="checkbox-1" type="checkbox" id="checkbox-1" checked>
           </label>
@@ -114,8 +115,10 @@
           </label>
         </fieldset>
 
-        <input class="form-send-btn" name="form-send-btn" type="submit" value="Отправить форму">
+        <div class="form-send__wrapper">
+          <input class="form-send-btn" name="form-send-btn" type="submit" value="Отправить форму">
         <span class="form-send-info"><span class="color-pink-dark">*</span> — обязательные поля</span>
+        </div>
 
       </form>
     </section>

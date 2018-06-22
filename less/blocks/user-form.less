@@ -12,7 +12,7 @@
 
 .name-fieldset {
   border: none;
-  padding: 20px;
+  padding: 0 20px;
   &__item {
     font-size: @fs-14;
     line-height: @lh-30;
@@ -26,8 +26,17 @@
     width: 100%;
     font-size: @fs-18;
     line-height: @lh-30;
-    padding: 10px 20px;
+    margin: 5px 0 20px;
+    padding: 13px 20px;
     border: 2px solid @color-white-dark;
+    border-radius: 5px;
+  }
+  &__input:hover {
+    border: 2px solid @color-blue;
+  }
+  &__input:focus {
+    border-color: @color-pink-dark;
+    outline: none;
   }
 }
 
@@ -44,6 +53,9 @@
     color: @color-pink-dark;
     margin: 0;
     padding: 20px;
+    &--desktop {
+      display: none;
+    }
   }
   &__item {
     display: block;
@@ -124,6 +136,8 @@
   }
 }
 
+.form-send__wrapper {}
+
 .form-send-btn {
   display: block;
   cursor: pointer;
@@ -135,10 +149,10 @@
   background-color: @color-green;
   text-transform: uppercase;
   box-sizing: border-box;
+  width: 280px;
+  min-height: 63px;
   border: none;
   border-radius: 5px;
-  width: 280px;
-  height: 63px;
 }
 
 .form-send-info {
@@ -162,12 +176,15 @@
     }
     &__wrapper {}
   }
+
+  .form-send-btn {
+    width: 300px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .user-form {
     &__title {
-      font-size: @fs-18;
       padding: 80px 190px;
     }
     &__wrapper {}
