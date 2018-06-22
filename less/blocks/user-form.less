@@ -12,6 +12,10 @@
   }
 }
 
+.hidden {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
   .user-form {
     &__title {
@@ -24,6 +28,10 @@
 
   .form-send-btn {
     width: 300px;
+  }
+
+  .hidden {
+    display: inline;
   }
 }
 
@@ -68,6 +76,24 @@
   &__input:focus {
     border-color: @color-pink-dark;
     outline: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .name-fieldset {
+    width: 620px;
+    padding: 0;
+    &__item--wrapper {
+      display: flex;
+    }
+    &__item {
+      margin-top: 20px;
+      margin-left: 0;
+      margin-right: 20px;
+    }
+    &__input {
+      flex-grow: 1;
+    }
   }
 }
 

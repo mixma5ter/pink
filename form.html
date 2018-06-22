@@ -45,25 +45,25 @@
     <section class="user-form">
       <div class="user-form__title">
         <p>
-          Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+          Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="hidden">Пожалуйста, заполните форму ниже:</span>
         </p>
       </div>
 
       <form class="user-form__wrapper">
 
         <fieldset class="name-fieldset">
-          <label class="name-fieldset__item" for="user-surname">Фамилия:
-            <input class="name-fieldset__input" name="surname" type="text" id="user-surname"
-                   placeholder="Укажите фамилию" required>
-          </label>
-          <label class="name-fieldset__item" for="user-name">Имя:
-            <input class="name-fieldset__input" name="name" type="text" id="user-name" placeholder="Введите ваше имя"
-                   required>
-          </label>
-          <label class="name-fieldset__item" for="user-midname">Отчество:
-            <input class="name-fieldset__input" name="midname" type="text" id="user-midname"
-                   placeholder="Ну и отчество тоже">
-          </label>
+          <div class="name-fieldset__item--wrapper">
+            <label class="name-fieldset__item" for="user-surname">Фамилия:</label>
+            <input class="name-fieldset__input" name="surname" type="text" id="user-surname" placeholder="Укажите фамилию" required>
+          </div>
+          <div class="name-fieldset__item--wrapper">
+            <label class="name-fieldset__item" for="user-name">Имя:</label>
+            <input class="name-fieldset__input" name="name" type="text" id="user-name" placeholder="Введите ваше имя" required>
+          </div>
+          <div class="name-fieldset__item--wrapper">
+            <label class="name-fieldset__item" for="user-midname">Отчество:</label>
+            <input class="name-fieldset__input" name="midname" type="text" id="user-midname" placeholder="Ну и отчество тоже">
+          </div>
         </fieldset>
 
         <fieldset class="achievements-fieldset">
@@ -111,7 +111,9 @@
         </fieldset>
 
         <fieldset class="application-fieldset">
-          <legend class="application-fieldset__title  application-fieldset__title--desktop">С каким приложением путешествовали?</legend>
+          <legend class="application-fieldset__title  application-fieldset__title--desktop">С каким приложением
+            путешествовали?
+          </legend>
           <span class="application-fieldset__title  application-fieldset__title--mobile-only">С каким приложением путешествовали?</span>
           <div class="application-fieldset__items">
             <label class="application-fieldset__item" for="pink-ios">Pink для iOS
