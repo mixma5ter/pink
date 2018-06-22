@@ -190,22 +190,69 @@
     text-align: center;
     color: @color-pink-dark;
     margin: 0;
-    padding: 20px 40px;
+    padding: 20px;
+    &--desktop {
+      display: none;
+    }
+  }
+  &__items {
+    width: 280px;
+    margin: 0 auto;
   }
   &__item {
+    position: relative;
     display: block;
-    text-align: center;
+    text-align: left;
     font-size: @fs-18;
     line-height: @lh-30;
     color: @color-blue-dark;
+    padding: 20px 0;
+    padding-left: 70px;
+    cursor: pointer;
   }
+}
+
+.application-fieldset__item input[type="radio"]{
+  display: none;
+}
+
+.application-fieldset__item .radio-indicator {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 35px;
+  height: 35px;
+  background-color: @color-white;
+  border: 2px solid lightgray;
+  border-radius: 50%;
+}
+
+.application-fieldset__item:hover .radio-indicator {
+  border-color: @color-blue;
+}
+
+.application-fieldset__item:active .radio-indicator {
+  border-color: @color-pink-dark;
+}
+
+.application-fieldset__item input[type="radio"]:checked + .radio-indicator:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: @color-pink-dark;
 }
 
 //-----------------------------------------------------
 
 .review-fieldset {
   border: none;
-  padding: 20px;
+  width: 280px;
+  margin: 0 auto;
+  padding: 20px 0 0 0;
   &__title {
     display: block;
     font-size: @fs-14;
@@ -214,18 +261,29 @@
     text-align: center;
     color: @color-pink-dark;
     padding: 20px 40px;
+    &--desktop {
+      display: none;
+    }
   }
   &__text {
     display: block;
+    box-sizing: border-box;
+    width: 280px;
+    height: 200px;
     font-size: @fs-18;
     line-height: @lh-30;
-    box-sizing: border-box;
-    width: 100%;
-    height: 200px;
-    margin: 0 auto;
-    padding: 10px 20px;
+    margin: 5px 0 20px;
+    padding: 13px 20px;
     border: 2px solid @color-white-dark;
+    border-radius: 3px;
     resize: none;
+  }
+  &__text:hover {
+    border-color: @color-blue;
+  }
+  &__text:focus {
+    border-color: @color-pink-dark;
+    outline: none;
   }
 }
 
@@ -236,18 +294,29 @@
 .form-send-btn {
   display: block;
   cursor: pointer;
-  margin: 20px auto;
   font-size: @fs-18;
   line-height: @lh-30;
   font-weight: bold;
-  color: @color-white;
-  background-color: @color-green;
   text-transform: uppercase;
+  color: @color-white;
+  background-color: @color-green-transp;
   box-sizing: border-box;
   width: 280px;
   min-height: 63px;
+  margin: 25px auto;
   border: none;
-  border-radius: 5px;
+  border-radius: 3px;
+  outline: none;
+}
+
+.form-send-btn:hover {
+  color: @color-white;
+  background-color: @color-green;
+}
+
+.form-send-btn:active {
+  color: @color-white-transp;
+  outline: none;
 }
 
 .form-send-info {
@@ -256,7 +325,7 @@
   line-height: @lh-30;
   text-transform: uppercase;
   text-align: center;
-  margin: 20px auto;
+  margin: 25px auto;
 }
 
 .color-pink-dark {

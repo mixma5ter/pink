@@ -111,20 +111,27 @@
         </fieldset>
 
         <fieldset class="application-fieldset">
-          <span class="application-fieldset__title">С каким приложением путешествовали?</span>
-          <label class="application-fieldset__item" for="pink-ios">Pink для iOS
-            <input name="app-type" type="radio" id="pink-ios" value="ios" checked>
-          </label>
-          <label class="application-fieldset__item" for="pink-android">Pink для Android
-            <input name="app-type" type="radio" id="pink-android" value="android">
-          </label>
-          <label class="application-fieldset__item" for="pink-windows">Windows Phone
-            <input name="app-type" type="radio" id="pink-windows" value="windows">
-          </label>
+          <legend class="application-fieldset__title  application-fieldset__title--desktop">С каким приложением путешествовали?</legend>
+          <span class="application-fieldset__title  application-fieldset__title--mobile-only">С каким приложением путешествовали?</span>
+          <div class="application-fieldset__items">
+            <label class="application-fieldset__item" for="pink-ios">Pink для iOS
+              <input name="app-type" type="radio" id="pink-ios" value="ios" checked>
+              <span class="radio-indicator"></span>
+            </label>
+            <label class="application-fieldset__item" for="pink-android">Pink для Android
+              <input name="app-type" type="radio" id="pink-android" value="android">
+              <span class="radio-indicator"></span>
+            </label>
+            <label class="application-fieldset__item" for="pink-windows">Windows Phone
+              <input name="app-type" type="radio" id="pink-windows" value="windows">
+              <span class="radio-indicator"></span>
+            </label>
+          </div>
         </fieldset>
 
         <fieldset class="review-fieldset">
-          <span class="review-fieldset__title">Опишите свои эмоции</span>
+          <legend class="review-fieldset__title  review-fieldset__title--desktop">Опишите свои эмоции</legend>
+          <span class="review-fieldset__title  review-fieldset__title--mobile-only">Опишите свои эмоции</span>
           <label for="user-text">
             <textarea class="review-fieldset__text" name="description" id="user-text"
                       placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
