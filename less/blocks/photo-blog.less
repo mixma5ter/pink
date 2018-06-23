@@ -5,7 +5,7 @@
     font-weight: normal;
     text-align: center;
     margin: 0;
-    padding: 40px 10%;
+    padding: 48px 10%;
   }
   &__post-wrapper {
     display: flex;
@@ -14,14 +14,18 @@
   }
   &__post {
     width: 280px;
-    min-height: 323px;
+    min-height: 300px;
     margin: auto;
     margin-bottom: 20px;
     background-color: @color-white-dark;
   }
+  &__post-picture {
+    width: 0;
+    height: 0;
+  }
   &__post-content {
     margin: 0;
-    padding: 20px;
+    padding: 10px 20px;
   }
   &__post-author-name {
     font-size: @fs-14;
@@ -36,10 +40,21 @@
     text-transform: uppercase;
   }
   &__post-likes {
+    position: relative;
     font-size: @fs-12;
     line-height: @lh-24;
     text-transform: uppercase;
     color: @color-pink-dark;
+    padding: 10px 30px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 13px;
+      height: 12px;
+      bottom: 16px;
+      left: 0;
+      background: url("../img/icon-heart.svg") no-repeat 0 0;
+    }
   }
 }
 
@@ -54,7 +69,6 @@
     }
     &__post {
       width: 300px;
-      //min-height: 455px;
     }
   }
 }
@@ -68,7 +82,6 @@
       padding: 20px 130px;
     }
     &__post {
-      //min-height: 555px;
     }
   }
 }
