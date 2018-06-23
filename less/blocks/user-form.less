@@ -499,6 +499,17 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .review-fieldset {
+    width: 940px;
+    margin: 0 130px 65px 130px;
+    &__text {
+      width: 820px;
+      height: 122px;
+    }
+  }
+}
+
 //-----------------------------------------------------
 
 .form-send-btn {
@@ -542,6 +553,10 @@
   color: @color-pink-dark;
 }
 
+.hidden {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
   .form-send__wrapper {
     order: 6;
@@ -557,5 +572,19 @@
   }
   .form-send-info {
     margin: 20px 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-send__wrapper {
+    width: 940px;
+    margin: 0 130px 0 130px;
+    & .visually-hidden {
+      display: inline;
+    }
+  }
+
+  .hidden {
+    display: inline;
   }
 }
