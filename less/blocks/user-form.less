@@ -172,6 +172,29 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .achievements-fieldset {
+    width: 940px;
+    margin: 0 130px 40px 130px;
+    &__items {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 880px;
+      margin-left: 60px;
+    }
+    &__item {
+      width: 220px;
+      &[for="checkbox-1"] {order: 1;}
+      &[for="checkbox-2"] {order: 4;}
+      &[for="checkbox-3"] {order: 2;}
+      &[for="checkbox-4"] {order: 5;}
+      &[for="checkbox-5"] {order: 3;}
+      &[for="checkbox-6"] {order: 6;}
+    }
+  }
+}
+
 .achievements-fieldset__item input[type="checkbox"]{
   display: none;
 }
@@ -293,10 +316,19 @@
 @media (min-width: @desktop-width) {
   .contacts-fieldset {
     width: 940px;
-    margin: -10px 130px 0 130px;
+    margin: -10px 130px 40px 130px;
+    &__item-wrapper-left {
+      float: left;
+    }
+    &__item-wrapper-right {
+      float: right;
+    }
     &__input {
       margin: 0;
       width: 375px;
+    }
+    &__item {
+      margin-bottom: 10px;
     }
   }
 }
