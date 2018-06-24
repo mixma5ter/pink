@@ -54,6 +54,20 @@
   }
 }
 
+//---------------------Ретинизация-на-мобилке-----------------------
+
+@media (min-width: @mobile-width) and (min-resolution: 144dpi),
+(min-width: @mobile-width) and (min-resolution: 1.5dppx) {
+  .features__items-wrapper {
+    &::after {
+      background-image: url("../img/iphone-screen-mobile@2x.png");
+      background-size: 157px 320px;
+    }
+  }
+}
+
+//------------------------------------------------------------------
+
 @media (min-width: @tablet-width) {
   .features {
     &__centered-container {
@@ -88,6 +102,20 @@
     }
   }
 }
+
+//---------------------Ретинизация-на-мобилке-----------------------
+
+@media (min-width: @tablet-width) and (min-resolution: 144dpi),
+(min-width: @tablet-width) and (min-resolution: 1.5dppx) {
+  .features__items-wrapper {
+    &::after {
+      background-image: url("../img/iphone-screen-3-tablet@2x.png");
+      background-size: 268px 481px;
+    }
+  }
+}
+
+//------------------------------------------------------------------
 
 @media (min-width: @desktop-width) {
   .features {
@@ -140,3 +168,23 @@
     }
   }
 }
+
+//---------------------Ретинизация-на-мобилке-----------------------
+
+@media (min-width: @desktop-width) and (min-resolution: 144dpi),
+(min-width: @desktop-width) and (min-resolution: 1.5dppx) {
+  .features__item-title--1:before {
+      background-image: url("../img/iphone-screen-1-desktop@2x.png");
+      background-size: 292px 302px;
+  }
+  .features__item-title--2:before {
+      background-image: url("../img/iphone-screen-2-desktop@2x.png");
+      background-size: 292px 302px;
+  }
+  .features__item-title--3:before {
+      background-image: url("../img/iphone-screen-3-desktop@2x.png");
+      background-size: 292px 302px;
+  }
+}
+
+//------------------------------------------------------------------
