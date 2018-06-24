@@ -47,6 +47,10 @@
   }
 }
 
+.page-footer--mobile-hidden {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
   .page-footer {
     padding: 20px 40px;
@@ -60,11 +64,19 @@
       text-align: right;
     }
   }
+
+  .page-footer--mobile-hidden {
+    display: block;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .page-footer {
     padding: 40px 130px;
+  }
+
+  .page-footer--mobile-hidden {
+    display: block;
   }
 }
 
