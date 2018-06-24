@@ -1,6 +1,6 @@
 .reviews-slider {
   text-align: center;
-  max-width: 840px;
+  max-width: 780px;
   margin: 0 auto;
   &__slide {
     display: flex;
@@ -65,9 +65,10 @@
 @media (min-width: @desktop-width) {
   .reviews-slider {
     padding: 80px;
+    margin: 0 130px;
     &:before {
       position: relative;
-      left: 370px;
+      left: 350px;
       content: "";
       display: block;
       width: 79px;
@@ -78,8 +79,25 @@
     &__author-name {
       font-size: @fs-24;
     }
-    &__toggles {
-      display: none;
+    &__toggle {
+      position: absolute;
+      top: 220px;
+      display: block;
+      width: 30px;
+      height: 30px;
+      margin: 0;
+      border: 3px solid rgba(0, 0, 0, 0.3);
+      border-radius: 0;
+      border-top: none;
+      border-right: none;
+      transform: rotate(45deg);
+      background-color: @color-white;
+      &:hover {
+        border-color: rgba(0, 0, 0, 0.6);
+      }
+      &:active {
+        border-color: rgba(0, 0, 0, 0.1);
+      }
     }
   }
 }
@@ -113,4 +131,51 @@
 #slider-input-3:checked ~ .reviews-slider__toggles label[for="slider-input-3"] {
   border: 3px solid rgb(40, 54, 69);
   background-color: @color-white;
+}
+
+@media (min-width: @desktop-width) {
+  #slider-input-1:checked ~ .reviews-slider__toggles {
+    & label[for="slider-input-1"] {
+      display: none;
+    }
+    & label[for="slider-input-2"] {
+      display: block;
+      transform: rotate(-135deg);
+      right: 0;
+    }
+    & label[for="slider-input-3"] {
+      display: block;
+      left: 0;
+    }
+  }
+
+  #slider-input-2:checked ~ .reviews-slider__toggles {
+    & label[for="slider-input-1"] {
+      display: block;
+      left: 0;
+    }
+    & label[for="slider-input-2"] {
+      display: none;
+    }
+    & label[for="slider-input-3"] {
+      display: block;
+      transform: rotate(-135deg);
+      right: 0;
+    }
+  }
+
+  #slider-input-3:checked ~ .reviews-slider__toggles {
+    & label[for="slider-input-1"] {
+      display: block;
+      transform: rotate(-135deg);
+      right: 0;
+    }
+    & label[for="slider-input-2"] {
+      display: block;
+      left: 0;
+    }
+    & label[for="slider-input-3"] {
+      display: none;
+    }
+  }
 }
