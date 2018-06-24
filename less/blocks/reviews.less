@@ -64,8 +64,17 @@
 
 @media (min-width: @desktop-width) {
   .reviews-slider {
-    padding-top: 145px;
-    padding-bottom: 80px;
+    padding: 80px;
+    &:before {
+      position: relative;
+      left: 370px;
+      content: "";
+      display: block;
+      width: 79px;
+      height: 63px;
+      background: url("../img/icon-quotes.svg") no-repeat center 0;
+      background-size: 79px 63px;
+    }
     &__author-name {
       font-size: @fs-24;
     }
