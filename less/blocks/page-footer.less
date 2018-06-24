@@ -36,10 +36,12 @@
     font-size: @fs-14;
     line-height: @lh-18;
     font-weight: normal;
+    margin-right: 10px;
   }
   &__copyright-link {
     position: relative;
     font-size: 0;
+    padding: 0 20px;
   }
   &__logo-htmlacademy {
     position: absolute;
@@ -73,6 +75,9 @@
 @media (min-width: @desktop-width) {
   .page-footer {
     padding: 40px 130px;
+    &__copyright {
+      font-size: @fs-18;
+    }
   }
 
   .page-footer--mobile-hidden {
