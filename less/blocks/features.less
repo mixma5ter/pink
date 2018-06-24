@@ -1,4 +1,5 @@
 .features {
+  position: relative;
   background-color: @color-white-dark;
   text-align: center;
   &__title-wrapper {
@@ -8,7 +9,7 @@
   &__centered-container {
     box-sizing: border-box;
     max-width: 380px;
-    margin: 5px auto;
+    margin: 0 auto;
     padding: 20px;
   }
   &__title {
@@ -20,10 +21,11 @@
   }
   &__items-wrapper {
     box-sizing: border-box;
-    max-width: 480px;
-    min-height: 480px;
+    max-width: 320px;
+    min-height: 410px;
     margin: 0 auto;
     padding: 55px 20px;
+    padding-top: -90px;
     padding-bottom: 0;
     &:after {
       content: "";
@@ -39,6 +41,7 @@
   }
   &__items {
     list-style: none;
+    margin: 0;
     padding: 0;
   }
   &__item {
@@ -82,12 +85,16 @@
       font-weight: 100;
       padding: 0;
     }
+    &__item-title {
+      margin-bottom: 10px;
+    }
     &__items-wrapper {
       position: relative;
       text-align: left;
       margin-left: 50%;
-      padding: 40px 0;
+      padding: 30px 0;
       padding-right: 40px;
+      padding-top: 0;
       &:after {
         position: absolute;
         bottom: 0;
@@ -96,7 +103,7 @@
         height: 481px;
         background-image: url("../img/iphone-screen-3-tablet@1x.png");
         background-repeat: no-repeat;
-        background-position: center 50px;
+        background-position: center 0;
         background-size: 268px 481px;
       }
     }
