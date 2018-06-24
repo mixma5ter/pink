@@ -61,6 +61,7 @@
     &__item {
       font-size: @fs-18;
       line-height: 1.2;
+      margin-bottom: 40px;
     }
   }
 }
@@ -68,10 +69,16 @@
 @media (min-width: @desktop-width) {
   .contacts-info {
     margin-bottom: 0;
-    padding: 40px 130px;
+    padding: 30px 130px;
     &__title {
       font-size: @fs-50;
       line-height: 1.2;
+    }
+    &__item {
+      margin-bottom: 0;
+      & h3 {
+        margin-bottom: 20px;
+      }
     }
     &__item:nth-child(2) {
       order: 3;
