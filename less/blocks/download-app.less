@@ -9,6 +9,7 @@
     background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
     background-repeat: no-repeat, no-repeat;
     background-position: 40% bottom, center center;
+    background-size: 258px 286px, auto auto;
   }
   &__content {
     max-width: 320px;
@@ -67,13 +68,27 @@
   }
 }
 
+//-------------------------------------Ретинизация-на-мобилке----------------------------------------
+
+@media (min-width: @mobile-width) and (min-resolution: 144dpi),
+       (min-width: @mobile-width) and (min-resolution: 1.5dppx) {
+  .download-app {
+    &::before {
+      background-image: url("../img/iphone-hand-mobile@2x.png"), url("../img/bg-back-mobile@2x.jpg");
+      background-size: 258px 286px, cover;
+    }
+  }
+}
+
+//---------------------------------------------------------------------------------------------------
+
 @media (min-width: @tablet-width) {
   .download-app {
     background-color: @color-blue;
-    background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
+    background-image: url("../img/iphone-hand-tablet@1x.png"), url("../img/bg-back-tablet@1x.jpg");
     background-repeat: no-repeat, no-repeat;
     background-position: 70% bottom, center center;
-    background-size: auto, cover;
+    background-size: 700px 545px, cover;
     &::before {
       content: none;
     }
@@ -100,12 +115,26 @@
   }
 }
 
+//-------------------------------------Ретинизация-на-таблетке---------------------------------------
+
+@media (min-width: @tablet-width) and (min-resolution: 144dpi),
+       (min-width: @tablet-width) and (min-resolution: 1.5dppx) {
+  .download-app {
+    &::before {
+      background-image: url("../img/iphone-hand-tablet@2x.png"), url("../img/bg-back-tablet@2x.jpg");
+      background-size: 700px 545px, cover;
+    }
+  }
+}
+
+//---------------------------------------------------------------------------------------------------
+
 @media (min-width: @desktop-width) {
   .download-app {
-    background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
+    background-image: url("../img/iphone-hand-desktop@1x.png"), url("../img/bg-back-desktop@1x.jpg");
     background-repeat: no-repeat, no-repeat;
-    background-position: 70% bottom, center center;
-    background-size: auto, cover;
+    background-position: 90% bottom, center center;
+    background-size: 1050px 645px, cover;
     &::before {
       content: none;
     }
@@ -132,3 +161,17 @@
     }
   }
 }
+
+//-------------------------------------Ретинизация-на-десктопе---------------------------------------
+
+@media (min-width: @desktop-width) and (min-resolution: 144dpi),
+       (min-width: @desktop-width) and (min-resolution: 1.5dppx) {
+  .download-app {
+    &::before {
+      background-image: url("../img/iphone-hand-desktop@2x.png"), url("../img/bg-back-desktop@2x.jpg");
+      background-size: 1050px 645px, cover;
+    }
+  }
+}
+
+//---------------------------------------------------------------------------------------------------
