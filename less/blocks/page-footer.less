@@ -38,7 +38,12 @@
     font-weight: normal;
   }
   &__copyright-link {
+    position: relative;
     font-size: 0;
+  }
+  &__logo-htmlacademy {
+    position: absolute;
+    top: -20px;
   }
 }
 
@@ -61,4 +66,22 @@
   .page-footer {
     padding: 40px 130px;
   }
+}
+
+.page-footer__social-link:hover {
+  border-color: @color-black;
+}
+
+.page-footer__social-link:active {
+  border-color: @color-black-transp;
+  opacity: 0.3;
+}
+
+.page-footer__logo-htmlacademy:hover {
+  fill: @color-black;
+}
+
+.page-footer__logo-htmlacademy:active {
+  border-color: @color-black-transp;
+  opacity: 0.3;
 }
