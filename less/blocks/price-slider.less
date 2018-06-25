@@ -1,22 +1,26 @@
 .price-slider {
   background-color: @color-white-dark;
   overflow: hidden;
+  &__input {
+    display: none;
+  }
 }
 
 .price-table {
+  width: 290%;
   font-size: @fs-14;
   line-height: @lh-30;
   text-transform: uppercase;
-  margin: 0 auto;
-  padding: 20px;
-  width: 100%;
+  padding: 0;
   &__title {
     font-size: @fs-18;
     line-height: @lh-30;
     font-weight: bold;
     color: @color-white;
-    background-color: @color-blue;
+    background-color: @color-blue-dark;
+    padding: 20px;
   }
+
   &__price {
     font-size: @fs-24;
     line-height: @lh-30;
@@ -24,5 +28,30 @@
   }
   & td {
     background-color: @color-white;
+    padding: 14px 20px;
   }
+}
+
+.price-table__title--hidden,
+.price-table__cell--hidden {
+  visibility: hidden;
+}
+
+@media (min-width: @tablet-width) {
+  .price-table {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .price-table__title--hidden,
+  .price-table__cell--hidden {
+    visibility: visible;
+  }
+
+  .price-table__title--hidden {
+    visibility: hidden;
+  }
+}
+
+@media (min-width: @desktop-width) {
 }
