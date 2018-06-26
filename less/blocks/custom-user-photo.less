@@ -80,10 +80,30 @@
     width: 280px;
     min-height: 56px;
     margin: 10px auto;
+    outline: none;
+    cursor: pointer;
+    &:hover {
+      color: @color-white-dark;
+      background-color: @color-pink-dark;
+    }
+    &:active {
+      color: @color-white-transp;
+    }
   }
   &__delete {
     color: @color-blue-dark-transp;
     border-color: @color-blue-dark-transp;
+    background-color: transparent;
+    &:hover {
+      color: @color-blue-dark-transp03;
+      border-color: @color-blue-dark-transp03;
+      background-color: transparent;
+    }
+    &:active {
+      color: @color-white-transp;
+      border-color: @color-blue-dark-transp03;
+      background-color: @color-blue-dark-transp03;
+    }
   }
 }
 
