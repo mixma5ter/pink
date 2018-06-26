@@ -97,6 +97,13 @@ input[id="contrast-radio-editor"]:checked + .contrast-radio-indicator {
   background: url("../img/icon-editor-contrast--active.svg") no-repeat 0 0;
 }
 
+
+
+
+
+
+
+
 @media (min-width: @tablet-width) {
   .custom-user-photo {
     &__title {
@@ -116,15 +123,19 @@ input[id="contrast-radio-editor"]:checked + .contrast-radio-indicator {
       display: none;
     }
     &__settings {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       width: 260px;
       margin: 0 10px;
     }
     &__all {
       display: block;
+      margin-top: -15px;
       &--slider {
         position: relative;
         height: 2px;
-        margin: 30px 0 30px 55px;
+        margin: 35px 18px 35px 55px;
         background-color: @color-blue-dark;
       }
       &--toggle {
@@ -138,15 +149,40 @@ input[id="contrast-radio-editor"]:checked + .contrast-radio-indicator {
         border-radius: 50%;
         cursor: pointer;
       }
-      &--crop {}
-      &--fill {}
-      &--contrast {}
+      &-indicator {
+        background-color: red;
+        display: block;
+        position: absolute;
+        top: -25px;
+        left: -55px;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        &--crop {
+          background: url("../img/icon-editor-crop--active-small.svg") no-repeat 0 center;
+        }
+        &--fill {
+          background: url("../img/icon-editor-fil--active-small.svg") no-repeat 0 center;
+        }
+        &--contrast {
+          background: url("../img/icon-editor-contrast--active-small.svg") no-repeat 0 center;
+        }
+      }
+    }
+    &__btns {
+      padding: 0;
     }
     &__btn {
       width: 100%;
+      margin: 0;
+      margin-top: 20px;
     }
   }
 }
+
+
+
+
 
 @media (min-width: @desktop-width) {
   .custom-user-photo {
@@ -155,8 +191,37 @@ input[id="contrast-radio-editor"]:checked + .contrast-radio-indicator {
       padding-bottom: 60px;
     }
     &__wrapper {
-      margin: 0 130px;
-      padding: 60px 80px;
+      max-width: 940px;
+      margin: 0 auto;
+      padding: 60px 60px 60px 80px;
+    }
+    &__settings {
+      width: 410px;
+      margin: 0;
+    }
+    &__all {
+      &--slider {
+        margin: 35px 28px 35px 90px;
+      }
+      &-indicator {
+        left: -90px;
+        &--crop {
+          background: url("../img/icon-editor-crop--active.svg") no-repeat center center;
+        }
+        &--fill {
+          background: url("../img/icon-editor-fil--active.svg") no-repeat center center;
+        }
+        &--contrast {
+          background: url("../img/icon-editor-contrast--active.svg") no-repeat center center;
+        }
+      }
+    }
+    &__btns {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__btn {
+      width: 180px;
     }
   }
 }
