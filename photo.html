@@ -225,7 +225,7 @@
       </div>
     </section>
 
-    <section class="custom-user-photo">
+    <form class="custom-user-photo">
       <h2 class="custom-user-photo__title">
         Затмите их всех!
         <br>
@@ -235,30 +235,29 @@
         <div class="custom-user-photo__img">
           <img src="img/photo-7-mobile@1x.jpg" width="280" height="374" alt="Ваше изображение">
         </div>
-        <div class="custom-user-photo__settings">
-          <div class="custom-user-photo__setting">
-            <div class="setting__scale">
-              <div class="setting__bar"></div>
-            </div>
-            <div class="setting__toggle"></div>
+        <div class="custom-user-photo__mobile">
+          <div class="custom-user-photo__mobile--inputs">
+            <label class="custom-user-photo__crop-radio-editor">
+              <input type="radio" name="radio-editor" id="crop-radio-editor" checked>
+              <span class="crop-radio-indicator"></span>
+            </label>
+            <label class="custom-user-photo__fill-radio-editor">
+              <input type="radio" name="radio-editor" id="fill-radio-editor">
+              <span class="fill-radio-indicator"></span>
+            </label>
+            <label class="custom-user-photo__contrast-radio-editor">
+              <input type="radio" name="radio-editor" id="contrast-radio-editor">
+              <span class="contrast-radio-indicator"></span>
+            </label>
           </div>
-          <div class="custom-user-photo__setting">
-            <div class="setting__scale">
-              <div class="setting__bar"></div>
-            </div>
-            <div class="setting__toggle"></div>
-          </div>
-          <div class="custom-user-photo__setting">
-            <div class="setting__scale">
-              <div class="setting__bar"></div>
-            </div>
-            <div class="setting__toggle"></div>
-          </div>
+          <div class="custom-user-photo__mobile--slider"></div>
+        </div>
+        <div class="custom-user-photo__btns">
           <button class="custom-user-photo__btn  custom-user-photo__send" type="button">Запостить</button>
           <button class="custom-user-photo__btn  custom-user-photo__delete" type="button">Отмена</button>
         </div>
       </div>
-    </section>
+    </form>
   </main>
 
   <footer class="page-footer">
