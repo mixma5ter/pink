@@ -232,9 +232,11 @@
         Выкладывайте все, что накопилось в телефоне!
       </h2>
       <div class="custom-user-photo__wrapper">
-        <div class="custom-user-photo__img">
-          <img src="img/photo-7-mobile@1x.jpg" width="280" height="374" alt="Ваше изображение">
-        </div>
+        <picture class="custom-user-photo__img">
+          <source media="(min-width: 1200px)" srcset="img/photo-7-desktop@1x.jpg">
+          <source media="(min-width: 700px)" srcset="img/photo-7-tablet@1x.jpg">
+          <img src="img/photo-7-mobile@1x.jpg" alt="Ваше изображение">
+        </picture>
         <div class="custom-user-photo__settings">
           <div class="custom-user-photo__mobile">
             <div class="custom-user-photo__mobile--inputs">
@@ -257,14 +259,20 @@
           </div>
           <div class="custom-user-photo__all">
             <div class="custom-user-photo__all--slider">
+              <span class="custom-user-photo__all--crop"></span>
               <div class="custom-user-photo__all--toggle"></div>
             </div>
+            <hr>
             <div class="custom-user-photo__all--slider">
+              <span class="custom-user-photo__all--fill"></span>
               <div class="custom-user-photo__all--toggle"></div>
             </div>
+            <hr>
             <div class="custom-user-photo__all--slider">
+              <span class="custom-user-photo__all--contrast"></span>
               <div class="custom-user-photo__all--toggle"></div>
             </div>
+            <hr>
           </div>
           <div class="custom-user-photo__btns">
             <button class="custom-user-photo__btn  custom-user-photo__send" type="button">Запостить</button>

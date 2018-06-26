@@ -105,15 +105,45 @@ input[id="contrast-radio-editor"]:checked + .contrast-radio-indicator {
       padding-bottom: 80px;
     }
     &__wrapper {
-      margin: 0 40px;
-      padding: 60px 40px;
       display: flex;
+      justify-content: space-between;
+      box-sizing: border-box;
+      max-width: 790px;
+      margin: 0 auto;
+      padding: 60px 40px;
     }
     &__mobile {
       display: none;
     }
+    &__settings {
+      width: 260px;
+      margin: 0 10px;
+    }
     &__all {
       display: block;
+      &--slider {
+        position: relative;
+        height: 2px;
+        margin: 30px 0 30px 55px;
+        background-color: @color-blue-dark;
+      }
+      &--toggle {
+        position: absolute;
+        top: -6px;
+        left: 80%;
+        width: 10px;
+        height: 10px;
+        background-color: @color-white;
+        border: 2px solid @color-pink-dark;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      &--crop {}
+      &--fill {}
+      &--contrast {}
+    }
+    &__btn {
+      width: 100%;
     }
   }
 }
