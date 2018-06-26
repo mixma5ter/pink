@@ -9,7 +9,7 @@
     padding-bottom: 40px;
   }
   &__wrapper {
-    box-sizing: border-box;
+    padding-top: 20px;
     text-align: center;
     margin: 0 auto;
     background-color: @color-white-dark;
@@ -17,10 +17,13 @@
   & input[type="radio"] {
     display: none;
   }
+  &__all {
+    display: none;
+  }
   &__mobile {
     width: 240px;
     margin: 0 auto;
-    padding: 40px;
+    padding: 40px 20px;
     border-bottom: 1px solid lightgray;
     &--inputs {
       display: flex;
@@ -29,7 +32,7 @@
     &--slider {
       position: relative;
       height: 2px;
-      margin-top: 28px;
+      margin-top: 30px;
       background-color: @color-blue-dark;
     }
     &--toggle {
@@ -41,6 +44,7 @@
       background-color: @color-white;
       border: 2px solid @color-pink-dark;
       border-radius: 50%;
+      cursor: pointer;
     }
   }
   & .crop-radio-indicator,
@@ -101,8 +105,15 @@ input[id="contrast-radio-editor"]:checked + .contrast-radio-indicator {
       padding-bottom: 80px;
     }
     &__wrapper {
+      margin: 0 40px;
       padding: 60px 40px;
       display: flex;
+    }
+    &__mobile {
+      display: none;
+    }
+    &__all {
+      display: block;
     }
   }
 }
