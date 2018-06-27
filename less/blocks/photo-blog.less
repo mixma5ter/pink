@@ -1,6 +1,5 @@
 .photo-blog {
   width: 100vw;
-  max-width: 650px;
   margin: 0 auto;
   &__title {
     font-size: @fs-14;
@@ -23,8 +22,23 @@
     margin: 0 10px;
     margin-bottom: 20px;
     &--panorama {
+      position: relative;
       margin: 0;
       margin-bottom: 20px;
+      &::before {
+        position: absolute;
+        top: 0;
+        right: 20px;
+        content: "панорама дня";
+        width: 140px;
+        height: 36px;
+        font-size: 12px;
+        line-height: 36px;
+        text-transform: uppercase;
+        text-align: center;
+        color: @color-white;
+        background-color: @color-pink-dark;
+      }
     }
     &-picture {
       & img {
@@ -76,7 +90,6 @@
 
 @media (min-width: @tablet-width) {
   .photo-blog {
-    max-width: 870px;
     margin: 0 auto;
     &__title {
       font-size: @fs-18;
@@ -86,7 +99,6 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      min-width: 620px;
       width: auto;
       margin: 0;
       padding: 0 30px;
@@ -96,6 +108,10 @@
       &--panorama {
         width: 100%;
         margin-right: 0;
+        &::before {
+          top: 57px;
+          right: 40px;
+        }
       }
       &-content {
         &--panorama {
@@ -120,6 +136,10 @@
       width: 300px;
       &--panorama {
         width: 100%;
+        &::before {
+          top: 57px;
+          right: 130px;
+        }
       }
       &-content {
         &--panorama {
